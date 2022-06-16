@@ -1,0 +1,75 @@
+.centerSidebar{
+    width: 45%;
+    margin: 85px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sobreheader{
+    width: 100%;
+    height: 60px;
+    background-color: #999;
+    color: #fff;
+    border-bottom: 1px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16pt;
+
+}
+.sobreText{
+    width: 100%;
+    font-size: 12.5pt;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.sobreTextParagrafo{
+    width: 90%;
+    padding: 7.5px;
+    color: #666;
+    text-align: justify;
+    text-indent: 40px;
+    
+}
+.sobreParticipantes{
+    width: 100%;
+    font-size: 12.5pt;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.headerSobrePartic{
+    text-align: center;
+    color: #666;
+}
+.sobreparticipanteDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    box-shadow: 0px 1px 0px #667;
+    width: 95%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.imagemParti{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #666;
+    box-shadow: 1px 1px 1px #667;
+    border-radius: 20px;
+}
+.divDescParti{
+    margin-right: 400px;
+    width: 400px;
+}
+.marginBott{
+    margin-top: 7px;
+    margin-bottom: 0px;
+    width: 400px;
+    margin-left: 20px;
+}

@@ -1,0 +1,77 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background-color: #193498;
+}
+.content{
+    width: 60%;
+    height: 100vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg{
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
+}
+.logoLogin{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginForm{
+    background-color: #F6F3F3;
+    width: 360px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(53, 49, 99, 0.5) solid 1px;
+    margin-top: 30px;
+}
+.inputLogin{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: none;
+}
+.entrarbutton{
+    background-color: #1597E5;
+}
+.entrarbutton:disabled{
+    background-color: #8acbf3;
+}
+.criar{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Termos{
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+#nawCreate{
+    color: #666;
+    transform: scale(0.95);
+}
+#nawCreate:hover{
+    color: #000;
+    transform: scale(1);
+}
+#h2Margin{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}

@@ -1,0 +1,61 @@
+.menu{
+    background-color: #193498;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    color: #F6F3F3;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+}
+ul{
+    list-style: none;
+    max-width: 600px;
+}
+li{
+    transform: scale(0.98)
+}
+li:hover{
+    transform: scale(1);
+    cursor: pointer;
+}
+.logo{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+.menuList{
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.fotoPerfil{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+.imagemLogo{
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+.fotoPerfilImg{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.smollUsername{
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 8pt;
+}
