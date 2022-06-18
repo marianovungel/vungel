@@ -22,6 +22,8 @@ function Venda() {
   const [preco, setPreco] = useState("")
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
+  const [cadastrarFunc, setCadastrarFunc] = useState(false)
+  const [banner, setBanner] = useState(true)
   const [file, setFile] = useState(null)
   const history = useHistory()
   
@@ -52,11 +54,20 @@ function Venda() {
       history.back();
     }catch(err){}
   }
-  
+
+  const Ative = ()=>{
+      setCadastrarFunc(true)
+      setBanner(false)
+  }
+  const TodosPro = ()=>{
+      setCadastrarFunc(false)
+      setBanner(true)
+  }
   return (
     <div className="venda">
       <Menu />
       <div className='conteiner'>
+            {cadastrarFunc ? (
         <div className='cadastrarProduto'>
           <div className='banner'>
             <div  className='buttonCadastrar'><i class="fa-solid fa-bag-shopping" id='shoop'></i></div>
@@ -64,19 +75,24 @@ function Venda() {
             <div className='triangulo'></div>
           </div>
           
-          <form className='formProduto' onSubmit={handleSubmit} >
-            <h4 className='produtoFormModal'>Cadastrar Produto</h4>
-            <input type="file" className='imgInputContent' accept="image/*" onChange={(e)=> setFile(e.target.files[0])}/>
-            <input className='inputProduto' type='text' placeholder='Titulo' onChange={(e)=> setTitle(e.target.value)} />
-            <input className='inputProduto' type='Number' placeholder='R$ 00,00' onChange={(e)=> setPreco(e.target.value)} />
-            <textarea placeholder='descrição...' className="story" rows="10" cols="33" onChange={(e)=> setDesc(e.target.value)} ></textarea>
-            <button className='inputProduto colorbutton' type='submit'> Cadastrar </button>
-          </form>
+            <form className='formProduto' onSubmit={handleSubmit} >
+              <h4 className='produtoFormModal'>Cadastrar Produto</h4>
+              <input type="file" className='imgInputContent' accept="image/*" onChange={(e)=> setFile(e.target.files[0])}/>
+              <input className='inputProduto' type='text' placeholder='Titulo' onChange={(e)=> setTitle(e.target.value)} />
+              <input className='inputProduto' type='Number' placeholder='R$ 00,00' onChange={(e)=> setPreco(e.target.value)} />
+              <textarea placeholder='descrição...' className="story" rows="10" cols="33" onChange={(e)=> setDesc(e.target.value)} ></textarea>
+              <button className='inputProduto colorbutton' type='submit'> Cadastrar </button>
+              <div className='todosProdutos' onClick={TodosPro}><i>Cancelar</i></div>
+            </form>
         </div>
-        <div className='sidebar'>
-            <Produto />
-        </div>
+            ):(
+          <div className='sidebar'>
+              <Produto />
+          </div>
+            )}
       </div>
+        {banner && (<div className='ativeCadastrar' onClick={Ative}><i>Cadastrar Produto</i></div>
+        )}
     </div>
   );
 }

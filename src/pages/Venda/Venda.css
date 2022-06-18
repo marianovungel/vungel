@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
-    margin-left: 40px;
+    margin-left: 68px;
 }
 .cadastrarProduto{
     position: relative;
@@ -132,4 +132,249 @@
 }
 .imgInputContent{
     width: 90%;
+}
+.todosProdutos{
+    color: #fff;
+}
+.ativeCadastrar{
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-size: 10pt;
+    background-color: #193498;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1120px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 80px;
+    }
+}
+@media (min-width: 945px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 80px;
+    }
+}
+@media (max-width: 1074px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 70px;
+    }
+    .banner{
+        display: none;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 120px;
+        left: 40px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        background-color: #193498;
+        border-radius: 10px;
+        color: #fff;
+    }
+    .formProduto{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        width: 300px;
+        height: 450px;
+        background-color: #193498;
+        margin: 120px 10px 0px 20px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 831px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 70px;
+    }
+    .banner{
+        display: none;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 120px;
+        left: 40px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        background-color: #193498;
+        border-radius: 10px;
+        color: #fff;
+    }
+    .formProduto{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        width: 300px;
+        height: 450px;
+        background-color: #193498;
+        margin: 120px 10px 0px 20px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 947px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 10%px;
+    }
+}
+@media (max-width: 885px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 130px;
+    }
+}
+@media (max-width: 885px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 100px;
+    }
+}
+@media (max-width: 775px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 50px;
+    }
+}
+@media (max-width: 775px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 462px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 380px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 50px;
+    }
 }

@@ -75,7 +75,7 @@ export default function Produto() {
           <Link className="titleColor" to={`/post/${post?._id}`}>
             {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
           <div className="Produto" key={post?.photo}>
-            <div className='imgProduto'>
+            <div className='imgProduto' id='Produto'>
                 <img className='imagemCard' src={URLImg+post?.photo} alt='imagem'/>
             </div>
             <div className='nomePreco'>

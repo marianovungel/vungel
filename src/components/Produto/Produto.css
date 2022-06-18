@@ -77,3 +77,513 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 1347px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 200px;
+        height: 270px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .nomePreco{
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid rgba(110, 110, 110, 0.3);;
+        background-color: #fff;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imagemCard{
+        width: 100%;
+        height: 170px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 14pt;
+    }
+}
+
+
+@media (max-width: 1074px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 200px;
+        height: 270px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .nomePreco{
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid rgba(110, 110, 110, 0.3);;
+        background-color: #fff;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imagemCard{
+        width: 100%;
+        height: 220px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+
+@media (min-width: 946px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 150px;
+        height: 220px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .nomePreco{
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid rgba(110, 110, 110, 0.3);;
+        background-color: #fff;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imagemCard{
+        width: 100%;
+        height: 170px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+@media (max-width: 810px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 150px;
+        height: 220px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .nomePreco{
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid rgba(110, 110, 110, 0.3);;
+        background-color: #fff;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imagemCard{
+        width: 100%;
+        height: 170px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+@media (max-width: 732px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 180px;
+        height: 250px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .nomePreco{
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        border-top: 1px solid rgba(110, 110, 110, 0.3);;
+        background-color: #fff;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imagemCard{
+        width: 100%;
+        height: 200px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 650px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 240px;
+        height: 310px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 260px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+@media (max-width: 570px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 120px;
+        height: 190px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 140px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
+@media (max-width: 463px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 180px;
+        height: 250px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 200px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 450px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 463px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 160px;
+        height: 230px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 180px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 450px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 380px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 240px;
+        height: 310px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 260px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 450px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: -50px;
+    }
+    .searchformInport{
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        border-color: #666;
+        border: 1px solid #666;
+        padding-right: 50px;
+        padding-left: 10px;
+        font-size: 13pt;
+    }
+}
+@media (max-width: 330px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 30px;
+        width: 240px;
+        height: 310px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 260px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 450px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: -30px;
+    }
+    .searchformInport{
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        border-color: #666;
+        border: 1px solid #666;
+        padding-right: 50px;
+        padding-left: 10px;
+        font-size: 13pt;
+    }
+}
+@media (max-width: 309px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 30px;
+        width: 240px;
+        height: 310px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 260px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 450px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: -15px;
+    }
+    .searchformInport{
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        border-color: #666;
+        border: 1px solid #666;
+        padding-right: 50px;
+        padding-left: 10px;
+        font-size: 13pt;
+    }
+}
+
+@media (max-width: 272px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 40px;
+        width: 240px;
+        height: 310px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 260px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+    .searchform{
+        width: 400px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .searchformInport{
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        border-color: #666;
+        border: 1px solid #666;
+        padding-right: 50px;
+        padding-left: 10px;
+        font-size: 13pt;
+    }
+}
+/* 
+@media (max-width: 709px){
+    #Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 110px;
+        height: 180px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 140px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+} */
