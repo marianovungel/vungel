@@ -39,7 +39,7 @@ export default function Login() {
                         <h2 id='h2Margin'>LOGIN</h2>
                         <input className='inputLogin' type='text' placeholder=' User' ref={userRef} />
                         <input className='inputLogin' type='password' placeholder=' Password' minLength='4' ref={passwordRef} />
-                        <button className='inputLogin entrarbutton' type='submit' disabled={isFetching}><Link to='/venda'>Sing In</Link></button>
+                        <button className='inputLogin entrarbutton' type='submit' disabled={isFetching}>Sing In</button>
                         <Link to='/registrar'><i className='TermosCreate' id='nawCreate'>Criar conta</i></Link>
                     </form>
                     <div className='criar'>
