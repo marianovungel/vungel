@@ -29,11 +29,11 @@ export default function Login() {
   return (
     <div className="login">
         <div className='content'>
-            <div className='logoLogin'>
-                <img className='logoImg' src='./image/u.png' alt='logo'/>
+            <div className='logoLoginRes'>
+                <img className='logoImgRes' src='./image/branca.png' alt='logo'/>
             </div>
 
-            <div className='section'>
+            <div className='sectionRES'>
                 <div className='form'>
                     <form className='loginForm' onSubmit={handleSubmit}>
                         <h2 id='h2Margin'>LOGIN</h2>
