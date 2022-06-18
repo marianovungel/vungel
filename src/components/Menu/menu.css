@@ -89,19 +89,13 @@ li:hover{
     }
     #iconMenuBut{
         margin-bottom: 25px;
+        color: #F6F3F3;
     }
 }
 @media (max-width: 459px){
     .imagemLogo{
-        width: 150px;
-        height: 150px;
-        margin-left: 10px;
-    }
-    #iconMenuBut{
-        margin-bottom: 25px;
-        background-color: #193498;
-        width: 100%;
-
+        width: 100px;
+        height: 100px;
     }
     .menuList{
         display: none;
@@ -111,7 +105,12 @@ li:hover{
         margin-top: 75px;
     }
     #contentMenuBox{
-        margin-top: 100px;
+        margin-top: 60px;
         background-color: #193498;
+        width: 100%;
+    }
+    #iconMenuBut{
+        margin-bottom: 25px;
+        color: #F6F3F3;
     }
 }

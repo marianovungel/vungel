@@ -402,6 +402,25 @@
 
     }
 }
+@media (max-width: 487px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 290px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
 @media (max-width: 470px){
     .sidebar{
         position: relative;
@@ -417,7 +436,7 @@
     }
     .ativeCadastrar{
         position: absolute;
-        top: 20px;
+        top: 15px;
         left: 300px;
         display: flex;
         justify-content:center;
@@ -447,6 +466,83 @@
         margin-left: 20px;
     }
 }
+@media (max-width: 452px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 288px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 406px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 280px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 393px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 275px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 387px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 270px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+
 @media (max-width: 380px){
     .sidebar{
         position: relative;
@@ -459,5 +555,122 @@
         flex-wrap: wrap;
         border-radius: 10px;
         margin-left: 50px;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 265px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 373px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 260px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 373px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 250px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 280px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 80px;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 245px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 237px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 90px;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 15px;
+        left: 230px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        font-size: 8pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
     }
 }
