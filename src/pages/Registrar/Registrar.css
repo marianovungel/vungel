@@ -126,3 +126,82 @@
     font-size: 11pt;
     border: 3px solid #008000;
 }
+
+@media (max-width: 637px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 579px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -25px;
+    }
+}
+@media (max-width: 542px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -40px;
+    }
+}
+@media (max-width: 492px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -55px;
+    }
+}
+@media (max-width: 440px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -70px;
+    }
+}
+@media (max-width: 400px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -85px;
+    }
+}
+@media (max-width: 330px){
+    .logoLoginRes{
+        width: 400px;
+        height: 400px;
+        margin: -250px auto 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100px;
+    }
+}
