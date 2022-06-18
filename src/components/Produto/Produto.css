@@ -312,6 +312,31 @@
         font-size: 10pt;
     }
 }
+@media (max-width: 470px){
+    .Produto{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 3px;
+        margin: 10px 10px 20px 10px;
+        width: 170px;
+        height: 240px;
+        border: 1px solid rgba(70, 69, 69, 0.30);
+        box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    }
+    .imagemCard{
+        width: 100%;
+        height: 190px;
+        border-radius: 3px 3px 0 0;
+    }
+    .valorNome{
+        color: rgb(78, 75, 75);
+        font-size: 10pt;
+    }
+}
 @media (max-width: 463px){
     .Produto{
         font-size: small;

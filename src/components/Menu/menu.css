@@ -59,3 +59,59 @@ li:hover{
     padding: 5px;
     font-size: 8pt;
 }
+#navDesa{
+    display: none;
+}
+@media (max-width: 930px){
+    .imagemLogo{
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 775px){
+    .imagemLogo{
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+    }
+    .menuList{
+        display: none;
+    }
+    #navDesa{
+        display: flex;
+        margin-top: 75px;
+    }
+    #contentMenuBox{
+        margin-top: 60px;
+        background-color: #193498;
+        width: 100%;
+    }
+    #iconMenuBut{
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 459px){
+    .imagemLogo{
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+    }
+    #iconMenuBut{
+        margin-bottom: 25px;
+        background-color: #193498;
+        width: 100%;
+
+    }
+    .menuList{
+        display: none;
+    }
+    #navDesa{
+        display: flex;
+        margin-top: 75px;
+    }
+    #contentMenuBox{
+        margin-top: 100px;
+        background-color: #193498;
+    }
+}

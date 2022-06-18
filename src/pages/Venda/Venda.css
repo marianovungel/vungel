@@ -317,6 +317,20 @@
         margin-left: 100px;
     }
 }
+@media (max-width: 804px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 70px;
+    }
+}
 @media (max-width: 775px){
     .sidebar{
         position: relative;
@@ -335,7 +349,76 @@
     .ativeCadastrar{
         position: absolute;
         top: 20px;
-        left: 200px;
+        left: 500px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 683px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 20px;
+        left: 450px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 616px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 20px;
+        left: 400px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        /* background-color: #193498; */
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        z-index: 100;
+
+    }
+}
+@media (max-width: 470px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 75px;
+    }
+    .ativeCadastrar{
+        position: absolute;
+        top: 20px;
+        left: 300px;
         display: flex;
         justify-content:center;
         align-items: center;

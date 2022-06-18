@@ -91,7 +91,7 @@ function Venda() {
           </div>
             )}
       </div>
-        {banner && (<div className='ativeCadastrar' onClick={Ative}><i>Cadastrar Produto</i></div>
+        {banner && (<div className='ativeCadastrar' id='ativ' onClick={Ative}><i>Cadastrar Produto</i></div>
         )}
     </div>
   );
