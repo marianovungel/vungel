@@ -20,28 +20,21 @@ export default function Registrar() {
         var senha = password;
         setErr(false)
         setForca(0);
-        
-    
         if((senha.length === 4)){
             setForca(forca+10);
         }
-    
         if((senha.length >= 5) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
             setForca(40);
         }
-    
         if((senha.length >= 6) && (senha.match(/[@#$%&;*]/)) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
             setForca(60);
         }
-    
         if((senha.length >= 7) && (senha.match(/[@#$%&;*]/)) &&  (senha.match(/([1-9]+)\1{1,}/)) && ((senha.match(/[a-z]+/)) && (senha.match(/[A-Z]+/)))){
             setForca(80);
         }
         mostrarForca(forca);
     }
-    
     function mostrarForca(forca){
-    
         if(forca < 30 ){
             setClassificacao("Fraca")
         }else if((forca >= 30) && (forca < 50)){
@@ -56,7 +49,6 @@ export default function Registrar() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         if(classificacao==="Forte" || classificacao==="Excelente"){
-
             if(confirmPassword===password){
                 try{
                     const description = Date.now();
@@ -78,17 +70,14 @@ export default function Registrar() {
             setErr(true)
         }
     }  
-    
-    
-
   return (
     <div className="login">
         <div className='content'>
-            <div className='logoLogin'>
-                <img className='logoImg' src='./image/u.png' alt='logo'/>
+            <div className='logoLoginRes'>
+                <img className='logoImgRes' src='./image/branca.png' alt='logo'/>
             </div>
 
-            <div className='section'>
+            <div className='sectionRES'>
                 
                 <div className='form'>
                     <form className='loginForm' onSubmit={handleSubmit}>
