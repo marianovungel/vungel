@@ -348,6 +348,7 @@
 @media (max-width: 775px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 20px;
         left: 500px;
         display: flex;
@@ -367,6 +368,7 @@
 @media (max-width: 683px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 20px;
         left: 450px;
         display: flex;
@@ -386,6 +388,7 @@
 @media (max-width: 616px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 20px;
         left: 400px;
         display: flex;
@@ -405,6 +408,7 @@
 @media (max-width: 487px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 290px;
         display: flex;
@@ -436,6 +440,7 @@
     }
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 300px;
         display: flex;
@@ -469,6 +474,7 @@
 @media (max-width: 452px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 288px;
         display: flex;
@@ -488,6 +494,7 @@
 @media (max-width: 406px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 280px;
         display: flex;
@@ -507,6 +514,7 @@
 @media (max-width: 393px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 275px;
         display: flex;
@@ -526,6 +534,7 @@
 @media (max-width: 387px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 270px;
         display: flex;
@@ -558,6 +567,7 @@
     }
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 265px;
         display: flex;
@@ -577,6 +587,7 @@
 @media (max-width: 373px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 260px;
         display: flex;
@@ -596,6 +607,7 @@
 @media (max-width: 373px){
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 250px;
         display: flex;
@@ -627,6 +639,7 @@
     }
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 245px;
         display: flex;
@@ -658,6 +671,7 @@
     }
     .ativeCadastrar{
         position: absolute;
+        position: fixed;
         top: 15px;
         left: 230px;
         display: flex;
