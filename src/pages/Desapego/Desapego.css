@@ -384,8 +384,7 @@
     .scroll{
         width: 70%;
         height: 100%;
-        scrollbar-color: #666;
-        scroll-margin-right: 80px;
+        margin-top: -30px;
     }
     .bannerDesapego{
         display: none;
@@ -445,7 +444,8 @@
         width: 70%;
         height: 100%;
         scrollbar-color: #666;
-        scroll-margin-right: 80px;
+        margin-top: -30px;
+
     }
     .buttonCad{
         color: #fff;
