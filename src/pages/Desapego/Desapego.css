@@ -384,8 +384,8 @@
     .scroll{
         width: 70%;
         height: 100%;
-        overflow-x: hidden;
-        overflow-y:hidden;
+        overflow-x:none;
+        overflow-y:none;
         scrollbar-color: #666;
         scroll-margin-right: 80px;
     }
@@ -446,8 +446,8 @@
     .scroll{
         width: 70%;
         height: 100%;
-        overflow-x: hidden;
-        overflow-y:hidden;
+        overflow-x: none;
+        overflow-y:none;
         scrollbar-color: #666;
         scroll-margin-right: 80px;
     }
