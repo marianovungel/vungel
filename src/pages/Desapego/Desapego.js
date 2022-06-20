@@ -209,7 +209,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
           {cadastrar ?(
              
               <div className='cadastrarProdutoCallForm'>
-                <div className='buttonCad' onClick={CadastrarTrue}>Cadastrar Produto ...</div>
+                <div className='buttonCad' onClick={CadastrarTrue}>Cadastrar Produto</div>
                 <div className='filtrar'>
                   <h4 className='filtrarh4'>Filtrar <i className="fa-solid fa-filter"></i></h4>
                   <div className='itemList'>
@@ -265,7 +265,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
           )}
           <div className='sidebarCardDesapego scroll'>
           <>
-    <form onSubmit={submitSearch} className='searchform'>
+      <form onSubmit={submitSearch} className='searchform'>
           <input className='searchformInportDesapego' type="search" placeholder='Pesquise...' onChange={e => setTitleSearh(e.target.value)} />
           <button type="submit" className='searchformButton'><i className="fa-solid fa-magnifying-glass colorSearch"></i></button>
       </form>
