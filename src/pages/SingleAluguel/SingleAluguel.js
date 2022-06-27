@@ -68,7 +68,7 @@ const handleDelete = async () =>{
       await api.delete(`/aluguel/${post._id}`, {
           data: { username: user.username }
       });
-      window.location.replace("/habitacao/aluguel");
+      window.location.replace("/habitacao-aluguel");
   }catch(err){
       console.log(err)
   }
@@ -80,7 +80,7 @@ const hendleUpdate = async () =>{
           title: title,
           desc: desc,
       });
-      window.location.reload('/habitacao/aluguel');
+      window.location.reload('/habitacao-aluguel');
       setEditar(false)
   }catch(err){
       console.log(err)
@@ -148,7 +148,7 @@ const FotoChengFive = ()=>{
           </div>
           <div className='butoomContent'>
             {post.username === user.username ? (
-              <Link to={`/aluguel/edit/${post?._id}`}>
+              <Link to={`/aluguel-edit/${post?._id}`}>
                 <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               </Link>
             ) : (
@@ -158,12 +158,7 @@ const FotoChengFive = ()=>{
               <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
-            )}
-            
-            
-
-            
-            
+            )} 
           </div>
           <footer className=''></footer>
         </div>

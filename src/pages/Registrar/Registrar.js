@@ -20,17 +20,20 @@ export default function Registrar() {
         var senha = password;
         setErr(false)
         setForca(0);
-        if((senha.length === 4)){
-            setForca(forca+10);
+        // if((senha.length >= 5) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
+        //     setForca(40);
+        // }
+        // if((senha.length >= 6) && (senha.match(/[@#$%&;*]/)) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
+        //     setForca(60);
+        // }
+        // if((senha.length >= 7) && (senha.match(/[@#$%&;*]/)) &&  (senha.match(/([1-9]+)\1{1,}/)) && ((senha.match(/[a-z]+/)) && (senha.match(/[A-Z]+/)))){
+        //     setForca(80);
+        // }
+        if((senha.length >= 6)){
+            setForca(forca+60);
         }
-        if((senha.length >= 5) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
-            setForca(40);
-        }
-        if((senha.length >= 6) && (senha.match(/[@#$%&;*]/)) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
-            setForca(60);
-        }
-        if((senha.length >= 7) && (senha.match(/[@#$%&;*]/)) &&  (senha.match(/([1-9]+)\1{1,}/)) && ((senha.match(/[a-z]+/)) && (senha.match(/[A-Z]+/)))){
-            setForca(80);
+        if((senha.length >= 8)){
+            setForca(79);
         }
         mostrarForca(forca);
     }

@@ -13,13 +13,13 @@ export default function Header() {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <Link to='/habitacao/aluguel' className="nav-link active" aria-current="page" href="#">Aluguel</Link>
+                <Link to='/habitacao-aluguel' className="nav-link active" aria-current="page" href="#">Aluguel</Link>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link to='/habitacao/compartilhar' className="nav-link" href="#">Compartilhamento</Link>
+                    <Link to='/habitacao-compartilhar' className="nav-link" href="#">Compartilhamento</Link>
                     </li>
                     <li className="nav-item">
-                    <Link to='/aluguel/cadastrando' className="nav-link" href="#">Divulgar Casa...</Link>
+                    <Link to='/aluguel-cadastrando' className="nav-link" href="#">Divulgar Casa...</Link>
                     </li>
                 </ul>
                 <form className="d-flex">

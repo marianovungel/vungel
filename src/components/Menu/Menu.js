@@ -42,10 +42,13 @@ export default function Menu({props}) {
                     <Link to='/' className="nav-link" href="#">Venda</Link>
                     </li>
                     <li className="nav-item">
-                    <Link to='/habitacao/aluguel' className="nav-link" href="#">Habitação</Link>
+                    <Link to='/habitacao-aluguel' className="nav-link" href="#">Habitação</Link>
                     </li>
                     <li className="nav-item">
                     <Link to='/sobre' className="nav-link" href="#">Sobre</Link>
+                    </li>
+                    <li className="nav-item" onClick={hendSair}>
+                      <i className="nav-link">Sair</i>
                     </li>
                 </ul>
                 </div>
@@ -55,7 +58,7 @@ export default function Menu({props}) {
         <ul className='menuList'>
             <Link to='/desapego'><li>Doação</li></Link>
             <Link to='/'><li>Venda</li></Link>
-            <Link to='/habitacao/aluguel'><li>Habitação</li></Link>
+            <Link to='/habitacao-aluguel'><li>Habitação</li></Link>
             <li onClick={Producao}>Oportunidades</li>
             <li onClick={Producao}>Vida na Unilab</li>
             <Link to='/sobre'><li>Sobre</li></Link>

@@ -11,13 +11,13 @@ export default function HeaderCompart() {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <Link to='/habitacao/aluguel' className="nav-link" aria-current="page" href="#" id='colorAluguelHeader'>Aluguel</Link>
+                <Link to='/habitacao-aluguel' className="nav-link" aria-current="page" href="#" id='colorAluguelHeader'>Aluguel</Link>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link to='/habitacao/compartilhar'  className="nav-link active" href="#" id='colorCompartilharHeader'>Compartilhamento</Link>
+                    <Link to='/habitacao-compartilhar'  className="nav-link active" href="#" id='colorCompartilharHeader'>Compartilhamento</Link>
                     </li>
                     <li className="nav-item">
-                    <Link to='/compartilhar/cadastrar' className="nav-link" href="#">Divulgar Casa...</Link>
+                    <Link to='/compartilhar-cadastrar' className="nav-link" href="#">Divulgar Casa...</Link>
                     </li>
                 </ul>
                 <form className="d-flex">

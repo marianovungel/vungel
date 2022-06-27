@@ -100,7 +100,7 @@ export default function CadastrarCompartilhar() {
             const res =  await api.post("/compartilhar", newPost);
             SetAddPhoto(false)
             console.log(res)
-            window.location.replace("/habitacao/compartilhar");
+            window.location.replace("/habitacao-compartilhar");
         }catch(err){}
       }
 

@@ -69,7 +69,7 @@ const handleDelete = async () =>{
       await api.delete(`/compartilhar/${post._id}`, {
           data: { username: user.username }
       });
-      window.location.replace("/habitacao/compartilhar");
+      window.location.replace("/habitacao-compartilhar");
   }catch(err){
       console.log(err)
   }
@@ -155,7 +155,7 @@ const FotoChengFive = ()=>{
           </div>
           <div className='butoomContent'>
             {post.username === user.username ? (
-              <Link to={`/compartilhar/edit/${post?._id}`}>
+              <Link to={`/compartilhar-edit/${post?._id}`}>
                   <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               </Link>
             ) : (
@@ -166,11 +166,6 @@ const FotoChengFive = ()=>{
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
             )}
-            
-            
-
-            
-            
           </div>
           <footer className=''></footer>
         </div>

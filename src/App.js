@@ -27,15 +27,14 @@ function App() {
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/desapego" component={ user ? Desapego : Login} exact />
-          <Route path="/habitacao/aluguel" component={ user ? Aluguel : Login} exact />
+          <Route path="/habitacao-aluguel" component={ user ? Aluguel : Login} exact />
           <Route path="/habitacao/aluguel/:id" component={ user ? SingleAluguel : Login} exact />
-          <Route path="/aluguel/edit/:id" component={ user ? EditAluguel : Login} exact />
-          <Route path="/compartilhar/edit/:id" component={ user ? EditCompartilhar : Login} exact />
-          <Route path="/aluguel/cadastrando" component={ user ? CadastrarAluguel : Login} exact />
-          <Route path="/habitacao/compartilhar" component={ user ? Compartilhar : Login} exact />
+          <Route path="/aluguel-edit/:id" component={ user ? EditAluguel : Login} exact />
+          <Route path="/compartilhar-edit/:id" component={ user ? EditCompartilhar : Login} exact />
+          <Route path="/aluguel-cadastrando" component={ user ? CadastrarAluguel : Login} exact />
+          <Route path="/habitacao-compartilhar" component={ user ? Compartilhar : Login} exact />
           <Route path="/habitacao/compartilhar/:id" component={ user ? SingleCompartilhar : Login} exact />
-          <Route path="/habitacao/compartilhar" component={ user ? Compartilhar : Login} exact />
-          <Route path="/compartilhar/cadastrar" component={ user ? CadastrarCompartilhar : Login} exact />
+          <Route path="/compartilhar-cadastrar" component={ user ? CadastrarCompartilhar : Login} exact />
           <Route path="/post/:id" component={user ? SingleVenda  : Login} />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} />
           <Route path="/login" component={Login} />

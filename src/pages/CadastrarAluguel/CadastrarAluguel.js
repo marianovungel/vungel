@@ -108,7 +108,7 @@ export default function CadastrarAluguel() {
             const res =  await api.post("/aluguel", newPost);
             console.log(res)
             setAlertImg(false)
-            window.location.replace("/habitacao/aluguel");
+            window.location.replace("/habitacao-aluguel");
           }else{
             setAlertImg(true)
           }
