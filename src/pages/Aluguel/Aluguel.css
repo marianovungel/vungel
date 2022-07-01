@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    
     border-bottom: 1px solid #999;
     position: fixed;
     z-index: 99;
@@ -77,6 +77,7 @@
     margin: 0px auto 12px auto;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: rgb(212, 206, 206);
     border-radius: 20px;
@@ -85,7 +86,8 @@
 
 }
 .buttonHeaderAluguela{
-    width: 340px;
+    width: 100%;
+    min-width: 50%;
     height: 45px;
     color: #fff;
     font-size: 15pt;
@@ -98,12 +100,14 @@
     transform: scale(0.95);
     background-color: rgb(35, 35, 241);
     cursor: pointer;
+    position: relative;
 }
 .descPlaceAluguel{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-right: 5px;
 }
 .ajustPositionDesc{
     display: flex;
@@ -111,6 +115,10 @@
     justify-content: center;
     width: 100%;
     margin-left: 35px;
+}
+.buttomContentInfo{
+    padding: 5px;
+    width: 100%;
 }
 .imgAluguelCard{
     border-radius: 20px;
@@ -120,4 +128,125 @@
 #alugarCasa{
     background-color: black;
     color: rgb(225, 222, 222);
+}
+@media(max-width: 889px){
+    .contentSideBar{
+        width: 60%;
+        margin: 150px auto 0px auto;
+    }
+    .cardAluguel{
+        width: 100%;
+        margin: 0px auto 12px auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgb(212, 206, 206);
+        border-radius: 20px;
+        padding: 3px;
+        box-shadow: 1px 1px 0px #666;
+    
+    }
+}
+@media(max-width: 750px){
+    .contentSideBar{
+        width: 70%;
+        margin: 150px auto 0px auto;
+    }
+    .cardAluguel{
+        width: 100%;
+        margin: 0px auto 12px auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgb(212, 206, 206);
+        border-radius: 20px;
+        padding: 3px;
+        box-shadow: 1px 1px 0px #666;
+    
+    }
+}
+@media(max-width: 650px){
+    .contentSideBar{
+        width: 80%;
+        margin: 150px auto 0px auto;
+    }
+    .cardAluguel{
+        width: 100%;
+        margin: 0px auto 12px auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgb(212, 206, 206);
+        border-radius: 20px;
+        padding: 3px;
+        box-shadow: 1px 1px 0px #666;
+    
+    }
+}
+@media(max-width: 550px){
+    .contentSideBar{
+        width: 90%;
+        margin: 150px auto 0px auto;
+    }
+    .cardAluguel{
+        width: 100%;
+        margin: 0px auto 12px auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgb(212, 206, 206);
+        border-radius: 20px;
+        padding: 3px;
+        box-shadow: 1px 1px 0px #666;
+    
+    }
+}
+@media(max-width: 474px){
+    .contentSideBar{
+        width: 70%;
+        margin: 150px auto 0px auto;
+    }
+    .imgAluguelCard{
+        border-radius: 20px;
+        width: 100%;
+        height: 300px;
+    }
+    .descPlaceAluguel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .editP{
+        font-size: 12pt;
+    }
+}
+@media(max-width: 350px){
+    .contentSideBar{
+        width: 80%;
+        margin: 150px auto 0px auto;
+    }
+}
+@media(max-width: 300px){
+    .contentSideBar{
+        width: 90%;
+        margin: 150px auto 0px auto;
+    }
+    .cardAluguel{
+        width: 100%;
+        margin: 0px auto 12px auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgb(212, 206, 206);
+        border-radius: 20px;
+        padding: 3px;
+        box-shadow: 1px 1px 0px #666;
+    
+    }
 }

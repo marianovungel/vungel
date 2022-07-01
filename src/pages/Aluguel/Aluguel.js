@@ -8,7 +8,7 @@ import Header from '../../components/Header/Header'
 
 export default function Aluguel() {
 
-    const [aluguel, setAluguel] = useState([]);;
+    const [aluguel, setAluguel] = useState([]);
     useEffect(()=>{
         const FetchDesapego = async () => {
             try{
@@ -18,7 +18,6 @@ export default function Aluguel() {
                 console.log(err)
             }
         }
-    
         FetchDesapego();
     }, [])
 
@@ -38,12 +37,14 @@ export default function Aluguel() {
                 <img className='imgAluguelCard' src={URLImg + p.photo1} alt='' />
                 <div className='descPlaceAluguel'>
                     <div className='ajustPositionDesc'>
-                        <p><i>Categoria</i>: <b>{p.categories}</b></p>
-                        <p><i>Cidade</i>: <b>{p.cidade}</b></p>
-                        <p><i>Preço</i>: <b>R${p.preco}</b></p>
-                        <p><i>Status</i>: <b>Desponível</b></p>
+                        <p className='editP'><i>Categoria</i>: <b>{p.categories}</b></p>
+                        <p className='editP'><i>Cidade</i>: <b>{p.cidade}</b></p>
+                        <p className='editP'><i>Preço</i>: <b>R${p.preco}</b></p>
+                        <p className='editP'><i>Status</i>: <b>Desponível</b></p>
                     </div>
-                    <Link to={`/habitacao/aluguel/${p?._id}`}><button className='buttonHeaderAluguela'>Mais informações</button></Link>
+                    <div className='buttomContentInfo'>
+                        <Link to={`/habitacao/aluguel/${p?._id}`}><button className='buttonHeaderAluguela'>Mais informações</button></Link>
+                    </div>
                 </div>
             </div>
             ))}
