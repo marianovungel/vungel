@@ -1,0 +1,26 @@
+.menuBootstrap{
+    background-color: #193498;
+}
+.braca{
+    color: #fff;
+    border: none;
+}
+.logoBootstrap{
+    width: 70px;
+    height: 70px;
+    margin-top: -70px;
+}
+@media(max-width: 775px){
+    .headerAluguel{
+        display: none;
+    }
+    .OI{
+        display: none;
+    }
+    .menuBootstrap{
+        background-color: #193498;
+    }
+    .contentSideBar{
+        margin-top: 10px;
+    }
+}

@@ -17,6 +17,7 @@ import SingleCompartilhar from './pages/SingleCompartilhar/SingleCompartilhar';
 import Sobre from './pages/Sobre/Sobre';
 import EditAluguel from './pages/EditAluguel/EditAluguel';
 import EditCompartilhar from './pages/EditCompartilhar/EditCompartilhar';
+import Exe from './pages/exe/Exe';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/compartilhar-cadastrar" component={ user ? CadastrarCompartilhar : Login} exact />
           <Route path="/post/:id" component={user ? SingleVenda  : Login} />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} />
+          <Route path="/exe" component={user ? Exe  : Login} />
           <Route path="/login" component={Login} />
           <Route path="/sobre" component={Sobre} />
           <Route path="/registrar" component={Registrar} />
