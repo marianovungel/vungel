@@ -25,7 +25,7 @@ function App() {
   const {user} = useContext(Context);
 
   return (
-      <Router basename='/tothepoint_login'>
+      <Router basename='/tothepoint_login/'>
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/desapego" component={ user ? Desapego : Login} exact />
