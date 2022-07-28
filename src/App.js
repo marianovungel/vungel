@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {useContext} from 'react'
 import {Context} from './Context/Context'
 import Venda from './pages/Venda/Venda'
@@ -18,13 +18,14 @@ import Sobre from './pages/Sobre/Sobre';
 import EditAluguel from './pages/EditAluguel/EditAluguel';
 import EditCompartilhar from './pages/EditCompartilhar/EditCompartilhar';
 import Exe from './pages/exe/Exe';
+import ExeComp from './pages/ExeComp/ExeComp';
 
 function App() {
 
   const {user} = useContext(Context);
 
   return (
-      <BrowserRouter>
+      <Router basename='/tothepoint_login'>
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/desapego" component={ user ? Desapego : Login} exact />
@@ -39,11 +40,12 @@ function App() {
           <Route path="/post/:id" component={user ? SingleVenda  : Login} />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} />
           <Route path="/exe" component={user ? Exe  : Login} />
+          <Route path="/execomp" component={user ? ExeComp  : Login} />
           <Route path="/login" component={Login} />
           <Route path="/sobre" component={Sobre} />
           <Route path="/registrar" component={Registrar} />
         </Switch>
-      </BrowserRouter>
+      </Router>
   );
 }
 

@@ -10,6 +10,9 @@
     height: 70px;
     margin-top: -70px;
 }
+.colorBranca{
+    color: #fff;
+}
 @media(max-width: 775px){
     .headerAluguel{
         display: none;
@@ -22,5 +25,17 @@
     }
     .contentSideBar{
         margin-top: 10px;
+    }
+}
+@media(min-width: 775px){
+    .contentSideBar{
+        margin-top: 100px;
+    }
+}
+@media(max-width: 458px){
+    .logoBootstrap{
+        width: 70px;
+        height: 70px;
+        margin-top: -20px;
     }
 }

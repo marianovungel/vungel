@@ -1,31 +1,32 @@
 import React from 'react'
-import './exe.css'
 import Menu from '../../components/Menu/Menu'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import api from '../../services/api'
-import Header from '../../components/Header/Header'
+import HeaderCompart from '../../components/HeaderCompart/HeaderCompart'
 
-export default function Exe() {
+export default function ExeComp() {
 
-    const [aluguel, setAluguel] = useState([]);
+    const [compartilhar, setCompartilhamento] = useState([]);;
     useEffect(()=>{
         const FetchDesapego = async () => {
             try{
-                const res = await api.get("/aluguel")
-                setAluguel(res.data);
+                const res = await api.get("/compartilhar")
+                setCompartilhamento(res.data);
             }catch(err){
                 console.log(err)
             }
         }
+    
         FetchDesapego();
     }, [])
 
-    console.log(aluguel)
+    console.log(compartilhar)
     const URLImg = "https://festupload.s3.amazonaws.com/";
-    //bg-light
+
   return (
-    <div className='fullContentAluguel'>
+    <div>
+        <div className='fullContentAluguel'>
         <div className='OI' >
             <Menu />
         </div>
@@ -43,16 +44,16 @@ export default function Exe() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active" aria-current="page" to="/desapego">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                <Link className="nav-link" to="/venda">Venda</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                <Link className="nav-link" to="/sobre">Sobre</Link>
                 </li>
                 <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <Link className="nav-link dropdown-toggle" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Habitação
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -68,27 +69,26 @@ export default function Exe() {
         </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
-            <Header />
+            <HeaderCompart />
             </div>
         </header>
         <div className='contentSideBar'>
-            {aluguel.map((p)=>(
+            {compartilhar?.map((p)=>(
                 <div className='cardAluguel' key={p?._id}>
                 <img className='imgAluguelCard' src={URLImg + p.photo1} alt='' />
                 <div className='descPlaceAluguel'>
                     <div className='ajustPositionDesc'>
-                        <p className='editP'><i>Categoria</i>: <b>{p.categories}</b></p>
-                        <p className='editP'><i>Cidade</i>: <b>{p.cidade}</b></p>
-                        <p className='editP'><i>Preço</i>: <b>R${p.preco}</b></p>
-                        <p className='editP'><i>Status</i>: <b>Desponível</b></p>
+                        <p><i>Categoria</i>: <b>{p.categories}</b></p>
+                        <p><i>Cidade</i>: <b>{p.cidade}</b></p>
+                        <p><i>Preço</i>: <b>R${p.preco}</b></p>
+                        <p><i>Status</i>: <b>Desponível</b></p>
                     </div>
-                    <div className='buttomContentInfo'>
-                        <Link to={`/habitacao/aluguel/${p?._id}`}><button className='buttonHeaderAluguela'>Mais informações</button></Link>
-                    </div>
+                    <Link to={`/habitacao/compartilhar/${p?._id}`}><button className='buttonHeaderAluguela'>Mais informações</button></Link>
                 </div>
             </div>
             ))}
-        </div>
+    </div>
+    </div>
     </div>
   )
 }
