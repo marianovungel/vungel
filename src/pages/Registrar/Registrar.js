@@ -48,13 +48,12 @@ export default function Registrar() {
         if(classificacao==="Forte" || classificacao==="Excelente"){
             if(confirmPassword===password){
                 try{
-                    const res = await api.post("/auth/router/register", {
+                    await api.post("/auth/router/register", {
                         username: username,
                         email: email,
                         whatsapp: whatsapp,
                         password: password
                     })
-                    console.log(res)
                     history.goBack()
                 }catch(err){
                     seterror(true)

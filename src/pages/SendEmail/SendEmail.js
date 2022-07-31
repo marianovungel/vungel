@@ -41,8 +41,6 @@ export default function SendEmail() {
             const inval = await api.post("/auth/router/usersearch", {
                 to: email
             })
-            console.log(inval.data)
-            console.log(typeof(inval.data))
             if(inval.data === textinv){
                 const codigoRequest = await api.post("/auth/router/sendemail", {
                     to: email,
@@ -57,14 +55,11 @@ export default function SendEmail() {
                 setInvalid(true)
             }   
         }catch(err){
-            console.log(err)
         }
     }
 
     const ConfEmail = async (e) => {
         e.preventDefault()
-        console.log(newCod)
-        console.log(conf)
         try{
             const valores = parseInt(conf)
             if(newCod === valores){
@@ -82,11 +77,10 @@ export default function SendEmail() {
 
     const ResetSenha = async (e)=>{
         e.preventDefault()
-        console.log(user)
         if(pSenha === sSenha){
             setConfDiferente(false)
             try{
-                const youUser = await api.put(`/users/${user._id}`, {
+                await api.put(`/users/${user._id}`, {
                     password: pSenha,
                     userId: user._id
                 })
@@ -98,7 +92,6 @@ export default function SendEmail() {
                     timer: 1500
                   })
                   window.location.replace("/");
-                console.log(youUser)
             }catch(err){
                 alert(err)
             }
