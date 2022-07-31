@@ -19,13 +19,14 @@ import EditAluguel from './pages/EditAluguel/EditAluguel';
 import EditCompartilhar from './pages/EditCompartilhar/EditCompartilhar';
 import Exe from './pages/exe/Exe';
 import ExeComp from './pages/ExeComp/ExeComp';
+import SendEmail from './pages/SendEmail/SendEmail';
 
 function App() {
 
   const {user} = useContext(Context);
 
   return (
-      <Router basename='/tothepoint_login/'>
+      <Router>
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/desapego" component={ user ? Desapego : Login} exact />
@@ -42,6 +43,7 @@ function App() {
           <Route path="/exe" component={user ? Exe  : Login} />
           <Route path="/execomp" component={user ? ExeComp  : Login} />
           <Route path="/login" component={Login} />
+          <Route path="/sendemail" component={SendEmail} />
           <Route path="/sobre" component={Sobre} />
           <Route path="/registrar" component={Registrar} />
         </Switch>

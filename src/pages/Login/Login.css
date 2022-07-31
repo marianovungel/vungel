@@ -1,7 +1,26 @@
-.login{
+.loginLogin{
+    margin-top: -20px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #193498;
+}
+.form{
+    width: 100%;
+    height: 80vh;
+}
+
+.registrarAndFogat{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.fogatPass{
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
 }
 .content{
     width: 60%;
@@ -26,17 +45,45 @@
     justify-content: center;
     align-items: center;
 }
-.loginForm{
-    background-color: #F6F3F3;
-    width: 360px;
-    height: 310px;
+#Valilaclass{
+    width: 420px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    background-color: wheat;
+    z-index: 0;
+    padding: 0px;
+}
+.logoImgLoginsystem{
+    width: 100px;
+    height: 60px;
+}
+.valillaTilt{
+    width: 420px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(53, 49, 99, 0.5) solid 1px;
+    margin-top: 0px;
+    background-color: wheat;
+    z-index: 99;
+}
+.loginForm{
+    width: 420px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
     box-shadow: rgba(53, 49, 99, 0.5) solid 1px;
     margin-top: 30px;
+    background-color: wheat;
 }
 .inputLogin{
     width: 80%;

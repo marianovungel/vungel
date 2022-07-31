@@ -27,7 +27,7 @@ export default function Login() {
     }
 
   return (
-    <div className="login">
+    <div className="loginLogin">
         <div className='content'>
             <div className='logoLoginRes'>
                 <img className='logoImgRes' src='./image/branca.png' alt='logo'/>
@@ -36,13 +36,21 @@ export default function Login() {
             <div className='sectionRES'>
                 <div className='form'>
                     <form className='loginForm' onSubmit={handleSubmit}>
-                        <h2 id='h2Margin'>LOGIN</h2>
-                        <input className='inputLogin' type='text' placeholder=' User' ref={userRef} />
-                        <input className='inputLogin' type='password' placeholder=' Password' minLength='4' ref={passwordRef} />
-                        <button className='inputLogin entrarbutton' type='submit' disabled={isFetching}>Sing In</button>
-                        <Link to='/registrar'><i className='TermosCreate' id='nawCreate'>Criar conta</i></Link>
+                            <div className='valillaTilt'>
+                                <h2 id='h2Margin'>LOGIN</h2>
+                                <input className='inputLogin' type='text' placeholder=' User' ref={userRef} minLength="2" required />
+                                <input className='inputLogin' type='password' placeholder=' Password' minLength='4' ref={passwordRef} required/>
+                                <button className='inputLogin entrarbutton' type='submit' disabled={isFetching}>Sing In</button>
+                                <div className='registrarAndFogat'>
+                                    <Link to='/registrar'><i className='TermosCreate' id='nawCreate'>Criar conta</i></Link>
+                                    <Link to='/sendemail'>
+                                        <button className='fogatPass'>Esqueceu a senha?</button>
+                                    </Link>
+                                </div>
+                            </div>
                     </form>
                     <div className='criar'>
+                    
                         <h6 className='Termos'><Link to='#'>Termos e Políticas de uso da aplicação</Link></h6>
                     </div>
                 </div>
