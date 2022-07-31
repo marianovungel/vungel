@@ -43,7 +43,7 @@ export default function Login() {
                                 <button className='inputLogin entrarbutton' type='submit' disabled={isFetching}>Sing In</button>
                                 <div className='registrarAndFogat'>
                                     <Link to='/registrar'><i className='TermosCreate' id='nawCreate'>Criar conta</i></Link>
-                                    <Link to='/sendemail'>
+                                    <Link to='/sendemail' className='fogatPass'>
                                         <button className='fogatPass'>Esqueceu a senha?</button>
                                     </Link>
                                 </div>

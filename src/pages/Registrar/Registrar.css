@@ -254,7 +254,7 @@
 }
 @media (max-width: 440px){
     #Valilaclass{
-        width: 30px;
+        width: 330px;
         height: 200px;
         display: flex;
         flex-direction: column;
@@ -281,7 +281,7 @@
         height: 80vh;
     }
     .valillaTilt{
-        width: 300px;
+        width: 370px;
         height: 450px;
         display: flex;
         flex-direction: column;
@@ -294,7 +294,7 @@
         z-index: 99;
     }
     .loginForm{
-        width: 300px;
+        width: 370px;
         height: 450px;
         display: flex;
         flex-direction: column;
@@ -317,7 +317,7 @@
 }
 @media (max-width: 400px){
     #Valilaclass{
-        width: 30px;
+        width: 300px;
         height: 200px;
         display: flex;
         flex-direction: column;
@@ -407,7 +407,7 @@
 }
 @media (max-width: 330px){
     #Valilaclass{
-        width: 30px;
+        width: 300px;
         height: 200px;
         display: flex;
         flex-direction: column;

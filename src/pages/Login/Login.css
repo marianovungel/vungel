@@ -19,10 +19,14 @@
 }
 .fogatPass{
     width: 150px;
-    height: 40px;
+    height: 50px;
     color: #fff;
+    font-size: 12px;
     background-color: #000;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .content{
     width: 60%;
