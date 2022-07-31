@@ -14,31 +14,29 @@
       content="Web site created using create-react-app"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
+    
     <title>Unilabtem</title>
     <style>
       body{
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         outline: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
         /* background-color: #193498; */
         background-color: #F6F3F3;
       }
-      html, body, #root{
+      html{
         height: 100%;
+        width: 100%;
+      }
+      body{
+        height: 100%;
+        width: 100%;
+      }
+      #root{
+        height: 100%;
+        width: 100%;
       }
       a{
         text-decoration: none;

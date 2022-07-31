@@ -22,15 +22,7 @@ export default function Registrar() {
         var senha = password;
         setErr(false)
         setForca(0);
-        // if((senha.length >= 5) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
-        //     setForca(40);
-        // }
-        // if((senha.length >= 6) && (senha.match(/[@#$%&;*]/)) && ((senha.match(/[a-z]+/)) || (senha.match(/[A-Z]+/))) ){
-        //     setForca(60);
-        // }
-        // if((senha.length >= 7) && (senha.match(/[@#$%&;*]/)) &&  (senha.match(/([1-9]+)\1{1,}/)) && ((senha.match(/[a-z]+/)) && (senha.match(/[A-Z]+/)))){
-        //     setForca(80);
-        // }
+        
         if((senha.length >= 6)){
             setForca(forca+60);
         }
@@ -78,7 +70,6 @@ export default function Registrar() {
     <div className="loginRegistrar">
         <div className='content'>
             <div className='logoLoginRes'>
-                <img className='logoImgRes' src='./image/branca.png' alt='logo'/>
             </div>
 
             <div className='sectionREgistrar'>
@@ -86,7 +77,7 @@ export default function Registrar() {
                 <div className='formregistrar'>
                     
 
-                    <form className='loginFormregister' onSubmit={handleSubmit}>
+                    <form className='loginFormregister animation' onSubmit={handleSubmit}>
                     <Vanilla id="Valilaclass">
                         <div className='valillaTilt'>
                             <h2 className='h2CriarConta'>Criar conta</h2>
