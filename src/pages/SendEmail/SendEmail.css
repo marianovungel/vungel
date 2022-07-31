@@ -24,6 +24,13 @@
     border: 1px solid #666;
     box-shadow: 1px 1px 1px 1px rgba(6, 6, 6, 0.8);
     padding: 10px;
+    animation-name: scalimentarx;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+@keyframes scalimentarx{
+    from{ transform: scale(0)}
+    to{ transform: scale(1)}
 }
 .enterEmailInput{
     width: 35%;
@@ -38,6 +45,13 @@
     border: 1px solid #666;
     box-shadow: 1px 1px 1px 1px rgba(6, 6, 6, 0.8);
     padding: 10px;
+    animation-name: scalimentarinput;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes scalimentarinput{
+    from{ transform: rotateY(360deg)}
+    to{ transform: rotateY(0deg)}
 }
 .enterEmailConfirm{
     width: 35%;
@@ -51,6 +65,13 @@
     border-radius: 10px;
     border: 1px solid #666;
     box-shadow: 1px 1px 1px 1px rgba(6, 6, 6, 0.8);
+    animation-name: scalimentarconfirm;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes scalimentarconfirm{
+    from{ transform: rotate(360deg) scale(0.2)}
+    to{ transform: rotate(0deg) scale(1)}
 }
 .imgenterEmail{
     margin-top: -20px;

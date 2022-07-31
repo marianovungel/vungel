@@ -115,7 +115,7 @@ export default function SendEmail() {
             <h4 className='h4enterEmail'>Recuperar Senha...</h4>
             <input type='email' className='inputEnterEmail' placeholder='Digite seu email...' minLength="9" onChange={(e)=> setEmail(e.target.value)} required />
             <div className='buttonsEnterEmail'>
-                <div className='cancelEnterEmail cancelColor'>Cancelar</div>
+            <Link to='/login' className='cancelEnterEmail cancelColor'><i>Cancelar</i></Link>
                 <button className='cancelEnterEmail receberColor' type='submit'>Receber Código</button>
             </div>
             {invalid && <i className='cod'>Não existe usuário cadastrado com este email!</i>}

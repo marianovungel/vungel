@@ -48,7 +48,7 @@
     animation-fill-mode: both;
 }
 @keyframes movimentarx{
-    from{ transform: translateX(-300px)}
+    from{ transform: translateX(-1100px)}
     to{ transform: translateX(0px)}
 }
 #Valilaclass{
