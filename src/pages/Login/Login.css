@@ -5,6 +5,12 @@
     /* background-color: #193498; */
     margin: 0px;
 }
+.checkuser{
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
 
 .form{
     width: 100%;
