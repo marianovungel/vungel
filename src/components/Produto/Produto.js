@@ -21,6 +21,7 @@ export default function Produto() {
     try{
       const response = await api.get('/produto');
       const res = response.data;
+      console.log(res)
       if(res.error){
         alert(res.message);
         return false;
@@ -33,7 +34,6 @@ export default function Produto() {
       setProdutoVenda(res);
       setVazio(false)
       setCarregar(false)
-      console.log(res)
 
     }catch(err){
       alert(err.message);
@@ -53,7 +53,6 @@ export default function Produto() {
       setCarregar(false)
       setProdutoVenda([])
     }else{
-      console.log(results.data)
       setProdutoVenda(results.data)
       setVazio(false)
       setCarregar(false)
@@ -66,13 +65,13 @@ export default function Produto() {
     <>
         <form onSubmit={submitSearch} className='searchform'>
           <input className='searchformInport' type="search" placeholder='Pesquise...' onChange={e => setTitle(e.target.value)} />
-          <button type="submit" className='searchformButton'><i class="fa-solid fa-magnifying-glass colorSearch"></i></button>
+          <button type="submit" className='searchformButton'><i className="fa-solid fa-magnifying-glass colorSearch"></i></button>
         </form>
       {vazio && (<div className='Encontrar'><h5>Nenhum Produto encontrado ...</h5></div>)}
       {carregar && (<div className='Encontrar'><h5>Carregando ...</h5></div>)}
 
         {produtoVenda?.map((post)=>(
-          <Link className="titleColor" to={`/post/${post?._id}`}>
+          <Link className="titleColor" to={`/post/${post?._id}`} key={post._id}>
             {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
           <div className="Produto" key={post?.photo}>
             <div className='imgProduto' id='Produto'>

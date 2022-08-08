@@ -53,7 +53,7 @@ export default function Login() {
     <div className="loginLogin">
         <div className='content'>
             <div className='logoLoginRes'>
-                <img className='logoImgRes' src='./image/branca.png' alt='logo'/>
+                <img className='logoImgRes' src='./image/branca.png' alt=''/>
             </div>
 
             <div className='sectionRES'>

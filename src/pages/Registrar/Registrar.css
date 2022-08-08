@@ -5,6 +5,10 @@
     background-color: #193498;
     margin-top: -20px;
 }
+.imgregister{
+    height: 78px;
+    text-align: center;
+}
 .animation{
     transform: translatex(-1000px);
 }
@@ -34,7 +38,7 @@
 }
 .loginFormregister{
     width: 420px;
-    height: 450px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;

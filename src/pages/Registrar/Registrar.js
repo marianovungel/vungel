@@ -1,9 +1,8 @@
 import React from 'react'
 import './Registrar.css'
 import {Link, useHistory} from 'react-router-dom'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import api from '../../services/api.js'
-import Vanilla from 'react-vanilla-tilt'
 
 export default function Registrar() {
 
@@ -14,11 +13,55 @@ export default function Registrar() {
     const [password, setPassword] = useState("")
     const [classificacao, setClassificacao] = useState("")
     const [error, seterror] = useState(false)
+    const [creden, setCreden] = useState(false)
     const [err, setErr] = useState(false)
     const [confirmPassword, setConfirmPassword] = useState("")
+    const [ale, setAle] = useState(false)
+    const [aleEmail, setAleEmail] = useState(false)
     const history = useHistory()
+    var checkValid = false;
+    var checkValidEmail = false;
+
+    useEffect(()=>{
+        setAle(false)
+        setAleEmail(false)
+    }, [])
+
+    const chackUser = async (e)=>{
+        setCreden(false)
+        checkValid = false;
+        try{
+            const result = await api.post("/auth/router/checkuser", {
+                username: username,
+            })
+            if(result.data){
+                checkValid = true;
+            }
+            setAle(checkValid)
+        }catch(err){
+            checkValid = true;
+            setAle(checkValid)
+        }
+    }
+    const chackEmail = async (e)=>{
+        setCreden(false)
+        checkValidEmail = false;
+        try{
+            const resultados = await api.post("/auth/router/usersearch", {
+                to: email,
+            })
+            if(resultados.data){
+                checkValidEmail = true;
+            }
+            setAleEmail(checkValidEmail)
+        }catch(err){
+            checkValidEmail = true;
+            setAleEmail(checkValidEmail)
+        }
+    }
 
     function validarSenhaForca(){
+        setCreden(false)
         var senha = password;
         setErr(false)
         setForca(0);
@@ -45,18 +88,23 @@ export default function Registrar() {
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        setCreden(false)
         if(classificacao==="Forte" || classificacao==="Excelente"){
             if(confirmPassword===password){
-                try{
-                    await api.post("/auth/router/register", {
-                        username: username,
-                        email: email,
-                        whatsapp: whatsapp,
-                        password: password
-                    })
-                    history.goBack()
-                }catch(err){
-                    seterror(true)
+                if(ale === false || aleEmail === false){
+                    try{
+                        await api.post("/auth/router/register", {
+                            username: username,
+                            email: email,
+                            whatsapp: whatsapp,
+                            password: password
+                        })
+                        history.goBack()
+                    }catch(err){
+                        setCreden(true)
+                    }
+                }else{
+                    setCreden(true)
                 }
             }else{
                 seterror(true)
@@ -74,21 +122,21 @@ export default function Registrar() {
             <div className='sectionREgistrar'>
                 
                 <div className='formregistrar'>
-                    
 
                     <form className='loginFormregister animation' onSubmit={handleSubmit}>
-                    <Vanilla id="Valilaclass">
+                    
                         <div className='valillaTilt'>
+                            
                             <h2 className='h2CriarConta'>Criar conta</h2>
-                            <input className='inputLogin' type='text' placeholder='  User' onChange={e=>setUsername(e.target.value)} />
-                            <input className='inputLogin' type='email' placeholder='  your email' onChange={e=>setEmail(e.target.value)} />
-                            <input className='inputLogin' type='Number' placeholder='  8599139-2625' onChange={e=>setWhatsapp(e.target.value)} />
+                            <input className='inputLogin' type='text' placeholder='  User' onChange={e=>setUsername(e.target.value)} onBlur={chackUser} />
+                            <input className='inputLogin' type='email' placeholder='  your email' onChange={e=>setEmail(e.target.value)} onBlur={chackEmail} />
+                            <input className='inputLogin' type='Number' placeholder='  Celular' minLength='9' onChange={e=>setWhatsapp(e.target.value)} />
                             <input className='inputLogin' onKeyUp={validarSenhaForca} type='password' placeholder='  Password' minLength='4' onChange={e=>setPassword(e.target.value)} />
                             <input className='inputLogin' type='password' placeholder='  Confirme a Senha...' onChange={e=>setConfirmPassword(e.target.value)} />
                             <button className='inputLogin entrarbutton' type='submit'>Registrar</button>
                             <h5 className='h6loginregistrar'><Link to='/' className='h6loginregistrar'>Login</Link></h5>
+                            
                         </div>
-                        </Vanilla>
                     </form>
                     
                     {error && <h3 className='errRegister'>Confirme Corretamente a sua Senha!</h3>}
@@ -97,8 +145,11 @@ export default function Registrar() {
                     {classificacao==="Média" && <h3 className='errRegister2'>Senha: {classificacao}</h3>}
                     {classificacao==="Forte" && <h3 className='errRegister3'>Senha: {classificacao}</h3>}
                     {classificacao==="Excelente" && <h3 className='errRegister4'>Senha: {classificacao}</h3>}
+                    {ale && <h3 className='errRegister'>Já existe usuário registrado com este nome!</h3>}
+                    {aleEmail && <h3 className='errRegister'>Já existe usuário registrado com este email!</h3>}
+                    {creden && <h3 className='errRegister'>Credências inválidas!</h3>}
                     <div className='criar'>
-                        <h6 className='Termos'><Link to='#'>Termos e Políticas</Link></h6>
+                        <div className='Termos'><Link to='#'></Link></div>
                          
                     </div>
                 </div>

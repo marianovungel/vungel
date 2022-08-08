@@ -118,7 +118,7 @@ export default function SendEmail() {
             <form className='enterEmailConfirm' onSubmit={ConfEmail}>
                 <img src='./image/preta.png' alt='' className='imgenterEmail'/>
                 <h4 className='h4enterEmail'>Recuperar Senha...</h4>
-                <p className='penterEmail'>Acabamos de efetuar o enviar um Email com o Código de confirmação no email: </p>
+                <p className='penterEmail'>Acabamos de enviar o código de verificação no email: {email} </p>
                 <input type='number' className='inputEnterEmail' placeholder='Digite o codigo enviado...' minLength="6" onChange={(e)=> setConf(e.target.value)} required />
                 <div className='buttonsEnterEmailSecund'>
                     <div className='vidSeparadora'>
