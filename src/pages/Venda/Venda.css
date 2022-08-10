@@ -6,6 +6,13 @@
     border-radius: 10px 10px 0px 0px;
     flex-direction: row;
     justify-content: center;
+    margin-top: -60px;
+}
+#ativ{
+    cursor: pointer;
+}
+#cancelform{
+    cursor: pointer;
 }
 .sidebar{
     position: relative;
@@ -19,25 +26,25 @@
     border-radius: 10px;
     margin-left: 68px;
 }
-.cadastrarProduto{
-    position: relative;
-    width: 320px;
-    height: 100vh;
-    
-}
+
 #textArea{
     padding: 10px;
 }
-.formProduto{
-    position: relative;
+.cadastrarProdutonew{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.formProdutonew{
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 450px;
+    width: 35%;
     background-color: #193498;
-    margin: 20px 10px 0px 20px;
+    margin: 120px auto 0px auto;
     border-radius: 10px;
 }
 #shoop{
@@ -97,44 +104,49 @@
     margin-top: 20px;
     color: #fff;
 }
-.produtoFormModal{
+.produtoFormModalnew{
     color: #fff;
-    margin: 20px 0px 20px 0px;
+    margin-bottom: 30px;
 }
 .colorbutton{
     background-color: #69DADB;
     color: #fff;
 }
-.inputProduto{
-    width: 90%;
-    height: 40px;
+.inputProdutonew{
+    width: 80%;
+    height: 50px;
     border: none;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1px 2px 1px 2px;
 }
-.story{
+.storynew{
     margin-top: 20px;
     border-radius: 20px;
-    max-width: 280px;
+    max-width: 80%;
     min-width: 100px;
-    width: 100px;
+    width: 80%;
     height: 100px;
     max-height: 100px;
     min-height: 100px;
     border: none;
+    border-radius: 5px;
     width: 90%;
     padding: 1px 2px 1px 2px;
 }
 .imgPostPreviw{
-    width: 10xpx;
+    width: 100px;
     height: 100px;
 }
-.imgInputContent{
-    width: 90%;
+.imgInputContentnew{
+    width: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0px;
 }
-.todosProdutos{
+.todosProdutosnew{
     color: #fff;
+    margin-top: 30px;
 }
 .ativeCadastrar{
     position: absolute;
@@ -152,15 +164,7 @@
 }
 
 
-@media (min-width: 576px){
 
-}
-@media (min-width: 768px){
-
-}
-@media (min-width: 992px){
-
-}
 @media (min-width: 1120px){
     .sidebar{
         position: relative;
@@ -174,21 +178,20 @@
         border-radius: 10px;
         margin-left: 80px;
     }
-}
-@media (min-width: 945px){
-    .sidebar{
-        position: relative;
-        height: 100%;
-        background-color: #F6F3F3;
-        min-width: 300px;
-        width: 100%;
-        margin: 75px auto 0px auto;
+    .formProdutonew{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
-        margin-left: 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
+
 @media (max-width: 1074px){
     .sidebar{
         position: relative;
@@ -219,17 +222,123 @@
         border-radius: 10px;
         color: #fff;
     }
-    .formProduto{
-        position: relative;
+    .formProdutonew{
         display: flex;
         flex-direction: column;
-        justify-content:flex-start;
+        justify-content: center;
         align-items: center;
-        width: 300px;
-        height: 450px;
+        width: 45%;
         background-color: #193498;
-        margin: 120px 10px 0px 20px;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 947px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 10%px;
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media (min-width: 945px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 80px;
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 885px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 130px;
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 885px){
+    .sidebar{
+        position: relative;
+        height: 100%;
+        background-color: #F6F3F3;
+        min-width: 300px;
+        width: 100%;
+        margin: 75px auto 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-left: 100px;
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 831px){
@@ -262,59 +371,17 @@
         border-radius: 10px;
         color: #fff;
     }
-    .formProduto{
-        position: relative;
+    .formProdutonew{
         display: flex;
         flex-direction: column;
-        justify-content:flex-start;
+        justify-content: center;
         align-items: center;
-        width: 300px;
-        height: 450px;
+        width: 60%;
         background-color: #193498;
-        margin: 120px 10px 0px 20px;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
-    }
-}
-@media (max-width: 947px){
-    .sidebar{
-        position: relative;
-        height: 100%;
-        background-color: #F6F3F3;
-        min-width: 300px;
-        width: 100%;
-        margin: 75px auto 0px auto;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 10px;
-        margin-left: 10%px;
-    }
-}
-@media (max-width: 885px){
-    .sidebar{
-        position: relative;
-        height: 100%;
-        background-color: #F6F3F3;
-        min-width: 300px;
-        width: 100%;
-        margin: 75px auto 0px auto;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 10px;
-        margin-left: 130px;
-    }
-}
-@media (max-width: 885px){
-    .sidebar{
-        position: relative;
-        height: 100%;
-        background-color: #F6F3F3;
-        min-width: 300px;
-        width: 100%;
-        margin: 75px auto 0px auto;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 10px;
-        margin-left: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 804px){
@@ -330,6 +397,18 @@
         border-radius: 10px;
         margin-left: 70px;
     }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 @media (max-width: 775px){
     .sidebar{
@@ -344,87 +423,58 @@
         border-radius: 10px;
         margin-left: 50px;
     }
+    .ativeCadastrar{
+        display: none;
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 @media (max-width: 775px){
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 20px;
-        left: 500px;
+        display: none;
+    }
+    .formProdutonew{
         display: flex;
-        justify-content:center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        /* background-color: #193498; */
-        background-color: red;
+        width: 77%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 683px){
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 20px;
-        left: 450px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
     }
-}
-@media (max-width: 616px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 20px;
-        left: 400px;
+    .formProdutonew{
         display: flex;
-        justify-content:center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        /* background-color: #193498; */
-        background-color: red;
+        width: 80%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
-@media (max-width: 487px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 290px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
 
-    }
-}
 @media (max-width: 470px){
     .sidebar{
         position: relative;
@@ -439,22 +489,20 @@
         margin-left: 75px;
     }
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 300px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 462px){
@@ -470,89 +518,55 @@
         border-radius: 10px;
         margin-left: 20px;
     }
-}
-@media (max-width: 452px){
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 288px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
     }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
+
 @media (max-width: 406px){
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 280px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
     }
-}
-@media (max-width: 393px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 275px;
+    .formProdutonew{
         display: flex;
-        justify-content:center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
+        width: 90%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
         border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
-@media (max-width: 387px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 270px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
-    }
-}
-
 @media (max-width: 380px){
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
     .sidebar{
         position: relative;
         height: 100%;
@@ -566,65 +580,23 @@
         margin-left: 50px;
     }
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 265px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
-    }
-}
-@media (max-width: 373px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 260px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 30px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
-
-    }
-}
-@media (max-width: 373px){
-    .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 250px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 40px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
     }
 }
 @media (max-width: 280px){
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 98%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
     .sidebar{
         position: relative;
         height: 100%;
@@ -638,21 +610,7 @@
         margin-left: 80px;
     }
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 245px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 40px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
     }
 }
@@ -670,21 +628,17 @@
         margin-left: 90px;
     }
     .ativeCadastrar{
-        position: absolute;
-        position: fixed;
-        top: 15px;
-        left: 230px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 100px;
-        height: 40px;
-        font-size: 8pt;
-        /* background-color: #193498; */
-        background-color: red;
-        border-radius: 10px;
-        color: #fff;
-        z-index: 100;
+        display: none;
 
+    }
+    .formProdutonew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 99%;
+        background-color: #193498;
+        margin: 120px auto 0px auto;
+        border-radius: 10px;
     }
 }

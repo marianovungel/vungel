@@ -85,11 +85,41 @@ const hendleUpdate = async () =>{
           desc: desc,
           preco: preco,
       });
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1300
+      })
       window.location.reload();
       setEditar(false)
   }catch(err){
       console.log(err)
   }
+}
+
+const TodosPro = ()=>{
+  Swal.fire({
+    title: 'Deseja cancelar?',
+    text: "",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Cancelado!',
+        'Divulgação de produto  cancelado!',
+        'success'
+      )
+
+      setEditar(false)
+    }
+  })
+    
 }
 
 
@@ -98,7 +128,7 @@ const hendleUpdate = async () =>{
         <Menu />
         <div className='fullContent'>
           <div className='imgContent'>
-            <p id='categoria'>Categoria: {post.categories}</p>
+            <p id='categoria'>Categoria: Venda</p>
             <div className='imgDivSingle'>
               <img id='photoVendaId' src={URLImg+post.photo} alt='#' />
             </div>
@@ -113,6 +143,7 @@ const hendleUpdate = async () =>{
                 <input className='inputFormEditVenda' value={preco} onChange={e=>setPreco(e.target.value)}  type='Number' placeholder='R$ 0,00' maxLength='10' />
                 <textarea className='inputFormEditVenda' value={desc} onChange={e=>setDesc(e.target.value)} placeholder='Descrição ...' maxLength='200' />
                 <button className='buttonFormEditVenda' onClick={hendleUpdate}>Editar ...</button>
+                <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
               </div>
             ) : (
             <>
@@ -133,10 +164,7 @@ const hendleUpdate = async () =>{
             <p>Vendedor: {post.username}</p>
             <p>Descrição: {post.desc}</p>
             <div className='cartoes'>
-              <i className="fa-brands fa-cc-mastercard cardBank"></i>
-              <i className="fa-brands fa-cc-paypal cardBank"></i>
-              <i className="fa-brands fa-cc-visa cardBank"></i>
-              <i className="fa-brands fa-cc-amazon-pay cardBank"></i>
+            {post.username === user.username && (<i>Assim que o produto for comprado, delete-o caso não esteje a vende-lo novamente!</i>)}
             </div>
             </>
             )}
@@ -152,11 +180,6 @@ const hendleUpdate = async () =>{
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i class="fa-brands fa-whatsapp"></i></button></div>
             )}
-            
-            
-
-            
-            
           </div>
           <footer className=''></footer>
         </div>

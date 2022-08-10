@@ -121,19 +121,19 @@ h2{
     background-color: rgb(210, 241, 12);
     width: 100%;
     height: 40px;
-    border: 1px solid rgba(77, 76, 10, 0.3);
-    box-shadow: 1px 1px 1px 3px rgba(77, 76, 10, 0.3);
+    border: 1px solid rgba(182, 180, 32, 0.3);
+    box-shadow: 1px 1px 1px 3px rgba(182, 180, 32, 0.3);
 }
 .buttonDeletar{
     font-size: 16pt;
     color: #fff;
     margin-bottom: 40px;
     border-radius: 5px;
-    background-color: rgb(241, 46, 12);
+    background-color: red;
     width: 100%;
     height: 40px;
-    border: 1px solid rgba(77, 76, 10, 0.3);
-    box-shadow: 1px 1px 1px 3px rgba(77, 76, 10, 0.3);
+    border: 1px solid rgba(211, 33, 33, 0.3);
+    box-shadow: 1px 1px 1px 3px rgba(211, 33, 33, 0.3);
 }
 
 .buttonZap{
@@ -190,4 +190,17 @@ h2{
     font-size: 15pt;
     margin-top: 20px;
     cursor: pointer;
+}
+@media(max-width: 913px){
+        .fullForm{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 5px 20px 5px;
+            background-color: rgba(19, 55, 153, 0.94);
+            border-radius: 10px;
+        }
+    
 }

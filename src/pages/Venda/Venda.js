@@ -6,7 +6,8 @@ import {useState, useContext} from 'react'
 import {Context} from '../../Context/Context'
 import api from '../../services/api'
 import upload from '../../services/upload'
-import { useHistory} from 'react-router-dom'
+import { Link, useHistory} from 'react-router-dom'
+import Swal from 'sweetalert2';
 //upload img
 async function postImage({image, description}) {
   const formData = new FormData();
@@ -44,45 +45,114 @@ function Venda() {
       try{
         const description = Date.now() + file.name;
         const result = await postImage({image: file, description})
-        console.log(result)
         newPost.photo = result.imagePath.split("/")[2];
       }catch(err){}
     }
     try{
       const resp = await api.post("/produto", newPost);
       console.log(resp.data.post.photo)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1300
+      })
+      setCadastrarFunc(false)
+      setBanner(true)
       history.back();
     }catch(err){}
   }
 
   const Ative = ()=>{
+    if(banner && !cadastrarFunc){
       setCadastrarFunc(true)
       setBanner(false)
-  }
-  const TodosPro = ()=>{
+    }else{
       setCadastrarFunc(false)
       setBanner(true)
+    }
+  }
+  const TodosPro = ()=>{
+    Swal.fire({
+      title: 'Deseja cancelar?',
+      text: "",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Cancelado!',
+          'Divulgação de produto  cancelado!',
+          'success'
+        )
+
+        setCadastrarFunc(false)
+        setBanner(true)
+      }
+    })
+      
   }
   return (
     <div className="venda">
-      <Menu />
+      <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/">Venda</Link>
+                </li>
+                <li className="nav-item" onClick={Ative}>
+                <Link className="nav-link text-light" to="">Cadastrar venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
       <div className='conteiner'>
             {cadastrarFunc ? (
-        <div className='cadastrarProduto'>
-          <div className='banner'>
-            <div  className='buttonCadastrar'><i class="fa-solid fa-bag-shopping" id='shoop'></i></div>
-            <div className='corpoBanner'> Venda online, divulga e compra produtos que estão a ser vendidos Em Redenção e cidades vizinhas ...</div>
-            <div className='triangulo'></div>
-          </div>
-          
-            <form className='formProduto' onSubmit={handleSubmit} >
-              <h4 className='produtoFormModal'>Cadastrar Produto</h4>
-              <input type="file" className='imgInputContent' accept="image/*" onChange={(e)=> setFile(e.target.files[0])}/>
-              <input className='inputProduto' type='text' placeholder='Titulo' onChange={(e)=> setTitle(e.target.value)} />
-              <input className='inputProduto' type='Number' placeholder='R$ 00,00' onChange={(e)=> setPreco(e.target.value)} />
-              <textarea placeholder='descrição...' className="story" rows="10" cols="33" onChange={(e)=> setDesc(e.target.value)} ></textarea>
-              <button className='inputProduto colorbutton' type='submit'> Cadastrar </button>
-              <div className='todosProdutos' onClick={TodosPro}><i>Cancelar</i></div>
+        <div className='cadastrarProdutonew'>
+            <form className='formProdutonew' onSubmit={handleSubmit} >
+              <h4 className='produtoFormModalnew'>Cadastrar Produto</h4>
+              <input type="file" className='imgInputContentnew' accept="image/*" onChange={(e)=> setFile(e.target.files[0])}/>
+              <input className='inputProdutonew' type='text' placeholder='Titulo' onChange={(e)=> setTitle(e.target.value)} />
+              <input className='inputProdutonew' type='Number' placeholder='R$ 00,00' onChange={(e)=> setPreco(e.target.value)} />
+              <textarea placeholder='descrição...' className="storynew" rows="10" cols="33" onChange={(e)=> setDesc(e.target.value)} ></textarea>
+              <button className='inputProdutonew colorbutton' type='submit'> Cadastrar </button>
+              <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
             </form>
         </div>
             ):(

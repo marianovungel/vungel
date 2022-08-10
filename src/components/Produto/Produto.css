@@ -11,6 +11,11 @@
     height: 370px;
     border: 1px solid rgba(70, 69, 69, 0.30);
     box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
+    transform: scale(0.96);
+}
+.Produto:hover{
+    transform: scale(1);
+    transition: 2s;
 }
 .nomePreco{
     width: 100%;
