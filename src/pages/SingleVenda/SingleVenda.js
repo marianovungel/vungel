@@ -18,6 +18,7 @@ export default function SingleVenda() {
   const [preco, setPreco ] = useState("")
   const [desc, setDesc ] = useState("")
   const [editar, setEditar ] = useState(false)
+  const [showButtons, setShowButtons ] = useState(true)
   
   
   useEffect(()=>{
@@ -30,6 +31,7 @@ export default function SingleVenda() {
       console.log(res)
     }
     getPost()
+    setShowButtons(true)
   }, [path])
 
 const {user} = useContext(Context);
@@ -42,14 +44,15 @@ const whatsappSend = () =>{
 
   window.open(`http://wa.me/+55${post.userwhatsapp}?text=${messageZap}`)
 }
-const Zoom = () =>{
-  window.open(`${URLImg}${post.photo}`)
-}
+// const Zoom = () =>{
+//   window.open(`${URLImg}${post.photo}`)
+// }
 const Home = () =>{
   window.open("http://localhost:3000")
 }
 const EditTrue = () =>{
   setEditar(true)
+  setShowButtons(false)
 }
 
 const confirmDelete= async () => {
@@ -94,6 +97,7 @@ const hendleUpdate = async () =>{
       })
       window.location.reload();
       setEditar(false)
+      setShowButtons(true)
   }catch(err){
       console.log(err)
   }
@@ -117,6 +121,7 @@ const TodosPro = ()=>{
       )
 
       setEditar(false)
+      setShowButtons(true)
     }
   })
     
@@ -132,7 +137,7 @@ const TodosPro = ()=>{
             <div className='imgDivSingle'>
               <img id='photoVendaId' src={URLImg+post.photo} alt='#' />
             </div>
-            <button className='zoom' onClick={Zoom}><i class="fa-solid fa-download"></i></button>
+            {/* <button className='zoom' onClick={Zoom}><i class="fa-solid fa-download"></i></button> */}
           </div>
           <div className='descContent'>
             {editar ? (
@@ -169,18 +174,20 @@ const TodosPro = ()=>{
             </>
             )}
           </div>
-          <div className='butoomContent'>
-            {post.username === user.username ? (
-              <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i class="fa-solid fa-pen-to-square"></i></button></div>
-            ) : (
-              <div></div>
-            )}
-            {post.username === user.username ? (
-              <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i class="fa-solid fa-trash-can"></i></button></div>
-            ) : (
-              <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i class="fa-brands fa-whatsapp"></i></button></div>
-            )}
-          </div>
+          {showButtons && (
+            <div className='butoomContent'>
+              {post.username === user.username ? (
+                <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i class="fa-solid fa-pen-to-square"></i></button></div>
+              ) : (
+                <div></div>
+              )}
+              {post.username === user.username ? (
+                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i class="fa-solid fa-trash-can"></i></button></div>
+              ) : (
+                <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i class="fa-brands fa-whatsapp"></i></button></div>
+              )}
+            </div>
+          )}
           <footer className=''></footer>
         </div>
     </div>

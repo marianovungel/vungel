@@ -204,3 +204,10 @@ h2{
         }
     
 }
+@media(max-width: 695px){
+    .descContent{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+}
