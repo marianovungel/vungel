@@ -3,6 +3,7 @@ import Menu from '../../components/Menu/Menu'
 import './SingleVenda.css'
 import { useState, useEffect, useContext } from 'react';
 import { useLocation} from 'react-router-dom';
+// import { useLocation, useHistory} from 'react-router-dom';
 import api from '../../services/api'
 import { Context } from '../../Context/Context';
 import Swal from 'sweetalert2';
@@ -19,6 +20,7 @@ export default function SingleVenda() {
   const [desc, setDesc ] = useState("")
   const [editar, setEditar ] = useState(false)
   const [showButtons, setShowButtons ] = useState(true)
+  // const history = useHistory()
   
   
   useEffect(()=>{
@@ -95,7 +97,8 @@ const hendleUpdate = async () =>{
         showConfirmButton: false,
         timer: 1300
       })
-      window.location.reload();
+      // window.location.reload();
+      window.location.replace("/");
       setEditar(false)
       setShowButtons(true)
   }catch(err){
