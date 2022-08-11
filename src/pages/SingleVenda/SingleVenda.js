@@ -50,7 +50,8 @@ const whatsappSend = () =>{
 //   window.open(`${URLImg}${post.photo}`)
 // }
 const Home = () =>{
-  window.open("http://localhost:3000")
+  // window.open("http://localhost:3000")
+  window.location.replace("/");
 }
 const EditTrue = () =>{
   setEditar(true)
