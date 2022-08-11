@@ -148,7 +148,7 @@ h2{
     box-shadow: 1px 1px 1px 3px rgba(15, 79, 25, 0.3);
 }
 .fullForm{
-    width: 80%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -182,7 +182,7 @@ h2{
     margin-top: 20px;
 }
 .buttonFormEditVenda{
-    width: 95%;
+    width: 90%;
     height: 40px;
     border: none;
     border-bottom: 3px solid rgb(228, 252, 12);
@@ -204,10 +204,43 @@ h2{
         }
     
 }
+
+@media(max-width: 720px){
+    .descContent{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .fullForm{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 5px 20px 5px;
+            background-color: rgba(19, 55, 153, 0.94);
+            border-radius: 10px;
+            margin: 0 auto 0 auto;
+    }
+    
+}
 @media(max-width: 695px){
     .descContent{
         width: 100%;
         margin-top: 20px;
     }
+    
+}
+@media(max-width: 420px){
+    .fullForm{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 5px 20px 5px;
+        background-color: rgba(19, 55, 153, 0.94);
+        border-radius: 10px;
+        margin: 0 auto 0 auto;
+}
     
 }
