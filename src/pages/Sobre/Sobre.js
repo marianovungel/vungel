@@ -92,7 +92,7 @@ export default function Sobre() {
                         </div>
                     </div>
                     <div className='sobreparticipanteDiv'>
-                        <img src='https://media-exp1.licdn.com/dms/image/C5603AQHnsbWX2TLV2g/profile-displayphoto-shrink_200_200/0/1631393065791?e=1657152000&v=beta&t=dOLziPZ_B-IEMmBYsxvxJ0-U1x-eKCPjLoUUJ8xdFjA' alt='#' className='imagemParti'/>
+                        <img src='./image/mariano.jpg' alt='#' className='imagemParti'/>
                         <div className='divDescParti'>
                             <b className='marginBott'>Mariano António Vunge</b>
                             <p className='marginBott'>Graduando</p>
