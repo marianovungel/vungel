@@ -75,7 +75,7 @@ export default function Produto() {
             {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
           <div className="Produto" key={post?.photo}>
             <div className='imgProduto' id='Produto'>
-                <img className='imagemCard' src={URLImg+post?.photo} alt='imagem'/>
+                <img className='imagemCard' src={URLImg+post?.photo} alt=' '/>
             </div>
             <div className='nomePreco'>
                 <h3 className='valorNome'>{post?.title}</h3>

@@ -182,7 +182,7 @@ const TodosPro = ()=>{
             <div className='imgDivSingle'>
               <img id='photoVendaId' src={URLImg+post.photo} alt='#' />
             </div>
-            {/* <button className='zoom' onClick={Zoom}><i class="fa-solid fa-download"></i></button> */}
+            
           </div>
           <div className='descContent'>
             {editar ? (
@@ -222,14 +222,14 @@ const TodosPro = ()=>{
           {showButtons && (
             <div className='butoomContent'>
               {post.username === user.username ? (
-                <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i class="fa-solid fa-pen-to-square"></i></button></div>
+                <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               ) : (
                 <div></div>
               )}
               {post.username === user.username ? (
-                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i class="fa-solid fa-trash-can"></i></button></div>
+                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
               ) : (
-                <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i class="fa-brands fa-whatsapp"></i></button></div>
+                <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
               )}
             </div>
           )}

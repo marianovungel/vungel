@@ -2,7 +2,7 @@ import React from 'react'
 import './SingleDesapego.css'
 import Menu from '../../components/Menu/Menu'
 import { useState, useEffect, useContext } from 'react';
-import { useLocation} from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 import api from '../../services/api'
 import { Context } from '../../Context/Context';
 import Swal from 'sweetalert2';
@@ -16,6 +16,8 @@ export default function SingleVenda() {
   const [title, setTitle ] = useState("")
   const [desc, setDesc ] = useState("")
   const [editar, setEditar ] = useState(false)
+  const [showButtons, setShowButtons ] = useState(true)
+
   
   useEffect(()=>{
     const getPost = async ()=>{
@@ -37,9 +39,6 @@ const whatsappSend = () =>{
   se ainda está a venda?`;
 
   window.open(`http://wa.me/+55${post.userwhatsapp}?text=${messageZap}`)
-}
-const Home = () =>{
-  window.open("http://localhost:3000")
 }
 const EditTrue = () =>{
   setEditar(true)
@@ -77,17 +76,81 @@ const hendleUpdate = async () =>{
           title: title,
           desc: desc,
       });
-      window.location.reload('http://localhost:3000/desapego');
+      window.location.reload('/desapego');
       setEditar(false)
   }catch(err){
       console.log(err)
   }
 }
+const TodosPro = ()=>{
+  Swal.fire({
+    title: 'Deseja cancelar?',
+    text: "",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Cancelado!',
+        'Divulgação de produto  cancelado!',
+        'success'
+      )
+
+      setEditar(false)
+      setShowButtons(true)
+    }
+  })
+    
+}
 
 
   return (
     <div className='conteinerSinglePostVenda'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/">Venda</Link>
+                </li>
+                
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
         <div className='fullContent'>
           <div className='imgContent'>
             <p id='categoria'>Categoria: {post.categories}</p>
@@ -104,13 +167,16 @@ const hendleUpdate = async () =>{
                 <input className='inputFormEditVenda' value={title} onChange={e=>setTitle(e.target.value)} type='text' placeholder='Title ...' maxLength='60'/>
                 <textarea className='inputFormEditVenda' value={desc} onChange={e=>setDesc(e.target.value)} placeholder='Descrição ...' maxLength='200' />
                 <button className='buttonFormEditVenda' onClick={hendleUpdate}>Editar ...</button>
+                <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
               </div>
             ) : (
             <>
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <i className='outrosProdutos' onClick={Home}>Outros produtos</i>
+              <Link to="/desapego">
+                <i className='outrosProdutos'>Outros produtos</i>
+              </Link>
             </div>
             <p><i className="sizeColor fa-solid fa-user-pen"></i> {post.username}</p>
             <p><i className="sizeColor fa-solid fa-audio-description"></i> {post.desc}</p>
@@ -120,23 +186,20 @@ const hendleUpdate = async () =>{
             </>
             )}
           </div>
-          <div className='butoomContent'>
-            {post.username === user.username ? (
-              <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i class="fa-solid fa-pen-to-square"></i></button></div>
-            ) : (
-              <div></div>
-            )}
-            {post.username === user.username ? (
-              <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i class="fa-solid fa-trash-can"></i></button></div>
-            ) : (
-              <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i class="fa-brands fa-whatsapp"></i></button></div>
-            )}
-            
-            
-
-            
-            
-          </div>
+          {showButtons && (
+            <div className='butoomContent'>
+              {post.username === user.username ? (
+                <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
+              ) : (
+                <div></div>
+              )}
+              {post.username === user.username ? (
+                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
+              ) : (
+                <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
+              )}
+            </div>
+          )}
           <footer className=''></footer>
         </div>
     </div>

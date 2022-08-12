@@ -29,23 +29,23 @@ function App() {
       <Router>
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
-          <Route path="/desapego" component={ user ? Desapego : Login} />
-          <Route path="/habitacao-aluguel" component={ user ? Aluguel : Login} />
-          <Route path="/habitacao/aluguel/:id" component={ user ? SingleAluguel : Login} />
-          <Route path="/aluguel-edit/:id" component={ user ? EditAluguel : Login} />
-          <Route path="/compartilhar-edit/:id" component={ user ? EditCompartilhar : Login} />
-          <Route path="/aluguel-cadastrando" component={ user ? CadastrarAluguel : Login} />
-          <Route path="/habitacao-compartilhar" component={ user ? Compartilhar : Login} />
-          <Route path="/habitacao/compartilhar/:id" component={ user ? SingleCompartilhar : Login} />
-          <Route path="/compartilhar-cadastrar" component={ user ? CadastrarCompartilhar : Login} />
-          <Route path="/post/:id" component={user ? SingleVenda  : Login} />
-          <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} />
-          <Route path="/exe" component={user ? Exe  : Login} />
-          <Route path="/execomp" component={user ? ExeComp  : Login} />
-          <Route path="/login" component={Login} />
-          <Route path="/sendemail" component={SendEmail} />
-          <Route path="/sobre" component={Sobre} />
-          <Route path="/registrar" component={Registrar} />
+          <Route path="/desapego" component={ user ? Desapego : Login} exact />
+          <Route path="/habitacao-aluguel" component={ user ? Aluguel : Login} exact />
+          <Route path="/habitacao/aluguel/:id" component={ user ? SingleAluguel : Login} exact />
+          <Route path="/aluguel-edit/:id" component={ user ? EditAluguel : Login} exact />
+          <Route path="/compartilhar-edit/:id" component={ user ? EditCompartilhar : Login} exact />
+          <Route path="/aluguel-cadastrando" component={ user ? CadastrarAluguel : Login} exact />
+          <Route path="/habitacao-compartilhar" component={ user ? Compartilhar : Login} exact />
+          <Route path="/habitacao/compartilhar/:id" component={ user ? SingleCompartilhar : Login} exact />
+          <Route path="/compartilhar-cadastrar" component={ user ? CadastrarCompartilhar : Login} exact />
+          <Route path="/post/:id" component={user ? SingleVenda  : Login} exact />
+          <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} exact />
+          <Route path="/exe" component={user ? Exe  : Login} exact />
+          <Route path="/execomp" component={user ? ExeComp  : Login} exact />
+          <Route path="/login" component={Login} exact />
+          <Route path="/sendemail" component={SendEmail} exact />
+          <Route path="/sobre" component={Sobre} exact />
+          <Route path="/registrar" component={Registrar} exact />
         </Switch>
       </Router>
   );

@@ -13,6 +13,14 @@
     flex-wrap: wrap;
     margin-top: -60px;
 }
+.imgcircul{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    object-fit: cover;
+    margin: 5px;
+}
 .sidebarCardDesapego{
     flex: 5;
     width: 90%;
@@ -38,21 +46,23 @@
     align-items: center;
 }
 .formProdutoDesapego{
-    flex: 3;
+    
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
-    width: 300px;
-    height: 580px;
+    width: 30%;
     min-width: 300px;
-    max-width: 300px;
-    max-height: 600px;
+    /* max-width: 300px; */
     background-color: #193498;
-    margin: 85px 10px 0px 50px;
+    margin: 95px auto 0px auto;
     border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    max-height: 550px;
 }
+
 .fotoProduto{
     width: 90%;
     height: 35px;
@@ -62,6 +72,7 @@
 }
 .produtoFormModal{
     color: #fff;
+    margin-bottom: 30px;
 }
 .colorbutton{
     background-color: #69DADB;
@@ -69,7 +80,7 @@
 }
 .inputProduto{
     width: 90%;
-    height: 35px;
+    height: 50px;
     border: none;
     margin-top: 20px;
     border-radius: 5px;
@@ -82,16 +93,16 @@
 .story{
     margin-top: 20px;
     border-radius: 20px;
-    max-width: 280px;
+    max-width: 90%;
     min-width: 100px;
-    width: 100px;
+    width: 90%;
     height: 100px;
     max-height: 100px;
     min-height: 100px;
     border: none;
+    border-radius: 5px;
     width: 90%;
     padding: 1px 2px 1px 2px;
-    border-radius: 5px;
 }
 .imgPostPreviw{
     width: 100px;
@@ -225,6 +236,7 @@
     width: 90%;
     min-width: 300px;
     height: 100%;
+    padding-top: 15px;
 }
 .divHeader{
     height: 30px;
@@ -257,6 +269,7 @@
 #heroIgm{
     width: 100%;
     height: 350px;
+    object-fit: cover;
 }
 .divFooter{
     background-color: rgba(6, 6, 6, 0.2);
@@ -336,6 +349,11 @@
     transition: 0.3s;
     color: #666;
 }
+.imgInputContentform{
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+}
 .inputSeletItem{
     text-decoration: border;
     color: #666;
@@ -357,6 +375,23 @@
 
 
 @media (max-width: 600px){
+    .formProdutoDesapego{
+    
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        width: 30%;
+        min-width: 300px;
+        /* max-width: 300px; */
+        background-color: #193498;
+        margin: 25px auto 0px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 17px;
+        max-height: 550px;
+    }
     .sidebarDesapego{
         width: 100%;
         height: 100%;

@@ -12,10 +12,12 @@
     border: 1px solid rgba(70, 69, 69, 0.30);
     box-shadow: 1px 1px 1px 3px rgba(70, 69, 69, 0.30);
     transform: scale(0.96);
+    object-fit: cover;
 }
 .Produto:hover{
     transform: scale(1);
     transition: 2s;
+    object-fit: cover;
 }
 .nomePreco{
     width: 100%;
@@ -31,11 +33,13 @@
 .imgProduto{
     width: 100%;
     height: 270px;
+    object-fit: cover;
 }
 .imagemCard{
     width: 100%;
     height: 270px;
     border-radius: 3px 3px 0 0;
+    object-fit: cover;
 }
 .valorNome{
     color: rgb(78, 75, 75);

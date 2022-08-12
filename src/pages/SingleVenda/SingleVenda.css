@@ -57,6 +57,7 @@
     max-height: 400px;
     width: 400px;
     height: 400px;
+    object-fit: cover;
 }
 .imgDiv:hover{
     transform: scale(1);

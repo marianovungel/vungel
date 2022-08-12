@@ -6,6 +6,7 @@ import {Context} from '../../Context/Context'
 import api from '../../services/api'
 import upload from '../../services/upload'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 //upload img
@@ -33,8 +34,10 @@ export default function Desapego() {
   const [desapego, setDesapego] = useState([])
   const [vazio, setVazio] = useState(false)
   const [carregar, setCarregar] = useState(false)
+  const [scroll, setScroll] = useState(true)
+  const [side, setSide] = useState(true)
   const [titleSearh, setTitleSearh] = useState("")
-  console.log(cat)
+
 
   const { user } = useContext(Context)
   useEffect(()=>{
@@ -47,7 +50,6 @@ export default function Desapego() {
               setCarregar(false)
               setDesapego([])
             }
-            console.log(res.data)
             setVazio(false)
             setCarregar(false)
             setDesapego(res.data)
@@ -95,15 +97,26 @@ export default function Desapego() {
     }
     try{
       const {data: ress} =  await api.post("/desapego", newPost);
-      console.log(ress)
       setDesapego([ress, ...desapego])
       setCadastrar(true)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1300
+      })
+      window.location.reload('/desapego');
+      setScroll(true)
+        setSide(true)
+        setCadastrar(true)
     }catch(err){}
   }
-
-  console.log(cep.localidade)
+///////////////--cadastrar--////////////
   const CadastrarTrue = () =>{
     setCadastrar(false)
+    setScroll(false)
+    setSide(false)
   }
 
   const submitSearch = async (e) =>{
@@ -133,7 +146,6 @@ export default function Desapego() {
       setVazio(false)
       setCarregar(false)
     }
-    console.log(user.username)
   }
   const submitSearchCat = async (e) =>{
     e.preventDefault()
@@ -145,7 +157,6 @@ export default function Desapego() {
         setCarregar(false)
         setDesapego([])
       }else{
-        console.log(results.data)
         setDesapego(results.data)
         setVazio(false)
         setCarregar(false)
@@ -153,7 +164,6 @@ export default function Desapego() {
     }catch(err){
       alert(err)
     }
-    console.log(categories)
     console.log(setDesapego)
   }
   const FetchDesapegoFiltro = async () => {
@@ -165,7 +175,6 @@ export default function Desapego() {
             setCarregar(false)
             setDesapego([])
           }
-          console.log(res.data)
           setVazio(false)
           setCarregar(false)
           setDesapego(res.data)
@@ -187,7 +196,6 @@ export default function Desapego() {
         setCarregar(false)
         setDesapego([])
       }else{
-        console.log(results.data)
         setDesapego(results.data)
         setVazio(false)
         setCarregar(false)
@@ -195,11 +203,32 @@ export default function Desapego() {
     }catch(err){
       alert(err)
     }
-    console.log(categories)
-    console.log(setDesapego)
   }
-  console.log(cidadeSee)
-  console.log(cidade)
+
+  const TodosPro = ()=>{
+    Swal.fire({
+      title: 'Deseja cancelar?',
+      text: "",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Cancelado!',
+          'Divulgação de produto  cancelado!',
+          'success'
+        )
+
+        setScroll(true)
+        setSide(true)
+        setCadastrar(true)
+      }
+    })
+      
+  }
 
 const URLImg = "https://festupload.s3.amazonaws.com/";
   return (
@@ -244,6 +273,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
         </div>
         </nav>
         </div>
+        {/* /////////////////////////////////////--HTML--////////////////////////// */}
         <div className='sidebarDesapego'>
           {cadastrar ?(
              
@@ -277,16 +307,8 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
           ) : (
           <form className='formProdutoDesapego' onSubmit={handleSubmit} key={file}>
               <h4 className='produtoFormModal'>Divulgar Doação</h4>
-              {file ? (
-                <div className='imgPostPreviw'>
-                  <img src={URL.createObjectURL(file)} alt='uploadImg' className='imgPostPreviw' />
-                </div>
-              ) : (
-                <div className='imgPostPreviwIconContent'>
-                  <i className="fa-solid fa-image fa-solid fa-image imgPostPreviwIcon"></i>
-                </div>
-              )}
-              <input type="file" className='imgInputContent' accept="image/*" required onChange={(e)=> setFile(e.target.files[0])}/>
+        
+              <input type="file" className='imgInputContentform' accept="image/*" required onChange={(e)=> setFile(e.target.files[0])}/>
               <input className='inputProduto' type='text' placeholder='Titulo' required onChange={(e)=> setTitle(e.target.value)} />
               <input className='inputProduto' type='text' placeholder='CEP' maxLength='9'
               minLength='9' required onChange={(e)=> setCepp(e.target.value)} onBlur={Cepfuncion} />
@@ -300,29 +322,32 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
 
               <textarea className="story" rows="10" cols="33" required onChange={(e)=> setDesc(e.target.value)} ></textarea>
               <button className='inputProduto colorbutton' type='submit'> Criar </button>
+              <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
             </form>
           )}
-          <div className='sidebarCardDesapego scroll'>
+
+          {/* ///////////////////////////--center--///////////////////////// */}
+          {scroll && (<div className='sidebarCardDesapego scroll'>
           <>
+          {/* /////////////////////////////////--pesquisa--//////////////////////////////// */}
       <form onSubmit={submitSearch} className='searchform'>
           <input className='searchformInportDesapego' type="search" placeholder='Pesquise...' onChange={e => setTitleSearh(e.target.value)} />
           <button type="submit" className='searchformButton'><i className="fa-solid fa-magnifying-glass colorSearch"></i></button>
       </form>
       {vazio && (<div className='Encontrar'><h5>Nenhum Produto encontrado ...</h5></div>)}
       {carregar && (<div className='Encontrar'><h5>Carregando ...</h5></div>)}
-
+{/* ///////////////////////////////--card--///////////////////////////// */}
     {desapego.map((p)=>(
     <div className='allCard' key={p.photo}>
         <div className='divHeader'>
+            <img className='imgcircul' src={URLImg + p.photo} alt=''/>
             <p className='SpanUsername'>{ p.username }</p>
+            
         </div>
         <div className='descClassName'>
-          <span className='descSpan'>
-            {p.desc}
-          </span>
+          <span className='descSpan'>{p.desc}</span>
         </div>
-        <div className='divHero'><img id='heroIgm' 
-          src={URLImg + p.photo} alt='#'/></div>
+        <div className='divHero'><img id='heroIgm' src={URLImg + p.photo} alt='#'/></div>
         <div className='divFooter'>
             <span className='spanDate'> {new  Date(p.createdAt).toDateString()} </span>
             <Link to={`/desapego/${p?._id}`}>
@@ -333,6 +358,9 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
     ))}
           </>
           </div>
+          )}
+          {/* ////////////////////////////////////--sideBar--//////////////////////////// */}
+          {side && (
           <div className='bannerDesapego'>
             <div className='bannerDesapegoFast'>
               <h3 className='h3Desapego'>Desapego</h3>
@@ -347,6 +375,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
               <p className='bannerDesapegoPp'>Doe aqui, desde bens alimentares até bens do outra natureza!</p>
           </div>
           </div>
+          )}
         </div>
     </div>
   )
