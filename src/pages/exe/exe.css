@@ -13,6 +13,11 @@
 .colorBranca{
     color: #fff;
 }
+@media(min-width: 991px){
+    .imagemLogo{
+        display: none;
+    }
+}
 @media(max-width: 775px){
     .headerAluguel{
         display: none;
