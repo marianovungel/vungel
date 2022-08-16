@@ -45,6 +45,13 @@
     align-items: center;
     justify-content: space-around;
 }
+.precoTypeone{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 .precoTypeInput{
     width: 35%;
     height: 35px;
@@ -106,4 +113,14 @@
     border-radius: 50%;
     border: 1px solid #666;
     box-shadow: 1px 1px 1px rgba(6, 6, 6, 0.3);
+}
+.canc{
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+}
+.canc:hover{
+    font-size: 20px;
+    color: #6669;
+    transition: 2s;
 }

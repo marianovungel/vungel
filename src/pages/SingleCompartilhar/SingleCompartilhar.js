@@ -7,7 +7,6 @@ import api from '../../services/api'
 import { Context } from '../../Context/Context';
 import Swal from 'sweetalert2';
 
-
 export default function SingleCompartilhar() {
   const location = useLocation();
 
@@ -17,7 +16,6 @@ export default function SingleCompartilhar() {
   const [desc, setDesc ] = useState("")
   const [foto, setFoto ] = useState("")
   const [editar, setEditar ] = useState(false)
-  console.log(location)
   
   
   useEffect(()=>{
@@ -26,7 +24,6 @@ export default function SingleCompartilhar() {
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
-      console.log(res.data)
       setFoto(res.data.photo1)
     }
     getPost()
@@ -36,14 +33,12 @@ const {user} = useContext(Context);
 const URLImg = "https://festupload.s3.amazonaws.com/";
 
 const whatsappSend = () =>{
-  const messageZap=`Olá ${post.username}. Gostaria de saber se o produto ${post.title} 
-  que divulgou na plataforma UnilabTem para doação 
-  se ainda está a venda?`;
+  const messageZap=`Olá ${post.username}. Gostaria de saber se A casa em compartilhamento  
+  que divulgou na plataforma UnilabTem
+  se ainda precisa de pessoa para compartilhar?
+  https://incredible-trifle-5834a1.netlify.app/habitacao/compartilhar/${path}`;
 
   window.open(`http://wa.me/+55${post.userwhatsapp}?text=${messageZap}`)
-}
-const Home = () =>{
-  window.open("http://localhost:3000")
 }
 const EditTrue = () =>{
   setEditar(true)
@@ -107,19 +102,58 @@ const FotoChengFive = ()=>{
 
   return (
     <div className='conteinerSinglePostVenda'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
         <div className='fullContent'>
           <div className='imgContent'>
             <p id='categoria'>Categoria: {post.categories}</p>
             <div className='imgDivSingle'>
-              <img id='photoVendaId' src={URLImg+foto} alt='#' />
+              <img id='photoVendaId' src={URLImg+foto} alt='' />
             </div>
             <div className='imgDivSingleClass'>
-              <img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='#' />
+              <img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='' />
             </div>
             
           </div>
@@ -137,17 +171,19 @@ const FotoChengFive = ()=>{
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <i className='outrosProdutos' onClick={Home}>Outros produtos</i>
+              <Link to="/habitacao-compartilhar"><i className='outrosProdutos'>Outros produtos</i></Link>
             </div>
             <p><i className="sizeColor fa-solid fa-user-pen"></i> {post.username}</p>
+            <p><i className="sizeColor fa-solid fa-user-pen"></i>R$ {post.preco}</p>
             <p><i className="sizeColor fa-solid fa-audio-description"></i> {post.desc}</p>
-            <p><i class="fa-duotone fa-sink"></i> {post.cozinha}</p>
+            <p><i className="bi bi-basket2-fill"></i> {post.cozinha}</p>
             <p><i className="sizeColor fa-solid fa-calendar-day"></i> {new  Date(post.createdAt).toDateString()}</p>
             <p><i className="sizeColor fa-solid fa-toggle-on"></i> Desponível</p>
             <p><i className="sizeColor fa-solid fa-map-location-dot"></i> Endereço</p>
-            <p><i class="bi bi-alarm-fill"></i>{post.cozinha} </p>
-            <p><i className="fa-duotone fa-circle-info"></i>{post.info} </p>
-            <p><i class="fa-duotone fa-bed"></i>{post.quartos} </p>
+            <p><i className="i">Info:</i>{post.desc} </p>
+            <p><i className="i">Sala:</i>{post.sala} </p>
+            <p><i className="i">Quartos:</i>{post.quarto} </p>
+            <p><i className="i">Banheiro:</i>{post.banheiro} </p>
             
 
             </>

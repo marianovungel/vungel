@@ -7,6 +7,7 @@ import upload from '../../services/upload'
 import api from '../../services/api'
 import { useLocation} from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 //upload img
 async function postImage({image, description}) {
@@ -45,12 +46,14 @@ export default function EditCompartilhar() {
     const [alertImg, setAlertImg] = useState(false)
     const location = useLocation();
 
-  const path = location.pathname.split("/")[3]
+  const path = location.pathname.split("/")[2]
 
     //pegar  os dados
     useEffect(()=>{
         const getPost = async ()=>{
+          console.log(path)
           const res = await api.get("/compartilhar/"+path)
+          console.log(res.data)
         //   setPost(res.data)
           setCat(res.data.categories)
           setPreco(res.data.preco)
@@ -137,6 +140,15 @@ export default function EditCompartilhar() {
         try{
           if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
             await api.put(`/compartilhar/${path}`, newPost)
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 1300
+            })
+            // window.location.reload();
+            window.location.replace(`/habitacao/compartilhar/${path}`);
             setAlertImg(false)
             history.goBack()
 
@@ -167,6 +179,28 @@ export default function EditCompartilhar() {
         }catch(err){
           alert(err)
         }
+      }
+
+      const TodosPro = ()=>{
+        Swal.fire({
+          title: 'Deseja cancelar?',
+          text: "",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sim!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Cancelado!',
+              'Divulgação de produto  cancelado!',
+              'success'
+            )
+            window.location.replace(`/habitacao/compartilhar/${path}`);
+          }
+        })
+          
       }
   return (
     <div className='fullContentAluguel'>
@@ -238,8 +272,9 @@ export default function EditCompartilhar() {
                     <div className='precoType'>
                         <textarea className='forNewDesc' value={desc} placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
-                    <div className='precoType'>
-                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
+                    <div className='precoTypeone'>
+                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Editar...</button>
+                        <div className='canc' onClick={TodosPro}><i>Cancelar</i></div>
                     </div>
                 </div>
             </form>

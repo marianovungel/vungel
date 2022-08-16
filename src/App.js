@@ -30,7 +30,10 @@ function App() {
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/desapego" component={ user ? Desapego : Login} exact />
+          {/* esta rota de aluguel é inacessível */}
           <Route path="/habitacao-aluguel" component={ user ? Aluguel : Login} exact />
+          <Route path="/execomp" component={user ? ExeComp  : Login} exact />
+          {/*Esta outa de compartilhamento é inacessível também */}
           <Route path="/habitacao/aluguel/:id" component={ user ? SingleAluguel : Login} exact />
           <Route path="/aluguel-edit/:id" component={ user ? EditAluguel : Login} exact />
           <Route path="/compartilhar-edit/:id" component={ user ? EditCompartilhar : Login} exact />
@@ -41,7 +44,6 @@ function App() {
           <Route path="/post/:id" component={user ? SingleVenda  : Login} exact />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} exact />
           <Route path="/exe" component={user ? Exe  : Login} exact />
-          <Route path="/execomp" component={user ? ExeComp  : Login} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/sendemail" component={SendEmail} exact />
           <Route path="/sobre" component={Sobre} exact />
