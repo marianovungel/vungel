@@ -66,7 +66,7 @@ const handleDelete = async () =>{
       });
       window.location.replace("/habitacao-compartilhar");
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 const hendleUpdate = async () =>{
@@ -79,7 +79,7 @@ const hendleUpdate = async () =>{
       window.location.reload('http://localhost:3000/habitacao/compartilhar');
       setEditar(false)
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 
@@ -173,19 +173,16 @@ const FotoChengFive = ()=>{
               <p>(Cód. Item {post._id})</p>
               <Link to="/habitacao-compartilhar"><i className='outrosProdutos'>Outros produtos</i></Link>
             </div>
-            <p><i className="sizeColor fa-solid fa-user-pen"></i> {post.username}</p>
-            <p><i className="sizeColor fa-solid fa-user-pen"></i>R$ {post.preco}</p>
-            <p><i className="sizeColor fa-solid fa-audio-description"></i> {post.desc}</p>
-            <p><i className="bi bi-basket2-fill"></i> {post.cozinha}</p>
-            <p><i className="sizeColor fa-solid fa-calendar-day"></i> {new  Date(post.createdAt).toDateString()}</p>
-            <p><i className="sizeColor fa-solid fa-toggle-on"></i> Desponível</p>
-            <p><i className="sizeColor fa-solid fa-map-location-dot"></i> Endereço</p>
-            <p><i className="i">Info:</i>{post.desc} </p>
-            <p><i className="i">Sala:</i>{post.sala} </p>
-            <p><i className="i">Quartos:</i>{post.quarto} </p>
-            <p><i className="i">Banheiro:</i>{post.banheiro} </p>
-            
-
+            <p><i>Divulgador: </i> <b>{post.username}</b></p>
+            <p><i>Preço: </i>R$ <b>{post.preco}</b></p>
+            <p><i>Data de divulgação: </i> <b>{new  Date(post.createdAt).toDateString()}</b></p>
+            <p><i>Estatos: </i> <b>Desponível</b></p>
+            {/* <p><i></i> Endereço</p> */}
+            <p><i>Sala: </i><b>{post.sala}</b> </p>
+            <p><i>Cozinha: </i> <b>{post.cozinha}</b></p>
+            <p><i>Quarto: </i><b>{post.quarto}</b> </p>
+            <p><i>Banheiro: </i><b>{post.banheiro}</b> </p>
+            <p><i>Info: </i> <b>{post.desc}</b> </p>
             </>
             )}
           </div>

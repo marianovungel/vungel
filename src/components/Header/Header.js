@@ -15,7 +15,7 @@ export default function Header() {
             <div className="navbar-nav">
             <Link className="nav-item nav-link active" to='/exe'>Aluguel <span class="sr-only">(current)</span></Link>
             <Link className="nav-item nav-link" to='/habitacao-compartilhar'>Compartilhamento</Link>
-            <Link className="nav-item nav-link" to='/compartilhar-cadastrar'>Divulgar casa...</Link>
+            <Link className="nav-item nav-link" to='/aluguel-cadastrando'>Divulgar casa...</Link>
             </div>
         </div>
         </nav>

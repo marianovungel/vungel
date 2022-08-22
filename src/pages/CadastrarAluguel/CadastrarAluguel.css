@@ -1,6 +1,8 @@
 .contentSideBarForm{
     width: 41%;
     margin: 150px auto 0px auto;
+    background: linear-gradient(#F6F3F3, #5574e1);
+    border-radius: 10px;
 }
 .buttonHeaderAluguelHeaderCadastrar{
     font-size: 20pt;
@@ -101,4 +103,32 @@
     box-shadow: 1px 1px 1px rgba(247, 33, 33, 0.742);
     text-align: center;
     padding: 8px;
+}
+@media(max-width: 775px){
+    .contentSideBarForm{
+        width: 55%;
+        margin: 25px auto 0px  auto;
+        background: linear-gradient(#F6F3F3, #5574e1);
+    }
+}
+@media(max-width: 700px){
+    .contentSideBarForm{
+        width: 75%;
+        margin: 25px auto 0px  auto;
+        background: radial-gradient(#F6F3F3, #5574e1);
+    }
+}
+@media(max-width: 600px){
+    .contentSideBarForm{
+        width: 85%;
+        margin: 25px auto 0px  auto;
+        background: linear-gradient(#F6F3F3, #5574e1);
+    }
+}
+@media(max-width: 500px){
+    .contentSideBarForm{
+        width: 95%;
+        margin: 25px auto 0px  auto;
+        background: linear-gradient(#F6F3F3, #5574e1);
+    }
 }

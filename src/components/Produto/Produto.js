@@ -21,7 +21,6 @@ export default function Produto() {
     try{
       const response = await api.get('/produto');
       const res = response.data;
-      console.log(res)
       if(res.error){
         alert(res.message);
         return false;

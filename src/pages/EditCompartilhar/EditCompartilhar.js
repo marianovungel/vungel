@@ -5,7 +5,7 @@ import {useState, useContext, useEffect} from 'react'
 import {Context} from '../../Context/Context'
 import upload from '../../services/upload'
 import api from '../../services/api'
-import { useLocation} from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
 import Swal from 'sweetalert2'
 
@@ -51,9 +51,7 @@ export default function EditCompartilhar() {
     //pegar  os dados
     useEffect(()=>{
         const getPost = async ()=>{
-          console.log(path)
           const res = await api.get("/compartilhar/"+path)
-          console.log(res.data)
         //   setPost(res.data)
           setCat(res.data.categories)
           setPreco(res.data.preco)
@@ -134,7 +132,6 @@ export default function EditCompartilhar() {
               const result = await postImage({image: file5, description})
               newPost.photo5 = result.imagePath.split("/")[2];
               
-              
             }catch(err){}
           }
         try{
@@ -172,7 +169,6 @@ export default function EditCompartilhar() {
       const Cepfuncion = async ()=>{
         try{
           const cepSearch = cepp.replace(/\D/g, '');
-          console.log(cepSearch)
           await fetch(`https://viacep.com.br/ws/${cepSearch}/json/`)
           .then(res=>res.json()).then(data => setCep(data)
           )
@@ -204,7 +200,46 @@ export default function EditCompartilhar() {
       }
   return (
     <div className='fullContentAluguel'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/compartilhar-cadastrar">Divulgar Compartilhamento</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
                 <p className='buttonHeaderAluguelHeaderCadastrar'>Editar casa em compartilhamento...</p>

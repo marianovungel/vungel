@@ -66,7 +66,7 @@ const handleDelete = async () =>{
       });
       window.location.replace("/");
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 const hendleUpdate = async () =>{
@@ -79,7 +79,7 @@ const hendleUpdate = async () =>{
       window.location.reload('/desapego');
       setEditar(false)
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 const TodosPro = ()=>{

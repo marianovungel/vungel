@@ -9,19 +9,20 @@ import Header from '../../components/Header/Header'
 export default function Exe() {
 
     const [aluguel, setAluguel] = useState([]);
+    
+    
     useEffect(()=>{
         const FetchDesapego = async () => {
             try{
                 const res = await api.get("/aluguel")
                 setAluguel(res.data);
             }catch(err){
-                console.log(err)
+                alert(err)
             }
         }
         FetchDesapego();
     }, [])
 
-    console.log(aluguel)
     const URLImg = "https://festupload.s3.amazonaws.com/";
     //bg-light
   return (
@@ -58,7 +59,7 @@ export default function Exe() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
-                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
                 </li>
             </ul>
@@ -71,24 +72,24 @@ export default function Exe() {
             <Header />
             </div>
         </header>
-        <div className='contentSideBar'>
-            {aluguel.map((p)=>(
-                <div className='cardAluguel' key={p?._id}>
-                <img className='imgAluguelCard' src={URLImg + p.photo1} alt='' />
-                <div className='descPlaceAluguel'>
-                    <div className='ajustPositionDesc'>
-                        <p className='editP'><i>Categoria</i>: <b>{p.categories}</b></p>
-                        <p className='editP'><i>Cidade</i>: <b>{p.cidade}</b></p>
-                        <p className='editP'><i>Preço</i>: <b>R${p.preco}</b></p>
-                        <p className='editP'><i>Status</i>: <b>Desponível</b></p>
+        <div className='contentSideBarComp'>
+            {aluguel?.map((p)=>(
+                <div className='cardAluguelnew' key={p?._id}>
+                    <div className="imagemAluguelSection">
+                    <img className="imgAluguelCArdAdd" src={URLImg + p.photo1} alt="" />
                     </div>
-                    <div className='buttomContentInfo'>
-                        <Link to={`/habitacao/aluguel/${p?._id}`}><button className='buttonHeaderAluguela'>Mais informações</button></Link>
+                    <div className="descritionAluguelSetion">
+                        <i className="aluguelI">{p.cep.localidade}</i>
+                        <h3 className="hpraceAluguel">R${p.preco}</h3>
+                        <smoll>Compartilhamento</smoll>
+                        <p className="pdescriçãoAluguel">{p.desc}</p>
+                    </div>
+                    <div className="buttonAluguelSection">
+                    <Link to={`/habitacao/aluguel/${p?._id}`}><button className="buttonAluguelInfoCard">Info...</button></Link>
                     </div>
                 </div>
-            </div>
             ))}
-        </div>
+    </div>
     </div>
   )
 }

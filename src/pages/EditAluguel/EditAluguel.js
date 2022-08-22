@@ -1,11 +1,13 @@
 import React from 'react'
 import Menu from '../../components/Menu/Menu'
-import './EditAluguel.css'
+// import './EditCompartilhar.css'
 import {useState, useContext, useEffect} from 'react'
 import {Context} from '../../Context/Context'
 import upload from '../../services/upload'
 import api from '../../services/api'
-import { useLocation} from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
+import {useHistory} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 //upload img
 async function postImage({image, description}) {
@@ -18,8 +20,9 @@ async function postImage({image, description}) {
   }
 
 export default function EditAluguel() {
-    //useStates
+
     const { user } = useContext(Context)
+    const history = useHistory()
     const [file1, setFile1] = useState(null)
     const [file2, setFile2] = useState(null)
     const [file3, setFile3] = useState(null)
@@ -36,17 +39,16 @@ export default function EditAluguel() {
     const [banheiro, setBanheiro] = useState("")
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
-    // const [post, setPost] = useState()
+    const [moradores, setMoradores] = useState("")
+
     const [alertImg, setAlertImg] = useState(false)
     const location = useLocation();
-
-  const path = location.pathname.split("/")[3]
+    const path = location.pathname.split("/")[2]
 
     //pegar  os dados
     useEffect(()=>{
         const getPost = async ()=>{
           const res = await api.get("/aluguel/"+path)
-        //   setPost(res.data)
           setCat(res.data.categories)
           setPreco(res.data.preco)
           setCepp(res.data.cepp)
@@ -58,9 +60,9 @@ export default function EditAluguel() {
           setBanheiro(res.data.banheiro)
           setArea(res.data.area)
           setDesc(res.data.desc)
+          setMoradores(res.data.moradores)
         }
         getPost()
-
       }, [path])
 
     const handleSubmit = async (e)=>{
@@ -70,6 +72,7 @@ export default function EditAluguel() {
           username: user.username,
           userwhatsapp: user.whatsapp,
           categories: cat,
+          moradores: moradores,
           preco,
           desc,
           cep: cep,
@@ -130,9 +133,19 @@ export default function EditAluguel() {
         try{
           if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
             await api.put(`/aluguel/${path}`, newPost)
-            console.log(newPost)
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 1300
+            })
+            // window.location.reload();
+            window.location.replace(`/habitacao/aluguel/${path}`);
             setAlertImg(false)
-            window.location.replace(`https://enchanting-entremet-bfde4f.netlify.app/habitacao/aluguel/${path}`);
+            history.goBack()
+
+            // window.location.replace(`/habitacao/compartilhar/${path}`);
           }else{
             setAlertImg(true)
           }
@@ -160,12 +173,73 @@ export default function EditAluguel() {
           alert(err)
         }
       }
+
+      const TodosPro = ()=>{
+        Swal.fire({
+          title: 'Deseja cancelar?',
+          text: "",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sim!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Cancelado!',
+              'Divulgação de produto  cancelado!',
+              'success'
+            )
+            window.location.replace(`/habitacao/aluguel/${path}`);
+          }
+        })
+          
+      }
   return (
     <div className='fullContentAluguel'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
-                <p className='buttonHeaderAluguelHeaderCadastrar'>Editar divulgação em alugar...</p>
+                <p className='buttonHeaderAluguelHeaderCadastrar'>Editar casa em Aluguel...</p>
             </div>
         </header>
         <div className='contentSideBarForm'>
@@ -223,14 +297,16 @@ export default function EditAluguel() {
                         <input type='number' value={cozinha} placeholder='Nº de Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={banheiro} placeholder='Nº de Banheiro' required className='precoTypeInput' onChange={(e)=> setBanheiro(e.target.value)}/>
-                        <input type='number'value={area} placeholder='Nº de Área' required className='precoTypeInput' onChange={(e)=> setArea(e.target.value)}/>
+                        <input type='number' value={banheiro} placeholder='Nº de Banheiro' required className='precoTypeInputNumber' onChange={(e)=> setBanheiro(e.target.value)}/>
+                        <input type='number'value={area} placeholder='Nº de Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
+                        
                     </div>
                     <div className='precoType'>
                         <textarea className='forNewDesc' value={desc} placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
-                    <div className='precoType'>
-                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
+                    <div className='precoTypeone'>
+                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Editar...</button>
+                        <div className='canc' onClick={TodosPro}><i>Cancelar</i></div>
                     </div>
                 </div>
             </form>

@@ -54,7 +54,7 @@ export default function Desapego() {
             setCarregar(false)
             setDesapego(res.data)
         }catch(err){
-            console.log(err)
+            alert(err)
         }
     }
 
@@ -64,7 +64,6 @@ export default function Desapego() {
   const Cepfuncion = async ()=>{
     try{
       const cepSearch = cepp.replace(/\D/g, '');
-      console.log(cepSearch)
       await fetch(`https://viacep.com.br/ws/${cepSearch}/json/`)
       .then(res=>res.json()).then(data => setCep(data)
       )
@@ -127,7 +126,6 @@ export default function Desapego() {
       setCarregar(false)
       setDesapego([])
     }else{
-      console.log(results.data)
       setDesapego(results.data)
       setVazio(false)
       setCarregar(false)
@@ -141,7 +139,6 @@ export default function Desapego() {
       setCarregar(false)
       setDesapego([])
     }else{
-      console.log(results.data)
       setDesapego(results.data)
       setVazio(false)
       setCarregar(false)
@@ -164,7 +161,6 @@ export default function Desapego() {
     }catch(err){
       alert(err)
     }
-    console.log(setDesapego)
   }
   const FetchDesapegoFiltro = async () => {
     setCarregar(true)
@@ -179,7 +175,7 @@ export default function Desapego() {
           setCarregar(false)
           setDesapego(res.data)
       }catch(err){
-          console.log(err)
+          alert(err)
       }
   }
 

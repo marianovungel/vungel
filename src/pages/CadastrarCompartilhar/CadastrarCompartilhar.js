@@ -5,6 +5,7 @@ import {useState, useContext} from 'react'
 import {Context} from '../../Context/Context'
 import upload from '../../services/upload'
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 //upload img
 async function postImage({image, description}) {
@@ -97,9 +98,8 @@ export default function CadastrarCompartilhar() {
             }catch(err){}
           }
         try{
-            const res =  await api.post("/compartilhar", newPost);
+            await api.post("/compartilhar", newPost);
             SetAddPhoto(false)
-            console.log(res)
             window.location.replace("/habitacao-compartilhar");
         }catch(err){}
       }
@@ -116,7 +116,6 @@ export default function CadastrarCompartilhar() {
       const Cepfuncion = async ()=>{
         try{
           const cepSearch = cepp.replace(/\D/g, '');
-          console.log(cepSearch)
           await fetch(`https://viacep.com.br/ws/${cepSearch}/json/`)
           .then(res=>res.json()).then(data => setCep(data)
           )
@@ -127,7 +126,46 @@ export default function CadastrarCompartilhar() {
 
   return (
     <div className='fullContentAluguel'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
             <header className='headerAluguel'>
                 <div className='flexHeaderAluguel'>
                     <p className='buttonHeaderAluguelHeaderCadastrar'>Divulgar Casa em Compartilhamento...</p>

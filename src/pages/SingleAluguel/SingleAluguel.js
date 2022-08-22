@@ -17,7 +17,6 @@ export default function SingleAluguel() {
   const [desc, setDesc ] = useState("")
   const [foto, setFoto ] = useState("")
   const [editar, setEditar ] = useState(false)
-  console.log(location)
   
   useEffect(()=>{
     const getPost = async ()=>{
@@ -26,7 +25,6 @@ export default function SingleAluguel() {
       setTitle(res.data.title)
       setDesc(res.data.desc)
       setFoto(res.data.photo1)
-      console.log(res.data)
     }
     getPost()
   }, [path])
@@ -35,14 +33,12 @@ const {user} = useContext(Context);
 const URLImg = "https://festupload.s3.amazonaws.com/";
 
 const whatsappSend = () =>{
-  const messageZap=`Olá ${post.username}. Gostaria de saber se o produto ${post.title} 
-  que divulgou na plataforma UnilabTem para doação 
-  se ainda está a venda?`;
+  const messageZap=`Olá ${post.username}. Gostaria de saber se A casa em compartilhamento  
+  que divulgou na plataforma UnilabTem
+  se ainda está em aluguel?
+  https://incredible-trifle-5834a1.netlify.app/habitacao/aluguel/${path}`;
 
   window.open(`http://wa.me/+55${post.userwhatsapp}?text=${messageZap}`)
-}
-const Home = () =>{
-  window.location.replace("/habitacao/aluguel")
 }
 const EditTrue = () =>{
   setEditar(true)
@@ -68,9 +64,9 @@ const handleDelete = async () =>{
       await api.delete(`/aluguel/${post._id}`, {
           data: { username: user.username }
       });
-      window.location.replace("/habitacao-aluguel");
+      window.location.replace("/exe");
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 const hendleUpdate = async () =>{
@@ -83,7 +79,7 @@ const hendleUpdate = async () =>{
       window.location.reload('/habitacao-aluguel');
       setEditar(false)
   }catch(err){
-      console.log(err)
+      alert(err)
   }
 }
 
@@ -106,19 +102,58 @@ const FotoChengFive = ()=>{
 
   return (
     <div className='conteinerSinglePostVenda'>
-        <Menu />
+        <div className='OI' >
+            <Menu />
+        </div>
+        <div className='menuBootstrap' >
+        <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+                <div className='logoBootstrap'>
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                </div>
+            </Link>
+            <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon bg-light braca"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link text-light" to="/sobre">Sobre</Link>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Habitação
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        </div>
         <div className='fullContent'>
           <div className='imgContent'>
             <p id='categoria'>Categoria: {post.categories}</p>
             <div className='imgDivSingle'>
-              <img id='photoVendaId' src={URLImg+foto} alt='#' />
+              <img id='photoVendaId' src={URLImg+foto} alt='' />
             </div>
             <div className='imgDivSingleClass'>
-              <img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='#' />
-              <img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='#' />
+              <img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='' />
+              <img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='' />
             </div>
             
           </div>
@@ -136,20 +171,25 @@ const FotoChengFive = ()=>{
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <i className='outrosProdutos' onClick={Home}>Outros produtos</i>
+              <Link to="/habitacao-compartilhar"><i className='outrosProdutos'>Outros produtos</i></Link>
             </div>
-            <p><i className="sizeColor fa-solid fa-user-pen"></i> {post.username}</p>
-            <p><i className="sizeColor fa-solid fa-audio-description"></i> {post.desc}</p>
-            <p><i className="sizeColor fa-solid fa-calendar-day"></i> {new  Date(post.createdAt).toDateString()}</p>
-            <p><i className="sizeColor fa-solid fa-toggle-on"></i> Desponível</p>
-            <p><i className="sizeColor fa-solid fa-map-location-dot"></i> Endereço</p>
+            <p><i>Divulgador: </i> <b>{post.username}</b></p>
+            <p><i>Preço: </i>R$ <b>{post.preco}</b></p>
+            <p><i>Data de divulgação: </i> <b>{new  Date(post.createdAt).toDateString()}</b></p>
+            <p><i>Estatos: </i> <b>Desponível</b></p>
+            {/* <p><i></i> Endereço</p> */}
+            <p><i>Sala: </i><b>{post.sala}</b> </p>
+            <p><i>Cozinha: </i> <b>{post.cozinha}</b></p>
+            <p><i>Quarto: </i><b>{post.quarto}</b> </p>
+            <p><i>Banheiro: </i><b>{post.banheiro}</b> </p>
+            <p><i>Info: </i> <b>{post.desc}</b> </p>
             </>
             )}
           </div>
           <div className='butoomContent'>
             {post.username === user.username ? (
               <Link to={`/aluguel-edit/${post?._id}`}>
-                <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
+                  <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               </Link>
             ) : (
               <div></div>
@@ -158,7 +198,7 @@ const FotoChengFive = ()=>{
               <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
-            )} 
+            )}
           </div>
           <footer className=''></footer>
         </div>

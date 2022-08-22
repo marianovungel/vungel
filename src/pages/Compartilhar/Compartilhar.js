@@ -4,7 +4,7 @@ import Menu from '../../components/Menu/Menu'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import api from '../../services/api'
-import Header from '../../components/Header/Header'
+import HeaderCompart from '../../components/HeaderCompart/HeaderCompart'
 
 export default function Compartilhar() {
 
@@ -15,7 +15,7 @@ export default function Compartilhar() {
                 const res = await api.get("/compartilhar")
                 setCompartilhamento(res.data);
             }catch(err){
-                console.log(err)
+                alert(err)
             }
         }
     
@@ -60,7 +60,7 @@ export default function Compartilhar() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
-                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/compartilhar-cadastrar">Divulgar Compartilhamento</Link></li>
                 </ul>
                 </li>
             </ul>
@@ -70,7 +70,7 @@ export default function Compartilhar() {
         </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
-            <Header />
+            <HeaderCompart />
             </div>
         </header>
         <div className='contentSideBarComp'>

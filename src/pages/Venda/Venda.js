@@ -49,8 +49,7 @@ function Venda() {
       }catch(err){}
     }
     try{
-      const resp = await api.post("/produto", newPost);
-      console.log(resp.data.post.photo)
+      await api.post("/produto", newPost)
       Swal.fire({
         position: 'center',
         icon: 'success',
