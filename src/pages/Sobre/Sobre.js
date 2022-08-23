@@ -101,9 +101,27 @@ export default function Sobre() {
                         </div>
                     </div>
                     <div className='sobreparticipanteDiv'>
-                        <img src='https://w7.pngwing.com/pngs/114/579/png-transparent-pink-cross-stroke-ink-brush-pen-red-ink-brush-ink-leave-the-material-text.png' alt='#' className='imagemParti'/>
+                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
                         <div className='divDescParti'>
                             <b className='marginBott'>Marcos Domingos Simão Kiacola</b>
+                            <p className='marginBott'>Graduando</p>
+                            <p className='marginBott'>Colaborador</p>
+                            <p className='marginBott'>@gmail</p>
+                        </div>
+                    </div>
+                    <div className='sobreparticipanteDiv'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
+                        <div className='divDescParti'>
+                            <b className='marginBott'>Sumaé Embaló</b>
+                            <p className='marginBott'>Graduando</p>
+                            <p className='marginBott'>Colaborador</p>
+                            <p className='marginBott'>@gmail</p>
+                        </div>
+                    </div>
+                    <div className='sobreparticipanteDiv'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
+                        <div className='divDescParti'>
+                            <b className='marginBott'>Nena António Impanta</b>
                             <p className='marginBott'>Graduando</p>
                             <p className='marginBott'>Colaborador</p>
                             <p className='marginBott'>@gmail</p>
