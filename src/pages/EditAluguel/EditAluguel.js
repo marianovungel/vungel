@@ -280,11 +280,11 @@ export default function EditAluguel() {
                 </div>
                 <div className='inputsFormeCadastrarAluguel'>
                     <div className='precoType'>
-                        <input type='text'value={cat} placeholder='Ex.: Apartamento' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
+                        <input type='text'value={cat} placeholder='tipo' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
                         <input type='number'value={preco} placeholder='Preço' required className='precoTypeInput' onChange={(e)=> setPreco(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={contrato} maxLength='2' placeholder='Meses de Contrato' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
+                        <input type='number' value={contrato} maxLength='2' placeholder='Nº Meses' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
                         <input type='text' value={cep.cep} placeholder='CEP' maxLength='9'
                                 minLength='9' required className='precoTypeInput'
                                 onChange={(e)=> setCepp(e.target.value)} 
@@ -292,13 +292,13 @@ export default function EditAluguel() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={quarto} placeholder='Nº de Quartos' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
-                        <input type='number'value={sala} placeholder='Nº de Salas' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
-                        <input type='number' value={cozinha} placeholder='Nº de Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
+                        <input type='number' value={quarto} placeholder='Nº quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
+                        <input type='number'value={sala} placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
+                        <input type='number'value={area} placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={banheiro} placeholder='Nº de Banheiro' required className='precoTypeInputNumber' onChange={(e)=> setBanheiro(e.target.value)}/>
-                        <input type='number'value={area} placeholder='Nº de Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
+                        <input type='number' value={banheiro} placeholder='Nº Banheiro' required className='precoTypeInputNumber' onChange={(e)=> setBanheiro(e.target.value)}/>
+                        <input type='number' value={cozinha} placeholder='Nº Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
                         
                     </div>
                     <div className='precoType'>
