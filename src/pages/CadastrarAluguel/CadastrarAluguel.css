@@ -48,12 +48,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.precoType1{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
 .precoTypeInput{
     width: 35%;
     height: 35px;
@@ -69,7 +64,7 @@
     width: 30%;
     height: 35px;
     padding-left: 10px;
-    font-size: 12pt;
+    font-size: 10pt;
     background-color: #fff;
     color: #666;
     border: none;
