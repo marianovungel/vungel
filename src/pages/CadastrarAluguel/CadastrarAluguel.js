@@ -30,7 +30,7 @@ export default function CadastrarAluguel() {
     const [preco, setPreco] = useState("")
     const [cepp, setCepp] = useState("")
     const [cep, setCep] = useState("")
-    const [contrato, setContrato] = useState("")
+    // const [contrato, setContrato] = useState("")
     const [quarto, setQuarto] = useState("")
     const [sala, setSala] = useState("")
     const [cozinha, setCozinha] = useState("")
@@ -38,6 +38,7 @@ export default function CadastrarAluguel() {
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
     const [alertImg, setAlertImg] = useState(false)
+    const [pfile1, setPfile1] = useState(false)
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
@@ -50,7 +51,7 @@ export default function CadastrarAluguel() {
           desc,
           cep: cep,
           cidade: cep.localidade,
-          contrato,
+          // contrato,
           quarto,
           sala,
           cozinha,
@@ -117,7 +118,11 @@ export default function CadastrarAluguel() {
 
       const setImg = () =>{
         if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
-          setAlertImg(false)
+          if(file1 === null){
+            setPfile1(true)
+          }else{
+            setAlertImg(false)
+          }
         }else{
           setAlertImg(true)
         }
@@ -184,7 +189,8 @@ export default function CadastrarAluguel() {
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
               {alertImg && (<h6 className='headerIAlert'>Adicione as 5 imagens para proceguir...</h6>)}
-                <i className='headerI'>Adaiciona cinco (5) imagens...</i>
+              {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
+                <i className='headerI'>Adiciona cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
                 {file1 ? (
                     <img src={URL.createObjectURL(file1)} alt='uploadImg' className='labelFotoObject' />
@@ -197,33 +203,33 @@ export default function CadastrarAluguel() {
                     ):(
                     <label for='foto2' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto2' required className='inputFotoLabelAlugel' onChange={(e)=> setFile2(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto2'  className='inputFotoLabelAlugel' onChange={(e)=> setFile2(e.target.files[0])}/>
                     {file3 ? (
                     <img src={URL.createObjectURL(file3)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto3' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto3' required className='inputFotoLabelAlugel' onChange={(e)=> setFile3(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto3'  className='inputFotoLabelAlugel' onChange={(e)=> setFile3(e.target.files[0])}/>
                     {file4 ? (
                     <img src={URL.createObjectURL(file4)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto4' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto4' required className='inputFotoLabelAlugel' onChange={(e)=> setFile4(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto4'  className='inputFotoLabelAlugel' onChange={(e)=> setFile4(e.target.files[0])}/>
                     {file5 ? (
                     <img src={URL.createObjectURL(file5)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto5' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto5' required className='inputFotoLabelAlugel' onChange={(e)=> setFile5(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto5'  className='inputFotoLabelAlugel' onChange={(e)=> setFile5(e.target.files[0])}/>
                 </div>
                 <div className='inputsFormeCadastrarAluguel'>
                     <div className='precoType'>
-                        <input type='text' placeholder='tipo' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
+                        <input type='text' placeholder='Categoria' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
                         <input type='number' placeholder='Preço' required className='precoTypeInput' onChange={(e)=> setPreco(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' maxLength='2' placeholder='Nº Meses' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
+                    <input type='number' placeholder='Nº quarto' required className='precoTypeInput' onChange={(e)=> setQuarto(e.target.value)}/>
                         <input type='text' placeholder='CEP' maxLength='9'
                                 minLength='9' required className='precoTypeInput'
                                 onChange={(e)=> setCepp(e.target.value)} 
@@ -231,12 +237,11 @@ export default function CadastrarAluguel() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='N quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
-                        <input type='number' placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
-                        <input type='number' placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
+                        <input type='number' placeholder='Nº Sala' required className='precoTypeInput' onChange={(e)=> setSala(e.target.value)}/>
+                        <input type='number' placeholder='Nº Área' required className='precoTypeInput' onChange={(e)=> setArea(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                    <input type='number' placeholder='Nº Cozinha' required className='precoTypeInput' onChange={(e)=> setCozinha(e.target.value)}/>
+                        <input type='number' placeholder='Nº Cozinha' required className='precoTypeInput' onChange={(e)=> setCozinha(e.target.value)}/>
                         <input type='number' placeholder='Nº Banheiro' required className='precoTypeInput' onChange={(e)=> setBanheiro(e.target.value)}/>
                         
                     </div>

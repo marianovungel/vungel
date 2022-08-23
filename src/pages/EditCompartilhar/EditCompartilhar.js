@@ -248,7 +248,7 @@ export default function EditCompartilhar() {
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
               {alertImg && (<h6 className='headerIAlert'>Adicione as 5 imagens para proceguir...</h6>)}
-                <i className='headerI'>Adaiciona cinco (5) imagens...</i>
+                <i className='headerI'>Adiciona cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
                 {file1 ? (
                     <img src={URL.createObjectURL(file1)}  alt='uploadImg' className='labelFotoObject' />
@@ -283,11 +283,11 @@ export default function EditCompartilhar() {
                 </div>
                 <div className='inputsFormeCadastrarAluguel'>
                     <div className='precoType'>
-                        <input type='text'value={cat} placeholder='Tipo' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
+                        <input type='text'value={cat} placeholder='Categoria' required className='precoTypeInput' onChange={(e)=> setCat(e.target.value)}/>
                         <input type='number'value={preco} placeholder='Preço' required className='precoTypeInput' onChange={(e)=> setPreco(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={contrato} maxLength='2' placeholder='Nº Meses' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
+                        <input type='number' value={contrato} maxLength='2' placeholder='Nº Quintal' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
                         <input type='text' value={cep.cep} placeholder='CEP' maxLength='9'
                                 minLength='9' required className='precoTypeInput'
                                 onChange={(e)=> setCepp(e.target.value)} 
