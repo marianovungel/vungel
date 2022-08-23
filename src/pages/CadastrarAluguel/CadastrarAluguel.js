@@ -231,13 +231,13 @@ export default function CadastrarAluguel() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='Nº de Quartos' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
-                        <input type='number' placeholder='Nº de Salas' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
-                        <input type='number' placeholder='Nº de Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
+                        <input type='number' placeholder='Nº Quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
+                        <input type='number' placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
+                        <input type='number' placeholder='Nº Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='Nº de Banheiro' required className='precoTypeInput' onChange={(e)=> setBanheiro(e.target.value)}/>
-                        <input type='number' placeholder='Nº de Área' required className='precoTypeInput' onChange={(e)=> setArea(e.target.value)}/>
+                        <input type='number' placeholder='Nº Banheiro' required className='precoTypeInput' onChange={(e)=> setBanheiro(e.target.value)}/>
+                        <input type='number' placeholder='Nº Área' required className='precoTypeInput' onChange={(e)=> setArea(e.target.value)}/>
                     </div>
                     <div className='precoType'>
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
