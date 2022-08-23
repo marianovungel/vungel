@@ -391,7 +391,6 @@
         padding-top: 10px;
         padding-bottom: 17px;
         max-height: 550px;
-        z-index: 0;
     }
     .sidebarDesapego{
         width: 100%;
@@ -418,7 +417,7 @@
         justify-content: flex-start;
         padding: 0px 10px 0px 10px;
     }
-
+    
     .bannerDesapego{
         display: none;
         
@@ -442,8 +441,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
-        margin-top: -55px;
-        z-index: 99;
+        margin-top: 0px;
     }
 
 }
