@@ -41,6 +41,8 @@ export default function EditCompartilhar() {
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
+    const [pfile1, setPfile1] = useState(false)
+
 
     // const [post, setPost] = useState()
     const [alertImg, setAlertImg] = useState(false)
@@ -159,7 +161,11 @@ export default function EditCompartilhar() {
 
       const setImg = () =>{
         if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
-          setAlertImg(false)
+          if(file1 === null){
+            setPfile1(true)
+          }else{
+            setAlertImg(false)
+          }
         }else{
           setAlertImg(true)
         }
@@ -248,6 +254,8 @@ export default function EditCompartilhar() {
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
               {alertImg && (<h6 className='headerIAlert'>Adicione as 5 imagens para proceguir...</h6>)}
+              {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
+
                 <i className='headerI'>Adiciona cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
                 {file1 ? (
@@ -261,25 +269,25 @@ export default function EditCompartilhar() {
                     ):(
                     <label for='foto2' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto2' required className='inputFotoLabelAlugel' onChange={(e)=> setFile2(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto2'  className='inputFotoLabelAlugel' onChange={(e)=> setFile2(e.target.files[0])}/>
                     {file3 ? (
                     <img src={URL.createObjectURL(file3)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto3' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto3' required className='inputFotoLabelAlugel' onChange={(e)=> setFile3(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto3'  className='inputFotoLabelAlugel' onChange={(e)=> setFile3(e.target.files[0])}/>
                     {file4 ? (
                     <img src={URL.createObjectURL(file4)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto4' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto4' required className='inputFotoLabelAlugel' onChange={(e)=> setFile4(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto4'  className='inputFotoLabelAlugel' onChange={(e)=> setFile4(e.target.files[0])}/>
                     {file5 ? (
                     <img src={URL.createObjectURL(file5)} alt='uploadImg' className='labelFotoObject' />
                     ):(
                     <label for='foto5' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd"></i></label>
                     )}
-                    <input type="file" accept="image/*" id='foto5' required className='inputFotoLabelAlugel' onChange={(e)=> setFile5(e.target.files[0])}/>
+                    <input type="file" accept="image/*" id='foto5'  className='inputFotoLabelAlugel' onChange={(e)=> setFile5(e.target.files[0])}/>
                 </div>
                 <div className='inputsFormeCadastrarAluguel'>
                     <div className='precoType'>
