@@ -40,7 +40,7 @@ export default function Sobre() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
-                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
                 </li>
             </ul>

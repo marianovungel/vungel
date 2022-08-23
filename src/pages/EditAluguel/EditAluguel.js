@@ -205,7 +205,7 @@ export default function EditAluguel() {
         <div className="container-fluid">
             <Link className="navbar-brand" to="/">
                 <div className='logoBootstrap'>
-                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="" />
+                  <div></div>
                 </div>
             </Link>
             <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

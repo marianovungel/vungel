@@ -132,7 +132,7 @@ const FotoChengFive = ()=>{
         <div className="container-fluid">
             <Link className="navbar-brand" to="/">
                 <div className='logoBootstrap'>
-                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                    <div></div>
                 </div>
             </Link>
             <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,7 +156,7 @@ const FotoChengFive = ()=>{
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
-                    <li><Link className="dropdown-item" to="/aluguel-cadastrar">Divulgar Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
                 </li>
             </ul>
