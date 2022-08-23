@@ -44,6 +44,27 @@ const EditTrue = () =>{
   setEditar(true)
 }
 
+const fastConfirmDelete = async ()=>{
+  const { value: accept } = await Swal.fire({
+    title: 'Deletar',
+    input: 'checkbox',
+    inputValue: 0,
+    inputPlaceholder:
+      'Selecione a caixa se desejas deletar!',
+    confirmButtonText:
+      'Continue <i class="fa fa-arrow-right"></i>',
+    inputValidator: (result) => {
+      return !result && 'É necessário selecionar a caixa para deletar!'
+      
+    }
+  })
+  
+  if (accept) {
+    // Swal.fire('You agreed with T&C :)')
+    confirmDelete()
+  }
+}
+
 const confirmDelete= async () => {
   const { isConfirmed } = await Swal.fire({
       title: `Deletar ${post?.title}`,
@@ -194,7 +215,7 @@ const TodosPro = ()=>{
                 <div></div>
               )}
               {post.username === user.username ? (
-                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={confirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
+                <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={fastConfirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
               ) : (
                 <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
               )}
