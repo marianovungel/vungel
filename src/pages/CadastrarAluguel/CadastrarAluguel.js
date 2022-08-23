@@ -223,7 +223,7 @@ export default function CadastrarAluguel() {
                         <input type='number' placeholder='Preço' required className='precoTypeInput' onChange={(e)=> setPreco(e.target.value)}/>
                     </div>
                     <div className='precoType'>
-                        <input type='number' maxLength='2' placeholder='Meses-Contrato' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
+                        <input type='number' maxLength='2' placeholder='Nº Meses' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
                         <input type='text' placeholder='CEP' maxLength='9'
                                 minLength='9' required className='precoTypeInput'
                                 onChange={(e)=> setCepp(e.target.value)} 
