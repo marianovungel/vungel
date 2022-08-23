@@ -193,7 +193,7 @@ const FotoChengFive = ()=>{
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <Link to="/habitacao-compartilhar"><i className='outrosProdutos'>Outros produtos</i></Link>
+              <Link to="/exe"><i className='outrosProdutos'>Outros produtos</i></Link>
             </div>
             <p><i>Divulgador: </i> <b>{post.username}</b></p>
             <p><i>Preço: </i>R$ <b>{post.preco}</b></p>
