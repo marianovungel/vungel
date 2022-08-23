@@ -231,7 +231,7 @@ export default function CadastrarAluguel() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='Nº Quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
+                        <input type='number' placeholder='Nº Quarto' required className='precoTypeInputNumberu' onChange={(e)=> setQuarto(e.target.value)}/>
                         <input type='number' placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
                         <input type='number' placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
                         
