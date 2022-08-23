@@ -230,7 +230,7 @@ export default function CadastrarAluguel() {
                                 onBlur={Cepfuncion}
                         />
                     </div>
-                    <div className='precoType'>
+                    <div className='precoType1'>
                         <input type='number' placeholder='Nº Quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
                         <input type='number' placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
                         <input type='number' placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
