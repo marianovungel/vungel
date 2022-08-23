@@ -228,19 +228,19 @@ export default function CadastrarCompartilhar() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='N quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
-                        <input type='number' placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
+                        <input type='number' placeholder='N quarto' required className='precoTypeInput' onChange={(e)=> setQuarto(e.target.value)}/>
+                        <input type='number' placeholder='Nº Sala' required className='precoTypeInput' onChange={(e)=> setSala(e.target.value)}/>
                         
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='Nº Cozinha' required className='precoTypeInputNumber' onChange={(e)=> setCozinha(e.target.value)}/>
-                        <input type='number' placeholder='Nº Banheiro' required className='precoTypeInputNumber' onChange={(e)=> setBanheiro(e.target.value)}/>
+                        <input type='number' placeholder='Nº Cozinha' required className='precoTypeInput' onChange={(e)=> setCozinha(e.target.value)}/>
+                        <input type='number' placeholder='Nº Banheiro' required className='precoTypeInput' onChange={(e)=> setBanheiro(e.target.value)}/>
                         
                         
                     </div>
                     <div className='precoType'>
-                        <input type='number' placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
-                        <input type='number' placeholder='Nº Pessoa' required className='precoTypeInputNumber' onChange={(e)=> setMoradores(e.target.value)}/>
+                        <input type='number' placeholder='Nº Área' required className='precoTypeInput' onChange={(e)=> setArea(e.target.value)}/>
+                        <input type='number' placeholder='Nº Pessoa' required className='precoTypeInput' onChange={(e)=> setMoradores(e.target.value)}/>
                     </div>
                     <div className='precoType'>
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
