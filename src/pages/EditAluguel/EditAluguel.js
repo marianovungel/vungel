@@ -205,7 +205,7 @@ export default function EditAluguel() {
         <div className="container-fluid">
             <Link className="navbar-brand" to="/">
                 <div className='logoBootstrap'>
-                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="logoUnilabtem" />
+                    <img className='imagemLogo' id="idImgFit" src="./image/preta.png" alt="" />
                 </div>
             </Link>
             <button className="bg-light braca" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -292,7 +292,7 @@ export default function EditAluguel() {
                         />
                     </div>
                     <div className='precoType'>
-                        <input type='number' value={quarto} placeholder='Nº quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
+                        <input type='number' value={quarto} placeholder='N quarto' required className='precoTypeInputNumber' onChange={(e)=> setQuarto(e.target.value)}/>
                         <input type='number'value={sala} placeholder='Nº Sala' required className='precoTypeInputNumber' onChange={(e)=> setSala(e.target.value)}/>
                         <input type='number'value={area} placeholder='Nº Área' required className='precoTypeInputNumber' onChange={(e)=> setArea(e.target.value)}/>
                     </div>
