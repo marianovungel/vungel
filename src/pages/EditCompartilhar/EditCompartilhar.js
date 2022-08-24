@@ -137,7 +137,7 @@ export default function EditCompartilhar() {
             }catch(err){}
           }
         try{
-          if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
+          if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
             await api.put(`/compartilhar/${path}`, newPost)
             Swal.fire({
               position: 'center',
@@ -160,9 +160,10 @@ export default function EditCompartilhar() {
 
 
       const setImg = () =>{
-        if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
+        if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
           if(file1 === null){
             setPfile1(true)
+            setAlertImg(false)
           }else{
             setAlertImg(false)
           }

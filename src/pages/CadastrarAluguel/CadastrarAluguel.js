@@ -20,7 +20,7 @@ async function postImage({image, description}) {
 export default function CadastrarAluguel() {
 
     //useStates
-    const { user } = useContext(Context)
+    const { user, isFetching } = useContext(Context)
     const [file1, setFile1] = useState(null)
     const [file2, setFile2] = useState(null)
     const [file3, setFile3] = useState(null)
@@ -105,10 +105,10 @@ export default function CadastrarAluguel() {
             }catch(err){}
           }
         try{
-          if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
+          if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
             await api.post("/aluguel", newPost);
             setAlertImg(false)
-            window.location.replace("/habitacao-aluguel");
+            window.location.replace("/exe");
           }else{
             setAlertImg(true)
           }
@@ -117,9 +117,10 @@ export default function CadastrarAluguel() {
 
 
       const setImg = () =>{
-        if(file1 !== null && file2 !== null && file3 !== null && file4 !== null && file5 !== null){
+        if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
           if(file1 === null){
             setPfile1(true)
+            setAlertImg(false)
           }else{
             setAlertImg(false)
           }
@@ -188,7 +189,7 @@ export default function CadastrarAluguel() {
         </header>
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
-              {alertImg && (<h6 className='headerIAlert'>Adicione as 5 imagens para proceguir...</h6>)}
+              {alertImg && (<h6 className='headerIAlert'>Adicionar no mínimo uma imagens...</h6>)}
               {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
                 <i className='headerI'>Adiciona cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
@@ -249,7 +250,7 @@ export default function CadastrarAluguel() {
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoType'>
-                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
+                        <button type='submit' disabled={isFetching} onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
                     </div>
                 </div>
             </form>

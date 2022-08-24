@@ -109,6 +109,7 @@ export default function CadastrarCompartilhar() {
         if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
           if(file1 === null){
             setPfile1(true)
+            setAlertImg(false)
           }else{
             setAlertImg(false)
           }
