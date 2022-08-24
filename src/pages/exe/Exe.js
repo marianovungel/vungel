@@ -47,7 +47,7 @@ export default function Exe() {
                 <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/venda">Venda</Link>
+                <Link className="nav-link text-light" to="/">Venda</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/sobre">Sobre</Link>
