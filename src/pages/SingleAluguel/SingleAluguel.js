@@ -171,11 +171,11 @@ const FotoChengFive = ()=>{
               <img id='photoVendaId' src={URLImg+foto} alt='' />
             </div>
             <div className='imgDivSingleClass'>
-              {post?.photo1 !== null && (<img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='' />)}
-              {post?.photo2 !== null && (<img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='' />)}
-              {post?.photo3 !== null && (<img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='' />)}
-              {post?.photo4 !== null && (<img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='' />)}
-              {post?.photo5 !== null && (<img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='' />)}
+              {post?.photo1  && (<img className='photoVendaclassName' onClick={FotoChengOne} src={URLImg+post.photo1} alt='' />)}
+              {post?.photo2  && (<img className='photoVendaclassName' onClick={FotoChengTwo} src={URLImg+post.photo2} alt='' />)}
+              {post?.photo3  && (<img className='photoVendaclassName' onClick={FotoChengTrei} src={URLImg+post.photo3} alt='' />)}
+              {post?.photo4  && (<img className='photoVendaclassName' onClick={FotoChengFort} src={URLImg+post.photo4} alt='' />)}
+              {post?.photo5  && (<img className='photoVendaclassName' onClick={FotoChengFive} src={URLImg+post.photo5} alt='' />)}
             </div>
             
           </div>
