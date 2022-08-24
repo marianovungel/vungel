@@ -25,8 +25,6 @@ export default function SingleCompartilhar() {
       setTitle(res.data.title)
       setDesc(res.data.desc)
       setFoto(res.data.photo1)
-      console.log(res.data.photo4)
-      console.log(res.data.photo1)
     }
     getPost()
   }, [path])
