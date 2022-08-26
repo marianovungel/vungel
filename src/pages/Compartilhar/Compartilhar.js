@@ -22,9 +22,8 @@ export default function Compartilhar() {
         FetchDesapego();
     }, [])
 
-    console.log(compartilhar)
     const URLImg = "https://festupload.s3.amazonaws.com/";
-
+    
   return (
     <div>
         <div className='fullContentAluguel'>
@@ -82,7 +81,7 @@ export default function Compartilhar() {
                     <div className="descritionAluguelSetion">
                         <i className="aluguelI">{p.cep.localidade}</i>
                         <h3 className="hpraceAluguel">R${p.preco}</h3>
-                        <smoll>Compartilhamento</smoll>
+                        <i>Compartilhamento</i>
                         <p className="pdescriçãoAluguel">{p.desc}</p>
                     </div>
                     <div className="buttonAluguelSection">

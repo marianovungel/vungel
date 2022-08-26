@@ -73,6 +73,7 @@ export default function Exe() {
             </div>
         </header>
         <div className='contentSideBarComp'>
+            
             {aluguel?.map((p)=>(
                 <div className='cardAluguelnew' key={p?._id}>
                     <div className="imagemAluguelSection">
@@ -81,7 +82,7 @@ export default function Exe() {
                     <div className="descritionAluguelSetion">
                         <i className="aluguelI">{p.cep.localidade}</i>
                         <h3 className="hpraceAluguel">R${p.preco}</h3>
-                        <smoll>Compartilhamento</smoll>
+                        <i>Compartilhamento</i>
                         <p className="pdescriçãoAluguel">{p.desc}</p>
                     </div>
                     <div className="buttonAluguelSection">

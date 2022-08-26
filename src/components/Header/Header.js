@@ -13,9 +13,9 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-            <Link className="nav-item nav-link active" to='/exe'>Aluguel <span class="sr-only">(current)</span></Link>
-            <Link className="nav-item nav-link" to='/habitacao-compartilhar'>Compartilhamento</Link>
-            <Link className="nav-item nav-link" to='/aluguel-cadastrando'>Divulgar casa...</Link>
+            <Link className="nav-item nav-link active" to='/exe'>Aluguel <span className="sr-only">(current)</span></Link>
+            <Link className="nav-item nav-link active" to='/habitacao-compartilhar'>Compartilhamento</Link>
+            <Link className="nav-item nav-link active" to='/aluguel-cadastrando'>Divulgar casa...</Link>
             </div>
         </div>
         </nav>
