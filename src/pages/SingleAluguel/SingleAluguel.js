@@ -16,11 +16,17 @@ export default function SingleAluguel() {
   const [title, setTitle ] = useState("")
   const [desc, setDesc ] = useState("")
   const [foto, setFoto ] = useState("")
+  const [cidade, setCidade ] = useState("")
+  const [bairro, setBairro ] = useState("")
+  const [logradouro, setLogradouro ] = useState("")
   const [editar, setEditar ] = useState(false)
   
   useEffect(()=>{
     const getPost = async ()=>{
       const res = await api.get("/aluguel/"+path)
+      setCidade(res.data.cep.localidade)
+      setBairro(res.data.cep.bairro)
+      setLogradouro(res.data.cep.logradouro)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -199,11 +205,13 @@ const FotoChengFive = ()=>{
             <p><i>Preço: </i>R$ <b>{post.preco}</b></p>
             <p><i>Data de divulgação: </i> <b>{new  Date(post.createdAt).toDateString()}</b></p>
             <p><i>Estatos: </i> <b>Desponível</b></p>
-            {/* <p><i></i> Endereço</p> */}
             <p><i>Sala: </i><b>{post.sala}</b> </p>
             <p><i>Cozinha: </i> <b>{post.cozinha}</b></p>
             <p><i>Quarto: </i><b>{post.quarto}</b> </p>
             <p><i>Banheiro: </i><b>{post.banheiro}</b> </p>
+            {cidade && (<p><i>Cidade: </i><b>{cidade}</b> </p>)}
+            {bairro && (<p><i>Bairro: </i><b>{bairro}</b> </p>)}
+            {logradouro && (<p><i>Logradouro: </i><b>{logradouro}</b> </p>)}
             <p><i>Info: </i> <b>{post.desc}</b> </p>
             </>
             )}

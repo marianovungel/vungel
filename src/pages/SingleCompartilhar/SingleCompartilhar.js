@@ -15,12 +15,18 @@ export default function SingleCompartilhar() {
   const [title, setTitle ] = useState("")
   const [desc, setDesc ] = useState("")
   const [foto, setFoto ] = useState("")
+  const [cidade, setCidade ] = useState("")
+  const [bairro, setBairro ] = useState("")
+  const [logradouro, setLogradouro ] = useState("")
   const [editar, setEditar ] = useState(false)
   
   
   useEffect(()=>{
     const getPost = async ()=>{
       const res = await api.get("/compartilhar/"+path)
+      setCidade(res.data.cep.localidade)
+      setBairro(res.data.cep.bairro)
+      setLogradouro(res.data.cep.logradouro)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -204,6 +210,9 @@ const FotoChengFive = ()=>{
             <p><i>Cozinha: </i> <b>{post.cozinha}</b></p>
             <p><i>Quarto: </i><b>{post.quarto}</b> </p>
             <p><i>Banheiro: </i><b>{post.banheiro}</b> </p>
+            {cidade && (<p><i>Cidade: </i><b>{cidade}</b> </p>)}
+            {bairro && (<p><i>Bairro: </i><b>{bairro}</b> </p>)}
+            {logradouro && (<p><i>Logradouro: </i><b>{logradouro}</b> </p>)}
             <p><i>Info: </i> <b>{post.desc}</b> </p>
             </>
             )}

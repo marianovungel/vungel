@@ -41,11 +41,9 @@ export default function EditCompartilhar() {
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
-    const [pfile1, setPfile1] = useState(false)
 
 
     // const [post, setPost] = useState()
-    const [alertImg, setAlertImg] = useState(false)
     const location = useLocation();
 
   const path = location.pathname.split("/")[2]
@@ -137,7 +135,6 @@ export default function EditCompartilhar() {
             }catch(err){}
           }
         try{
-          if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
             await api.put(`/compartilhar/${path}`, newPost)
             Swal.fire({
               position: 'center',
@@ -148,28 +145,11 @@ export default function EditCompartilhar() {
             })
             // window.location.reload();
             window.location.replace(`/habitacao/compartilhar/${path}`);
-            setAlertImg(false)
             history.goBack()
 
             // window.location.replace(`/habitacao/compartilhar/${path}`);
-          }else{
-            setAlertImg(true)
-          }
+          
         }catch(err){}
-      }
-
-
-      const setImg = () =>{
-        if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
-          if(file1 === null){
-            setPfile1(true)
-            setAlertImg(false)
-          }else{
-            setAlertImg(false)
-          }
-        }else{
-          setAlertImg(true)
-        }
       }
 
       //cep
@@ -254,8 +234,6 @@ export default function EditCompartilhar() {
         </header>
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
-              {alertImg && (<h6 className='headerIAlert'>Adicione as 5 imagens para proceguir...</h6>)}
-              {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
 
                 <i className='headerI'>Adiciona cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
@@ -264,7 +242,7 @@ export default function EditCompartilhar() {
                 ):(
                     <label for='foto1' className='labelFoto'><i className="fa-solid fa-circle-plus sizeAdd" ></i></label>
                 )}
-                    <input type="file" accept="image/*" id='foto1' required className='inputFotoLabelAlugel'onChange={(e)=> setFile1(e.target.files[0])} />
+                    <input type="file" accept="image/*" id='foto1' className='inputFotoLabelAlugel'onChange={(e)=> setFile1(e.target.files[0])} />
                     {file2 ? (
                     <img src={URL.createObjectURL(file2)} alt='uploadImg' className='labelFotoObject' />
                     ):(
@@ -321,7 +299,7 @@ export default function EditCompartilhar() {
                         <textarea className='forNewDesc' value={desc} placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoTypeone'>
-                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Editar...</button>
+                        <button type='submit' className='CadastrarcasaEmAluguel'>Editar...</button>
                         <div className='canc' onClick={TodosPro}><i>Cancelar</i></div>
                     </div>
                 </div>
