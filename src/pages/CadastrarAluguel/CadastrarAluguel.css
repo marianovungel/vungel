@@ -107,6 +107,13 @@
     text-align: center;
     padding: 8px;
 }
+@media(min-width: 885px){
+    .contentSideBarForm{
+        width: 42%;
+        margin: 100px auto 0px  auto;
+        background: linear-gradient(#F6F3F3, #5574e1);
+    }
+}
 @media(max-width: 775px){
     .contentSideBarForm{
         width: 55%;

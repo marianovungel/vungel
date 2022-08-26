@@ -253,7 +253,7 @@ export default function CadastrarCompartilhar() {
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoType'>
-                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
+                        <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar Compartilhamento</button>
                     </div>
                 </div>
             </form>
