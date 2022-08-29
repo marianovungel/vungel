@@ -188,7 +188,7 @@ export default function CadastrarCompartilhar() {
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
             {alertImg && (<h6 className='headerIAlert'>Adicione no mínimo uma imagens...</h6>)}
             {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
-                <i className='headerI'>Adiciona cinco (5) imagens...</i>
+                <i className='headerI'>Adiciona até cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
                 {file1 ? (
                     <img src={URL.createObjectURL(file1)} alt='uploadImg' className='labelFotoObject' />

@@ -76,7 +76,7 @@ export default function Sobre() {
                     <div className='sobreparticipanteDiv'>
                         <img src='https://sig.unilab.edu.br/shared/verFoto?idFoto=494816&key=c7bc69afa99a94c1404d79d7bded526d' alt='#' className='imagemParti'/>
                         <div className='divDescParti'>
-                            <b className='marginBott'>Doutor Sabi Moisé Bandiri</b>
+                            <b className='marginBott'>Doutor Sabi Yari Moïse Bandiri</b>
                             <p className='marginBott'>Professor</p>
                             <p className='marginBott'>Cordenador</p>
                             <p className='marginBott'>@gmail</p>
@@ -85,9 +85,9 @@ export default function Sobre() {
                     <div className='sobreparticipanteDiv'>
                         <img src='https://sig.unilab.edu.br/shared/verFoto?idFoto=643363&key=846b8cc5a7457f43ef9bbc9380a869e6' alt='#' className='imagemParti'/>
                         <div className='divDescParti'>
-                            <b className='marginBott'>Doutor Tales Paiva</b>
+                            <b className='marginBott'>Doutor Tales Paiva Nogueira</b>
                             <p className='marginBott'>Professor</p>
-                            <p className='marginBott'>subcoordenado</p>
+                            <p className='marginBott'>Vice-coordenado</p>
                             <p className='marginBott'>@gmail</p>
                         </div>
                     </div>

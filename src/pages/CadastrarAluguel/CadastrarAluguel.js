@@ -184,14 +184,14 @@ export default function CadastrarAluguel() {
         </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
-                <p className='buttonHeaderAluguelHeaderCadastrar'>Divulgar Casa Em alugar...</p>
+                <p className='buttonHeaderAluguelHeaderCadastrar'>Divulgar Casa em aluguel...</p>
             </div>
         </header>
         <div className='contentSideBarForm'>
             <form className='formCadastrarContent' onSubmit={handleSubmit}>
               {alertImg && (<h6 className='headerIAlert'>Adicionar no mínimo uma imagens...</h6>)}
               {pfile1 && (<h6 className='headerIAlert'>É oprigatório colocar a primeira imagem...</h6>)}
-                <i className='headerI'>Adiciona cinco (5) imagens...</i>
+                <i className='headerI'>Adiciona até cinco (5) imagens...</i>
                 <div className='imgPhotosHoome'>
                 {file1 ? (
                     <img src={URL.createObjectURL(file1)} alt='uploadImg' className='labelFotoObject' />
@@ -250,7 +250,7 @@ export default function CadastrarAluguel() {
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoType'>
-                        <button type='submit' disabled={isFetching} onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar casa em Aluguel</button>
+                        <button type='submit' disabled={isFetching} onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar Aluguel</button>
                     </div>
                 </div>
             </form>

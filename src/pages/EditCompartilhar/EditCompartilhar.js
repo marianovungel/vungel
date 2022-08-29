@@ -229,7 +229,7 @@ export default function EditCompartilhar() {
         </div>
         <header className='headerAluguel'>
             <div className='flexHeaderAluguel'>
-                <p className='buttonHeaderAluguelHeaderCadastrar'>Editar casa em compartilhamento...</p>
+                <p className='buttonHeaderAluguelHeaderCadastrar'>Editar Casa em compartilhamento...</p>
             </div>
         </header>
         <div className='contentSideBarForm'>
