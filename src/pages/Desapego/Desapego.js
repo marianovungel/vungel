@@ -78,6 +78,7 @@ export default function Desapego() {
     const newPost = {
       username: user.username,
       userwhatsapp: user.whatsapp,
+      userId: user._id,
       title,
       desc,
       cep: cep,

@@ -37,6 +37,7 @@ function Venda() {
     const newPost = {
       username: user.username,
       userwhatsapp: user.whatsapp,
+      userId: user._id,
       preco,
       title,
       desc,

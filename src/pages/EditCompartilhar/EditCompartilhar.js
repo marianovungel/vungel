@@ -41,6 +41,8 @@ export default function EditCompartilhar() {
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
+    const [userId, setUserId] = useState("")
+
 
 
     // const [post, setPost] = useState()
@@ -53,6 +55,7 @@ export default function EditCompartilhar() {
         const getPost = async ()=>{
           const res = await api.get("/compartilhar/"+path)
         //   setPost(res.data)
+          setUserId(res.data.userId)
           setCat(res.data.categories)
           setPreco(res.data.preco)
           setCepp(res.data.cepp)
@@ -135,7 +138,10 @@ export default function EditCompartilhar() {
             }catch(err){}
           }
         try{
-            await api.put(`/compartilhar/${path}`, newPost)
+            await api.put(`/compartilhar/${path}`, {
+              newPost,
+              userId: userId,
+              headers: {authorization:"Bearer " + user.accessToken}})
             Swal.fire({
               position: 'center',
               icon: 'success',

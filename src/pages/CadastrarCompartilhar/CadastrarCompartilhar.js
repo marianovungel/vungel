@@ -49,6 +49,7 @@ export default function CadastrarCompartilhar() {
           username: user.username,
           userwhatsapp: user.whatsapp,
           categories: cat,
+          userId: user._id,
           preco,
           desc,
           cep: cep,

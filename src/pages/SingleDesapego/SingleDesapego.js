@@ -83,7 +83,8 @@ const confirmDelete= async () => {
 const handleDelete = async () =>{
   try{
       await api.delete(`/desapego/${post._id}`, {
-          data: { username: user.username }
+          data: { username: user.username, userId: post.userId },
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       window.location.replace("/");
   }catch(err){
@@ -96,6 +97,8 @@ const hendleUpdate = async () =>{
           username: user.username,
           title: title,
           desc: desc,
+          userId: post.userId,
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       window.location.reload('/desapego');
       setEditar(false)

@@ -40,6 +40,7 @@ export default function EditAluguel() {
     const [area, setArea] = useState("")
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
+    const [userId, setUserId] = useState("")
 
     const location = useLocation();
     const path = location.pathname.split("/")[2]
@@ -48,7 +49,7 @@ export default function EditAluguel() {
     useEffect(()=>{
         const getPost = async ()=>{
           const res = await api.get("/aluguel/"+path)
-          
+          setUserId(res.data.userId)
           setCat(res.data.categories)
           setPreco(res.data.preco)
           setCepp(res.data.cepp)
@@ -130,7 +131,10 @@ export default function EditAluguel() {
             }catch(err){}
           }
         try{
-            await api.put(`/aluguel/${path}`, newPost)
+            await api.put(`/aluguel/${path}`, {
+              newPost,
+              userId: userId,
+              headers: {authorization:"Bearer " + user.accessToken}})
             Swal.fire({
               position: 'center',
               icon: 'success',

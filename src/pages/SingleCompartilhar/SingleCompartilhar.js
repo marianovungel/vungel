@@ -90,7 +90,8 @@ const confirmDelete= async () => {
 const handleDelete = async () =>{
   try{
       await api.delete(`/compartilhar/${post._id}`, {
-          data: { username: user.username }
+          data: { username: user.username, userId: post.userId },
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       window.location.replace("/habitacao-compartilhar");
   }catch(err){
@@ -103,6 +104,7 @@ const hendleUpdate = async () =>{
           username: user.username,
           title: title,
           desc: desc,
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       window.location.reload('http://localhost:3000/habitacao/compartilhar');
       setEditar(false)

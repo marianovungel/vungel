@@ -46,6 +46,7 @@ export default function CadastrarAluguel() {
         const newPost = {
           username: user.username,
           userwhatsapp: user.whatsapp,
+          userId: user._id,
           categories: cat,
           preco,
           desc,

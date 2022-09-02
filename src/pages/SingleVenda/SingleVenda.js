@@ -38,7 +38,6 @@ export default function SingleVenda() {
 
 const {user} = useContext(Context);
 const URLImg = "https://festupload.s3.amazonaws.com/";
-
 const whatsappSend = () =>{
   const messageZap=`Olá ${post.username}. Gostaria de saber se o produto ${post.title} 
   que divulgou na plataforma UnilabTem no preço de R$${post.preco} 
@@ -97,7 +96,8 @@ const confirmDelete= async () => {
 const handleDelete = async () =>{
   try{
       await api.delete(`/produto/${post._id}`, {
-          data: { username: user.username }
+          data: { username: user.username, userId: post.userId },
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       window.location.replace("/");
   }catch(err){
@@ -111,6 +111,8 @@ const hendleUpdate = async () =>{
           title: title,
           desc: desc,
           preco: preco,
+          userId: post.userId,
+          headers: {authorization:"Bearer " + user.accessToken}
       });
       Swal.fire({
         position: 'center',
