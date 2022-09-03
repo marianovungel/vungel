@@ -237,19 +237,19 @@ const TodosPro = ()=>{
             <p>Vendedor: {post.username}</p>
             <p>Descrição: {post.desc}</p>
             <div className='cartoes'>
-            {post.username === user.username && (<i>Assim que o produto for comprado, delete-o caso não esteje a vende-lo novamente!</i>)}
+            {(post.username === user.username && post.userId === user._id) && (<i>Assim que o produto for comprado, delete-o caso não esteje a vende-lo novamente!</i>)}
             </div>
             </>
             )}
           </div>
           {showButtons && (
             <div className='butoomContent'>
-              {post.username === user.username ? (
+              {(post.username === user.username && post.userId === user._id) ? (
                 <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               ) : (
                 <div></div>
               )}
-              {post.username === user.username ? (
+              {(post.username === user.username && post.userId === user._id) ? (
                 <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={fastConfirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
               ) : (
                 <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>

@@ -84,7 +84,6 @@ h2{
     font-size: 20pt;
 }
 .cartoes{
-    margin-left: -10px;
     width: 40%;
     display: flex;
     justify-content: space-evenly;
