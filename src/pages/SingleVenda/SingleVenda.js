@@ -111,8 +111,8 @@ const hendleUpdate = async () =>{
           title: title,
           desc: desc,
           preco: preco,
-          userId: post.userId,
-          headers: {authorization:"Bearer " + user.accessToken}
+          authorization:"Bearer " + user.accessToken,
+          userId: post.userId
       });
       Swal.fire({
         position: 'center',
