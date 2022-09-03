@@ -7,13 +7,16 @@
     align-items: center;
     position: fixed;
     z-index: 99;
+    font-family: 'Roboto', sans-serif;
 }
 ul{
     list-style: none;
     max-width: 600px;
+    font-family: 'Roboto', sans-serif;
 }
 li{
-    transform: scale(0.98)
+    transform: scale(0.98);
+    font-family: 'Roboto', sans-serif;
 }
 li:hover{
     transform: scale(1);
