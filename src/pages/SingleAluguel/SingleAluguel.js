@@ -105,7 +105,7 @@ const hendleUpdate = async () =>{
           title: title,
           desc: desc,
           userId: post.userId,
-          headers: {authorization:"Bearer " + user.accessToken}
+          authorization:"Bearer " + user.accessToken
       });
       window.location.reload('/habitacao-aluguel');
       setEditar(false)
@@ -220,14 +220,14 @@ const FotoChengFive = ()=>{
             )}
           </div>
           <div className='butoomContent'>
-            {post.username === user.username ? (
+            {(post.username === user.username && post.userId === user._id) ? (
               <Link to={`/aluguel-edit/${post?._id}`}>
                   <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               </Link>
             ) : (
               <div></div>
             )}
-            {post.username === user.username ? (
+            {(post.username === user.username && post.userId === user._id) ? (
               <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={fastConfirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>

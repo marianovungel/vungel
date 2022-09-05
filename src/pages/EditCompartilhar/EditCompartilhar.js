@@ -8,6 +8,7 @@ import api from '../../services/api'
 import { Link, useLocation} from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { CircularProgress } from '@mui/material'
 
 //upload img
 async function postImage({image, description}) {
@@ -42,6 +43,9 @@ export default function EditCompartilhar() {
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
     const [userId, setUserId] = useState("")
+    const [progress, setProgress] = useState(true)
+
+    
 
 
 
@@ -53,6 +57,7 @@ export default function EditCompartilhar() {
     //pegar  os dados
     useEffect(()=>{
         const getPost = async ()=>{
+          setProgress(true)
           const res = await api.get("/compartilhar/"+path)
         //   setPost(res.data)
           setUserId(res.data.userId)
@@ -75,7 +80,7 @@ export default function EditCompartilhar() {
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
-    
+        setProgress(false)
         const newPost = {
           username: user.username,
           userwhatsapp: user.whatsapp,
@@ -91,6 +96,8 @@ export default function EditCompartilhar() {
           cozinha,
           banheiro,
           area,
+          authorization:"Bearer " + user.accessToken,
+          userId: userId
 
         };
         if(file1){
@@ -138,10 +145,7 @@ export default function EditCompartilhar() {
             }catch(err){}
           }
         try{
-            await api.put(`/compartilhar/${path}`, {
-              newPost,
-              userId: userId,
-              headers: {authorization:"Bearer " + user.accessToken}})
+            await api.put(`/compartilhar/${path}`, newPost)
             Swal.fire({
               position: 'center',
               icon: 'success',
@@ -281,7 +285,7 @@ export default function EditCompartilhar() {
                     </div>
                     <div className='precoType'>
                         <input type='number' value={contrato} maxLength='2' placeholder='Nº Quintal' required className='precoTypeInput' onChange={(e)=> setContrato(e.target.value)}/>
-                        <input type='text' value={cep.cep} placeholder='CEP' maxLength='9'
+                        <input type='text' placeholder='CEP' maxLength='9'
                                 minLength='9' required className='precoTypeInput'
                                 onChange={(e)=> setCepp(e.target.value)} 
                                 onBlur={Cepfuncion}
@@ -305,7 +309,8 @@ export default function EditCompartilhar() {
                         <textarea className='forNewDesc' value={desc} placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoTypeone'>
-                        <button type='submit' className='CadastrarcasaEmAluguel'>Editar...</button>
+                        {progress ? (<button type='submit' className='CadastrarcasaEmAluguel'>Editar...</button>):
+                        (<button type='submit' className='CadastrarcasaEmAluguel'><CircularProgress variant="determinate" value={75} /></button>)}
                         <div className='canc' onClick={TodosPro}><i>Cancelar</i></div>
                     </div>
                 </div>

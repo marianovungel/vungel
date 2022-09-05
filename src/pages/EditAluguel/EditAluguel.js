@@ -8,6 +8,7 @@ import api from '../../services/api'
 import { Link, useLocation} from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { CircularProgress } from '@mui/material'
 
 //upload img
 async function postImage({image, description}) {
@@ -41,6 +42,7 @@ export default function EditAluguel() {
     const [desc, setDesc] = useState("")
     const [moradores, setMoradores] = useState("")
     const [userId, setUserId] = useState("")
+    const [progress, setProgress] = useState(true)
 
     const location = useLocation();
     const path = location.pathname.split("/")[2]
@@ -68,6 +70,7 @@ export default function EditAluguel() {
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
+        setProgress(false)
         const newPost = {
           username: user.username,
           userwhatsapp: user.whatsapp,
@@ -83,6 +86,8 @@ export default function EditAluguel() {
           cozinha,
           banheiro,
           area,
+          authorization:"Bearer " + user.accessToken,
+          userId: userId
 
         };
         if(file1){
@@ -131,10 +136,7 @@ export default function EditAluguel() {
             }catch(err){}
           }
         try{
-            await api.put(`/aluguel/${path}`, {
-              newPost,
-              userId: userId,
-              headers: {authorization:"Bearer " + user.accessToken}})
+            await api.put(`/aluguel/${path}`, newPost)
             Swal.fire({
               position: 'center',
               icon: 'success',
@@ -295,7 +297,10 @@ export default function EditAluguel() {
                         <textarea className='forNewDesc' value={desc} placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoTypeone'>
-                        <button type='submit' className='CadastrarcasaEmAluguel'>Editar...</button>
+                        {progress ? (<button type='submit' className='CadastrarcasaEmAluguel'>Editar...</button>):
+                        (<button type='submit' className='CadastrarcasaEmAluguel'>
+                          <CircularProgress variant="determinate" value={75} />
+                        </button>)}
                         <div className='canc' onClick={TodosPro}><i>Cancelar</i></div>
                     </div>
                 </div>

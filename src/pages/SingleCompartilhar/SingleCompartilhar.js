@@ -104,7 +104,8 @@ const hendleUpdate = async () =>{
           username: user.username,
           title: title,
           desc: desc,
-          headers: {authorization:"Bearer " + user.accessToken}
+          userId: post.userId,
+          authorization:"Bearer " + user.accessToken
       });
       window.location.reload('http://localhost:3000/habitacao/compartilhar');
       setEditar(false)
@@ -220,14 +221,14 @@ const FotoChengFive = ()=>{
             )}
           </div>
           <div className='butoomContent'>
-            {post.username === user.username ? (
+            {(post.username === user.username && post.userId === user._id) ? (
               <Link to={`/compartilhar-edit/${post?._id}`}>
                   <div className='buttonZapDiv'><button  className='buttonEditar' onClick={EditTrue}>Editar <i className="fa-solid fa-pen-to-square"></i></button></div>
               </Link>
             ) : (
               <div></div>
             )}
-            {post.username === user.username ? (
+            {(post.username === user.username && post.userId === user._id) ? (
               <div className='buttonZapDiv'><button  className='buttonDeletar' onClick={fastConfirmDelete}>Deletar <i className="fa-solid fa-trash-can"></i></button></div>
             ) : (
               <div className='buttonZapDiv'><button onClick={whatsappSend} className='buttonZap'>Enviar Zap <i className="fa-brands fa-whatsapp"></i></button></div>
