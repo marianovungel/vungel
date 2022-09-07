@@ -4,14 +4,12 @@ import {useContext} from 'react'
 import {Context} from '../../Context/Context'
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2';
+import { Avatar, Chip } from '@mui/material'
 
 export default function Menu({props}) {
 
-  const { user, dispatch } = useContext(Context)
+  const { user } = useContext(Context)
 
-  const hendSair = ()=>{
-    dispatch({type: "LOGOUT"})
-  }
 
   const Producao = ()=>{
     Swal.fire({
@@ -47,9 +45,7 @@ export default function Menu({props}) {
                     <li className="nav-item">
                     <Link to='/sobre' className="nav-link" href="#">Sobre</Link>
                     </li>
-                    <li className="nav-item" onClick={hendSair}>
-                      <i className="nav-link">Sair</i>
-                    </li>
+      
                 </ul>
                 </div>
             </div>
@@ -62,11 +58,17 @@ export default function Menu({props}) {
             <li onClick={Producao}>Oportunidades</li>
             <li onClick={Producao}>Vida na Unilab</li>
             <Link to='/sobre'><li>Sobre</li></Link>
-            <li onClick={hendSair}>Sair</li>
         </ul>
         <div className='fotoPerfil'>
-          <i className="fa-solid fa-user"></i>
-          <span  className='smollUsername'>{user.username}</span>
+          {/* <i className="fa-solid fa-user"></i> */}
+              <Link to='/user' >
+                  <Chip
+                  className='CursorUserPoiter'
+                    avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />}
+                    label={user.username}
+                    variant="outlined"
+                  />
+              </Link>
         </div>
     </div>
   )

@@ -20,6 +20,7 @@ import EditCompartilhar from './pages/EditCompartilhar/EditCompartilhar';
 import Exe from './pages/exe/Exe';
 import ExeComp from './pages/ExeComp/ExeComp';
 import SendEmail from './pages/SendEmail/SendEmail';
+import UserPage from './pages/UserPage/UserPage';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/post/:id" component={user ? SingleVenda  : Login} exact />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} exact />
           <Route path="/exe" component={user ? Exe  : Login} exact />
+          <Route path="/user" component={user ? UserPage  : Login} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/sendemail" component={SendEmail} exact />
           <Route path="/sobre" component={Sobre} exact />
