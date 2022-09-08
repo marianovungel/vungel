@@ -48,10 +48,24 @@
 }
 .userInputB{
     width: 100%;
+    border-radius: 10px;
+}
+.inputbBortder{
+    border: none;
+    background-color: #fff;
+    height: 47px;
+    border-bottom: 1px solid #666;
+}
+.inputbBortder:focus{
+    border: none;
+    background-color: #fff;
+    height: 47px;
+    border-bottom: 1px solid #666;
+    outline: 0;
 }
 .ButtonBackgrondcolor{
     background-color: #2043be;
-    color: rgb(204, 212, 249);
+    color: #fff;
     border: none;
     height: 45px;
 }
@@ -62,4 +76,28 @@
     width: 300px;
     height: 300px;
     border-radius: 20px;
+}
+.borderImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.bolinha{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2043be;
+    margin-top: -35px;
+    margin-left: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.iconColor{
+    color: #fff;
+}
+.displayNone{
+    display: none;
 }
