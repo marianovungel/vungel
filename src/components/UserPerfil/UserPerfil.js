@@ -1,33 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './UserPerfil.css'
+import {useContext} from 'react'
+import {Context} from '../../Context/Context'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 export default function UserPerfil() {
+
+    const { user } = useContext(Context)
+
+    useEffect(()=>{
+        console.log(user)
+    }, [user])
+
   return (
     <section className='fullContenUser'>
             <h4 className="userInfo">Meus dados de Usuário...</h4>
             <div className="dados">
                 <div className=" use imgUser">
                     <i className="Iselect photoUser">Foto de Perfil</i>
-                    <img 
-                    src="https://cdn-icons-png.flaticon.com/512/47/47774.png" 
-                    alt="" className="photoUserI" />
+                    {user.profilePic !== null ? (
+                        <img 
+                        src={URLImg +user.profilePic} 
+                        alt="" className="photoUserI" />
+                    ):(
+                        <img 
+                        src="https://cdn-icons-png.flaticon.com/512/47/47774.png" 
+                        alt="" className="photoUserI" />
+                    )}
                 </div>
                 <div className="expretionData">
                     <div className=" use userNameUser">
                         <i className="Iselect userNameOfUser">Nome de Usuário</i>
-                        <b className="Bselect userNameB">Mariano António Vunge Peralta New</b>
+                        <b className="Bselect userNameB">{user.username}</b>
                     </div>
                     <div className=" use zapUser">
                         <i className="Iselect zapUserI">Whatsapp...</i>
-                        <b className="Bselect zapUserB">(85)991392625</b>
+                        <b className="Bselect zapUserB">{user.whatsapp}</b>
                     </div>
                     <div className=" use e-mailUser">
                         <i className="Iselect EmailUserI">E-mail...</i>
-                        <b className="Bselect EmailUserB">vungemariano@gmail.com</b>
+                        <b className="Bselect EmailUserB">{user.email}</b>
                     </div>
                     <div className="use datacriacao">
                         <i className="Iselect dataUserI">Dsta de Criação da conta</i>
-                        <b className="Bselect dataB">Ter 27/08/2022</b>
+                        <b className="Bselect dataB">{new  Date(user.createdAt).toDateString()}</b>
                     </div>
                 </div>
             </div>
