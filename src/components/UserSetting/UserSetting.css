@@ -63,6 +63,12 @@
     border-bottom: 1px solid #666;
     outline: 0;
 }
+.entrarbutton{
+    background-color: #1597E5;
+}
+.entrarbutton:disabled{
+    background-color: #8acbf3;
+}
 .ButtonBackgrondcolor{
     background-color: #2043be;
     color: #fff;
