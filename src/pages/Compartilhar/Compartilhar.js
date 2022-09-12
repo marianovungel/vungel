@@ -5,10 +5,14 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import api from '../../services/api'
 import HeaderCompart from '../../components/HeaderCompart/HeaderCompart'
+import { useContext } from 'react'
+import { Context } from '../../Context/Context'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 export default function Compartilhar() {
 
-    const [compartilhar, setCompartilhamento] = useState([]);;
+    const [compartilhar, setCompartilhamento] = useState([]);
+    const { user } = useContext(Context)
     useEffect(()=>{
         const FetchDesapego = async () => {
             try{
@@ -22,7 +26,6 @@ export default function Compartilhar() {
         FetchDesapego();
     }, [])
 
-    const URLImg = "https://festupload.s3.amazonaws.com/";
     
   return (
     <div>
@@ -44,7 +47,7 @@ export default function Compartilhar() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -61,6 +64,12 @@ export default function Compartilhar() {
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/compartilhar-cadastrar">Divulgar Compartilhamento</Link></li>
                 </ul>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/user">
+                        {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                        (<i>Usuário</i>)}
+                    </Link>
                 </li>
             </ul>
             </div>

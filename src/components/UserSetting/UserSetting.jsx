@@ -69,15 +69,15 @@ export default function UserSetting() {
                 <div className="expretionData">
                     <div className=" use userNameUser">
                         <i className="Iselect userNameOfUser">Nome de Usuário</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder="Mariano António Vunge Peralta New" onChange={(e)=> setName(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.username} onChange={(e)=> setName(e.target.value)} />
                     </div>
                     <div className=" use zapUser">
                         <i className="Iselect zapUserI">Whatsapp...</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder="(85)991392625" onChange={(e)=> setWhatsapp(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.whatsapp} onChange={(e)=> setWhatsapp(e.target.value)} />
                     </div>
                     <div className=" use e-mailUser">
                         <i className="Iselect EmailUserI">E-mail...</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder="vungemariano@gmail.com" onChange={(e)=> setEmail(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.email} onChange={(e)=> setEmail(e.target.value)} />
                     </div>
                     <div className=" use e-mailUser displayNone">
                         <i className="Iselect EmailUserI displayNone">Imagem de Perfil...</i>

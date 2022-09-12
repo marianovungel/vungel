@@ -2,9 +2,14 @@ import React from 'react'
 import './Sobre.css'
 import Menu from '../../components/Menu/Menu'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from '../../Context/Context'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 
 export default function Sobre() {
+
+    const { user } = useContext(Context)
  
   return (
     <div className='desapego'>
@@ -25,7 +30,7 @@ export default function Sobre() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -42,6 +47,12 @@ export default function Sobre() {
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/user">
+                        {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                        (<i>Usuário</i>)}
+                    </Link>
                 </li>
             </ul>
             </div>

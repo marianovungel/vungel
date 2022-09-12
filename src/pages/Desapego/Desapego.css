@@ -14,12 +14,12 @@
     margin-top: -60px;
 }
 .imgcircul{
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 1px solid #999;
     object-fit: cover;
-    margin: 5px;
+    margin-left: 5px;
 }
 .sidebarCardDesapego{
     flex: 5;
@@ -123,19 +123,21 @@
 .bannerDesapegoFast{
     margin-top: 86px;
     width: 70%;
+    position: relative;
 }
 .h3Desapego{
     border: none;
     border-top: 2px solid #666;
     border-bottom: 2px solid #666;
     text-align: center;
+    width: 100%;
     color: #666;
     padding: 5px;
     margin-bottom: 5px;
 }
 .bannerDesapegoimg{
-    width: 278px;
-    height: 250px;
+    width: 100%;
+    object-fit: cover;
 }
 .bannerDesapegoP{
     margin-top: -5px;
@@ -152,6 +154,7 @@
     margin-bottom: 5px;
     background-color: #fff;
 }
+
 .bannerDesapegoPp{
     padding: 5px;
     background-color: #193498;
@@ -205,6 +208,7 @@
 }
 .filtraritem{
     color: #666;
+    font-size: 12pt;
     width: 100%;
     text-align: center;
     height: 50px;
@@ -244,6 +248,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
+
 }
 #idImg{
     height: 40px;
@@ -257,8 +263,8 @@
     align-items: center;
 }
 .SpanUsername{
-    font-size: 7pt;
-    margin-left: 5px;
+    font-size: 12pt;
+    margin-left: 10px;
     color: #666;
 }
 .divHero{
@@ -295,7 +301,8 @@
 .descSpan{
     width: 100%;
     text-align: justify;
-    font-size: 8pt;
+    font-size: 10pt;
+    box-sizing: border-box;
 }
 .spanDate{
     font-size: 8pt;
@@ -327,6 +334,7 @@
 }
 .inputProdutoselet{
     color: #666;
+    font-size: 12pt;
     width: 100%;
     text-align: center;
     height: 50px;

@@ -8,6 +8,7 @@
     justify-content: center;
     margin-top: -60px;
 }
+ativeCadastrar
 #ativ{
     cursor: pointer;
 }
@@ -150,7 +151,7 @@
 }
 .ativeCadastrar{
     position: absolute;
-    top: 120px;
+    top: 145px;
     left: 40px;
     display: flex;
     justify-content:center;
@@ -159,8 +160,9 @@
     height: 40px;
     font-size: 10pt;
     background-color: #193498;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
+    box-shadow: 1px 1px 3px 1px #666;
 }
 
 

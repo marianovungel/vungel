@@ -9,6 +9,7 @@ import { Link, useLocation} from 'react-router-dom';
 import {useHistory} from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { CircularProgress } from '@mui/material'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 //upload img
 async function postImage({image, description}) {
@@ -205,7 +206,7 @@ export default function EditAluguel() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -222,6 +223,12 @@ export default function EditAluguel() {
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/user">
+                        {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                        (<i>Usuário</i>)}
+                    </Link>
                 </li>
             </ul>
             </div>

@@ -54,3 +54,104 @@
     height: 300px;
     border-radius: 20px;
 }
+@media(max-width: 1170px){
+    .fullContenUser{
+        width: 65%;
+        height: 400px;
+        margin: 100px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 970px){
+    .fullContenUser{
+        width: 75%;
+        height: 400px;
+        margin: 100px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 850px){
+    .fullContenUser{
+        width: 85%;
+        height: 400px;
+        margin: 100px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 775px){
+    .fullContenUser{
+        width: 85%;
+        height: 400px;
+        margin: 50px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 745px){
+    .fullContenUser{
+        width: 90%;
+        height: 400px;
+        margin: 30px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 700px){
+    .fullContenUser{
+        width: 98%;
+        height: 400px;
+        margin: 50px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 640px){
+    
+    .photoUserI{
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+    }
+}
+@media(max-width: 500px){
+    
+    .photoUserI{
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+    }
+    .fullContenUser{
+        width: 100%;
+        height: 400px;
+        margin: 50px auto 0px auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0px;
+    }
+    .dados{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 0px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+    .use{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}

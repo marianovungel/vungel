@@ -86,7 +86,7 @@ const handleDelete = async () =>{
           data: { username: user.username, userId: post.userId },
           headers: {authorization:"Bearer " + user.accessToken}
       });
-      window.location.replace("/desapego");
+      window.location.replace("/doacao");
   }catch(err){
       alert(err)
   }
@@ -107,7 +107,7 @@ const hendleUpdate = async () =>{
         showConfirmButton: false,
         timer: 1300
       })
-      window.location.reload('/desapego');
+      window.location.reload('/doacao');
       setEditar(false)
   }catch(err){
       alert(err)
@@ -157,7 +157,7 @@ const TodosPro = ()=>{
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -176,6 +176,12 @@ const TodosPro = ()=>{
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/user">
+                        {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                        (<i>Usuário</i>)}
+                    </Link>
                 </li>
             </ul>
             </div>

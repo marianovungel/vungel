@@ -7,6 +7,7 @@ import api from '../../services/api'
 import upload from '../../services/upload'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 
 //upload img
@@ -227,7 +228,6 @@ export default function Desapego() {
       
   }
 
-const URLImg = "https://festupload.s3.amazonaws.com/";
   return (
     <div className='desapego'>
         <div className='OI' >
@@ -247,7 +247,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -265,6 +265,12 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/user">
+                        {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                        (<i>Usuário</i>)}
+                    </Link>
+                </li>
             </ul>
             </div>
         </div>
@@ -275,7 +281,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
           {cadastrar ?(
              
               <div className='cadastrarProdutoCallForm'>
-                <div className='buttonCad' onClick={CadastrarTrue}>Cadastrar Produto</div>
+                <div className='buttonCad' onClick={CadastrarTrue}>Cadastrar Doação</div>
                 <div className='filtrar'>
                   <h4 className='filtrarh4'>Filtrar <i className="fa-solid fa-filter"></i></h4>
                   <div className='itemList'>
@@ -337,9 +343,8 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
     {desapego.map((p)=>(
     <div className='allCard' key={p.photo}>
         <div className='divHeader'>
-            <img className='imgcircul' src={URLImg + p.photo} alt=''/>
+            {/* <img className='imgcircul' src={URLImg + p.photo} alt=''/> */}
             <p className='SpanUsername'>{ p.username }</p>
-            
         </div>
         <div className='descClassName'>
           <span className='descSpan'>{p.desc}</span>
@@ -347,7 +352,7 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
         <div className='divHero'><img id='heroIgm' src={URLImg + p.photo} alt='#'/></div>
         <div className='divFooter'>
             <span className='spanDate'> {new  Date(p.createdAt).toDateString()} </span>
-            <Link to={`/desapego/${p?._id}`}>
+            <Link to={`/doacao/${p?._id}`}>
               <button className='buttonSaiba'>Saiba Mais</button>
             </Link>
         </div>

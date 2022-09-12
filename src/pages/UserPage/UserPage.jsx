@@ -10,6 +10,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useContext } from 'react'
 import { Context } from '../../Context/Context'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 export default function UserPage() {
     //var
@@ -39,7 +40,7 @@ export default function UserPage() {
         setShowset(true)
     }
 
-    const { dispatch } = useContext(Context)
+    const { dispatch, user } = useContext(Context)
 
     const hendSair = ()=>{
         dispatch({type: "LOGOUT"})
@@ -64,7 +65,7 @@ export default function UserPage() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link active text-light" aria-current="page" to="/desapego">Doação</Link>
+                <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/">Venda</Link>
@@ -80,6 +81,18 @@ export default function UserPage() {
                     <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
+                </ul>
+                </li>
+                <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {user.profilePic ? (<img src={URLImg+user.profilePic} alt="" className='imgMenuHumburguer' />):
+                    (<i>Usuário</i>)}
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><Link className="dropdown-item" to='/user' onClick={SetPerfil}>Perfil</Link></li>
+                    <li><Link className="dropdown-item" to='/user' onClick={SetPost}>Minhas Divulgações</Link></li>
+                    <li><Link className="dropdown-item" to='/user' onClick={SetSet}>Editar Usuário</Link></li>
+                    <li><Link className="dropdown-item" to='/' onClick={hendSair}>Logout...</Link></li>
                 </ul>
                 </li>
             </ul>
