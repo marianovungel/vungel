@@ -5,10 +5,9 @@ import {Context} from '../../Context/Context'
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2';
 import { Avatar, Chip } from '@mui/material'
-const URL = "https://cdn-icons-png.flaticon.com/512/47/47774.png";
 const URLImg = "https://festupload.s3.amazonaws.com/";
 
-export default function Menu({props}) {
+export default function Menu() {
 
   const { user } = useContext(Context)
 
@@ -66,7 +65,7 @@ export default function Menu({props}) {
               <Link to='/user' >
                   <Chip
                   className='CursorUserPoiter'
-                    avatar={<Avatar alt="Natacha" src={user.profilePic !== null ? URLImg +user.profilePic : URL} />}
+                    avatar={<Avatar alt="Natacha" src={URLImg +user.profilePic} />}
                     label={user.username}
                     variant="outlined"
                   />

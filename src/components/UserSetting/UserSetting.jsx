@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import {useState, useContext} from 'react'
 import {Context} from '../../Context/Context'
 import api from '../../services/api'
@@ -22,6 +23,19 @@ export default function UserSetting() {
 
     const { user } = useContext(Context)
     const {isFetching, dispatch } = useContext(Context)
+
+    useEffect(()=>{
+      const GetUser = async ()=>{
+        const yourUser = await api.get(`/users/${user._id}`)
+        console.log(yourUser.data.email)
+        setPhoto(yourUser.data.profilePic)
+        setName(yourUser.data.username)
+        setEmail(yourUser.data.email)
+        setWhatsapp(yourUser.data.whatsapp)
+      }
+      GetUser()
+    }, [user._id])
+    
 
     const Update = async (e)=>{
         e.preventDefault()
@@ -55,13 +69,10 @@ export default function UserSetting() {
             <div className="dados">
                 <div className=" use imgUser">
                     <i className="Iselect photoUser">Foto de Perfil</i>
-                    {photo ? (
-                        <img src={URL.createObjectURL(photo)} alt=' ' className='borderImg' />
-                    ):(
+                        {/* <img src={URL.createObjectURL(photo)} alt=' ' className='borderImg' /> */}
                         <img 
-                        src="https://cdn-icons-png.flaticon.com/512/47/47774.png" 
+                        src={photo} 
                         alt="" className="borderImg" />
-                    )}
                     <label for='imgUserPhoto' className="bolinha">
                         <i className="fa-solid fa-pen iconColor"></i>
                     </label>
@@ -69,15 +80,15 @@ export default function UserSetting() {
                 <div className="expretionData">
                     <div className=" use userNameUser">
                         <i className="Iselect userNameOfUser">Nome de Usuário</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.username} onChange={(e)=> setName(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder"  value={name} onChange={(e)=> setName(e.target.value)} />
                     </div>
                     <div className=" use zapUser">
                         <i className="Iselect zapUserI">Whatsapp...</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.whatsapp} onChange={(e)=> setWhatsapp(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder"  value={whatsapp} onChange={(e)=> setWhatsapp(e.target.value)} />
                     </div>
                     <div className=" use e-mailUser">
                         <i className="Iselect EmailUserI">E-mail...</i>
-                        <input type="text" className="userInputB Bselect inputbBortder" placeholder={user.email} onChange={(e)=> setEmail(e.target.value)} />
+                        <input type="text" className="userInputB Bselect inputbBortder"  value={email} onChange={(e)=> setEmail(e.target.value)} />
                     </div>
                     <div className=" use e-mailUser displayNone">
                         <i className="Iselect EmailUserI displayNone">Imagem de Perfil...</i>

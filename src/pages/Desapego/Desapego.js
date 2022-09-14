@@ -135,7 +135,7 @@ export default function Desapego() {
   }
   const submitSearchMeu = async (e) =>{
     e.preventDefault()
-    const results = await api.post("/desapego/search/meu", {username: user.username,})
+    const results = await api.post("/desapego/search/meu/id", {userId: user._id,})
     if(results.data.length === 0){
       setVazio(true)
       setCarregar(false)

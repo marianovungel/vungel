@@ -97,7 +97,8 @@ export default function Registrar() {
                             username: username,
                             email: email,
                             whatsapp: whatsapp,
-                            password: password
+                            password: password,
+                            profilePic: "https://cdn-icons-png.flaticon.com/512/47/47774.png"
                         })
                         history.goBack()
                     }catch(err){

@@ -18,15 +18,10 @@ export default function UserPerfil() {
             <div className="dados">
                 <div className=" use imgUser">
                     <i className="Iselect photoUser">Foto de Perfil</i>
-                    {user.profilePic !== null ? (
-                        <img 
+                    <img 
                         src={URLImg +user.profilePic} 
-                        alt="" className="photoUserI" />
-                    ):(
-                        <img 
-                        src="https://cdn-icons-png.flaticon.com/512/47/47774.png" 
-                        alt="" className="photoUserI" />
-                    )}
+                        alt="" className="photoUserI" 
+                    />
                 </div>
                 <div className="expretionData">
                     <div className=" use userNameUser">

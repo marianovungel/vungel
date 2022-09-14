@@ -28,10 +28,10 @@ export default function UserDivulg() {
         
         const GetAll = async ()=>{
             try{
-                const vendas = await api.post("/produto/search/meu", {username: user.username,})
-                const doacoes = await api.post("/desapego/search/meu", {username: user.username,})
-                const Alugueis = await api.post("/aluguel/search/meu", {username: user.username,})
-                const compartilhamentos = await api.post("/compartilhar/search/meu", {username: user.username,})
+                const vendas = await api.post("/produto/search/meu/id", {userId: user._id,})
+                const doacoes = await api.post("/desapego/search/meu/id", {userId: user._id,})
+                const Alugueis = await api.post("/aluguel/search/meu/id", {userId: user._id,})
+                const compartilhamentos = await api.post("/compartilhar/search/meu/id", {userId: user._id,})
                 setVenda(vendas.data)
                 console.log(compartilhamentos.data.length)
                 if(vendas.data.length > 2){
@@ -54,7 +54,7 @@ export default function UserDivulg() {
             }
         }
         GetAll()
-    }, [user.username])
+    }, [user._id])
 
     const Left = (e)=>{
         e.preventDefault()
