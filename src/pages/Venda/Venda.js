@@ -40,7 +40,7 @@ function Venda() {
       userwhatsapp: user.whatsapp,
       userId: user._id,
       preco,
-      title,
+      title: title.toLowerCase(),
       desc,
     };
     if(file){
@@ -105,7 +105,7 @@ function Venda() {
         <div className='menuBootstrap' >
         <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/venda">
                 <div className='logoBootstrap'>
                     <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
                 </div>
@@ -119,7 +119,7 @@ function Venda() {
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/">Venda</Link>
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 <li className="nav-item" onClick={Ative}>
                 <Link className="nav-link text-light" to="">Cadastrar venda</Link>

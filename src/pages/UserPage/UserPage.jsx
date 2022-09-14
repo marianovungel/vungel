@@ -54,7 +54,7 @@ export default function UserPage() {
         <div className='menuBootstrap' >
         <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/venda">
                 <div className='logoBootstrap'>
                     <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
                 </div>
@@ -68,7 +68,7 @@ export default function UserPage() {
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/">Venda</Link>
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/sobre">Sobre</Link>

@@ -30,6 +30,7 @@ function App() {
       <Router>
         <Switch> 
           <Route path="/" component={ user ? Venda : Login} exact />
+          <Route path="/venda" component={ user ? Venda : Login} exact />
           <Route path="/doacao" component={ user ? Desapego : Login} exact />
           {/* esta rota de aluguel é inacessível */}
           <Route path="/exe" component={ user ? Aluguel : Login} exact />

@@ -2,6 +2,8 @@
     background-color: #193498;
     width: 100%;
     height: 70px;
+    min-height: 70px;
+    min-width: 100%;
     display: flex;
     align-items: center;
     color: #F6F3F3;
@@ -9,6 +11,10 @@
     position: fixed;
     z-index: 99;
     font-family: 'Roboto', sans-serif;
+}
+.blueHeader{
+    width: 100%;
+    min-width: 100%;
 }
 ul{
     list-style: none;
@@ -84,12 +90,17 @@ li:hover{
     .menu{
         background-color: #193498;
         width: 100%;
+        min-width: 100%;
         height: 70px;
         display: flex;
         color: #F6F3F3;
         align-items: center;
         position: fixed;
         z-index: 99;
+    }
+    .blueHeader{
+        width: 100%;
+        min-width: 100%;
     }
     .imagemLogo{
         width: 150px;
@@ -115,6 +126,10 @@ li:hover{
 }
 
 @media (max-width: 459px){
+    .blueHeader{
+        width: 100%;
+        min-width: 100%;
+    }
     .imagemLogo{
         width: 100px;
         height: 100px;
@@ -131,6 +146,7 @@ li:hover{
         margin-top: 60px;
         background-color: #193498;
         width: 100%;
+        min-width: 100%;
     }
     #iconMenuBut{
         margin-bottom: 25px;

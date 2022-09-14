@@ -80,7 +80,7 @@ export default function Desapego() {
       username: user.username,
       userwhatsapp: user.whatsapp,
       userId: user._id,
-      title,
+      title: title.toLowerCase(),
       desc,
       cep: cep,
       cidade: cep.localidade,
@@ -122,7 +122,7 @@ export default function Desapego() {
 
   const submitSearch = async (e) =>{
     e.preventDefault()
-    const results = await api.post("/desapego/search", {title: titleSearh,})
+    const results = await api.post("/desapego/search", {title: titleSearh.toLowerCase(),})
     if(results.data.length === 0){
       setVazio(true)
       setCarregar(false)
@@ -250,7 +250,7 @@ export default function Desapego() {
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/">Venda</Link>
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/sobre">Sobre</Link>

@@ -48,7 +48,6 @@ export default function Produto() {
 
   const submitSearch = async (e) =>{
     e.preventDefault()
-    console.log(title)
     const results = await api.post("/produto/search", {title: title.toLowerCase()})
     if(results.data.length === 0){
       setVazio(true)

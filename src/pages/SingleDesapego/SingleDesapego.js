@@ -95,7 +95,7 @@ const hendleUpdate = async () =>{
   try{
       await api.put(`/desapego/${post._id}`, {
           username: user.username,
-          title: title,
+          title: title.toLowerCase(),
           desc: desc,
           authorization:"Bearer " + user.accessToken,
           userId: post.userId
@@ -160,7 +160,7 @@ const TodosPro = ()=>{
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/">Venda</Link>
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 
                 <li className="nav-item">

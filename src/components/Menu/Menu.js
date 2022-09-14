@@ -29,7 +29,7 @@ export default function Menu() {
       <div className='logo'>
             <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
         </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-blue" id='navDesa'>
+      <nav className="navbar navbar-expand-lg navbar-light bg-blue blueHeader" id='navDesa'>
                 <button className="navbar-toggler" id='iconMenuBut' type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -38,7 +38,7 @@ export default function Menu() {
                 <Link to='/doacao' className="nav-link active" aria-current="page" href="#">Doação</Link>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link to='/' className="nav-link" href="#">Venda</Link>
+                    <Link to='/venda' className="nav-link" href="#">Venda</Link>
                     </li>
                     <li className="nav-item">
                     <Link to='/habitacao-aluguel' className="nav-link" href="#">Habitação</Link>
@@ -54,7 +54,7 @@ export default function Menu() {
 
         <ul className='menuList'>
             <Link to='/doacao'><li>Doação</li></Link>
-            <Link to='/'><li>Venda</li></Link>
+            <Link to='/venda'><li>Venda</li></Link>
             <Link to='/habitacao-aluguel'><li>Habitação</li></Link>
             <li onClick={Producao}>Oportunidades</li>
             <li onClick={Producao}>Vida na Unilab</li>

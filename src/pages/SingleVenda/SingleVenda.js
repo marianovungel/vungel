@@ -50,7 +50,7 @@ const whatsappSend = () =>{
 // }
 const Home = () =>{
   // window.open("http://localhost:3000")
-  window.location.replace("/");
+  window.location.replace("/venda");
 }
 const EditTrue = () =>{
   setEditar(true)
@@ -99,7 +99,7 @@ const handleDelete = async () =>{
           data: { username: user.username, userId: post.userId },
           headers: {authorization:"Bearer " + user.accessToken}
       });
-      window.location.replace("/");
+      window.location.replace("/venda");
   }catch(err){
       console.log(err)
   }
@@ -108,7 +108,7 @@ const hendleUpdate = async () =>{
   try{
       await api.put(`/produto/${post._id}`, {
           username: user.username,
-          title: title,
+          title: title.toLowerCase(),
           desc: desc,
           preco: preco,
           authorization:"Bearer " + user.accessToken,
@@ -122,7 +122,7 @@ const hendleUpdate = async () =>{
         timer: 1300
       })
       // window.location.reload();
-      window.location.replace("/");
+      window.location.replace("/venda");
       setEditar(false)
       setShowButtons(true)
   }catch(err){
@@ -163,7 +163,7 @@ const TodosPro = ()=>{
         <div className='menuBootstrap' >
         <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/venda">
                 <div className='logoBootstrap'>
                     <div></div>
                 </div>
@@ -177,7 +177,7 @@ const TodosPro = ()=>{
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link text-light" to="/">Venda</Link>
+                <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 
                 <li className="nav-item">
