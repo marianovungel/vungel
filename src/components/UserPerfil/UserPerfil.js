@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import './UserPerfil.css'
 import {useContext} from 'react'
 import {Context} from '../../Context/Context'
@@ -7,10 +6,6 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
 export default function UserPerfil() {
 
     const { user } = useContext(Context)
-
-    useEffect(()=>{
-        console.log(user)
-    }, [user])
 
   return (
     <section className='fullContenUser'>

@@ -5,6 +5,8 @@ import {Context} from '../../Context/Context'
 import api from '../../services/api'
 import upload from '../../services/upload'
 import './UserSetting.css'
+import Swal from 'sweetalert2'
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 async function postImage({image, description}) {
     const formData = new FormData();
@@ -27,15 +29,13 @@ export default function UserSetting() {
     useEffect(()=>{
       const GetUser = async ()=>{
         const yourUser = await api.get(`/users/${user._id}`)
-        console.log(yourUser.data.email)
-        setPhoto(yourUser.data.profilePic)
+        // setPhoto(yourUser.data.profilePic)
         setName(yourUser.data.username)
         setEmail(yourUser.data.email)
         setWhatsapp(yourUser.data.whatsapp)
       }
       GetUser()
     }, [user._id])
-    
 
     const Update = async (e)=>{
         e.preventDefault()
@@ -56,7 +56,23 @@ export default function UserSetting() {
           try{
             const userUpdate = await api.put(`/users/${user._id}`, newPost)
             await dispatch({ type: "UPDATE_SUCCESS", payload: userUpdate.data.updateUser})
-            console.log(userUpdate.data.updateUser)
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+              }
+            })
+            
+            Toast.fire({
+              icon: 'success',
+              title: 'Atualizado com sucesso!'
+            })
+            window.location.replace("/user");
           }catch(err){
             dispatch({ type: "UPDATE_FAILURE"})
             alert(err)
@@ -69,10 +85,13 @@ export default function UserSetting() {
             <div className="dados">
                 <div className=" use imgUser">
                     <i className="Iselect photoUser">Foto de Perfil</i>
-                        {/* <img src={URL.createObjectURL(photo)} alt=' ' className='borderImg' /> */}
+                    {photo ? (
+                        <img src={URL.createObjectURL(photo)} alt=' ' className='borderImg' />
+                    ):(
                         <img 
-                        src={photo} 
+                        src={URLImg+user.profilePic} 
                         alt="" className="borderImg" />
+                    )}
                     <label for='imgUserPhoto' className="bolinha">
                         <i className="fa-solid fa-pen iconColor"></i>
                     </label>
@@ -92,7 +111,7 @@ export default function UserSetting() {
                     </div>
                     <div className=" use e-mailUser displayNone">
                         <i className="Iselect EmailUserI displayNone">Imagem de Perfil...</i>
-                        <input type="file" id='imgUserPhoto' accept="image/*" className="inputImgUser userInputB Bselect displayNone" onChange={(e)=> setPhoto(e.target.files[0])} />
+                        <input type="file" id='imgUserPhoto' accept="image/*" className="inputImgUser userInputB Bselect displayNone" onChange={(e)=> setPhoto(e.target.files[0])}  />
                     </div>
                     <div className=" use e-mailUser">
                         <button type='submit' disabled={isFetching} className="entrarbutton inputImgUser userInputB Bselect ButtonBackgrondcolor">Salvar Alteração</button>
