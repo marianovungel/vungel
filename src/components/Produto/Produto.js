@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 // import { useHistory } from 'react-router-dom';
 import './Produto.css'
 import { Link } from 'react-router-dom';
+const URLImg = "https://festupload.s3.amazonaws.com/";
 
 export default function Produto() {
   // const history = useHistory();
@@ -17,6 +18,7 @@ export default function Produto() {
   const [title, setTitle] = useState("")
 
   const getProdutoVenda = async ()=>{
+    
     setCarregar(true)
     try{
       const response = await api.get('/produto');
@@ -46,7 +48,8 @@ export default function Produto() {
 
   const submitSearch = async (e) =>{
     e.preventDefault()
-    const results = await api.post("/produto/search", {title: title,})
+    console.log(title)
+    const results = await api.post("/produto/search", {title: title.toLowerCase()})
     if(results.data.length === 0){
       setVazio(true)
       setCarregar(false)
@@ -58,7 +61,6 @@ export default function Produto() {
     }
   }
 
-  const URLImg = "https://festupload.s3.amazonaws.com/";
 
   return (
     <>

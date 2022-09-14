@@ -124,7 +124,7 @@ export default function UserDivulg() {
         <i className="doacoaI">Doação...</i>
         <div className="doacaoDiv" ref={carrocelDoacao}>
         {doacao?.map((post)=>(
-            <Link className="titleColor" to={`/post/${post?._id}`} key={post._id}>
+            <Link className="titleColor" to={`/doacao/${post?._id}`} key={post._id}>
                 {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
             <div className="Produto" key={post?.photo}>
                 <div className='imgProduto' id='Produto'>
@@ -153,7 +153,7 @@ export default function UserDivulg() {
         <i className="aluguelI">Aluguel...</i>
         <div className="compartilharDiv" ref={carrocelAluguel}>
         {aluguel?.map((post)=>(
-            <Link className="titleColor" to={`/post/${post?._id}`} key={post._id}>
+            <Link className="titleColor" to={`/habitacao/aluguel/${post?._id}`} key={post._id}>
                 {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
             <div className="Produto" key={post?.photo}>
                 <div className='imgProduto' id='Produto'>
@@ -182,7 +182,7 @@ export default function UserDivulg() {
         <i className="compartilharI">Compartilhamento...</i>
         <div className="compartilharDiv" ref={carrocelDivulg}>
         {compartilhar?.map((post)=>(
-            <Link className="titleColor" to={`/post/${post?._id}`} key={post._id}>
+            <Link className="titleColor" to={`/habitacao/compartilhar/${post?._id}`} key={post._id}>
                 {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
             <div className="Produto" key={post?.photo}>
                 <div className='imgProduto' id='Produto'>
