@@ -110,7 +110,7 @@ export default function CadastrarAluguel() {
           if(file1 !== null || file2 !== null || file3 !== null || file4 !== null || file5 !== null){
             await api.post("/aluguel", newPost);
             setAlertImg(false)
-            window.location.replace("/exe");
+            window.location.replace("/habitacao-aluguel");
           }else{
             setAlertImg(true)
           }
@@ -174,7 +174,7 @@ export default function CadastrarAluguel() {
                     Habitação
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-aluguel">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>

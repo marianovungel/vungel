@@ -32,7 +32,7 @@ function App() {
           <Route path="/" component={ user ? Venda : Login} exact />
           <Route path="/doacao" component={ user ? Desapego : Login} exact />
           {/* esta rota de aluguel é inacessível */}
-          <Route path="/habitacao-aluguel" component={ user ? Aluguel : Login} exact />
+          <Route path="/exe" component={ user ? Aluguel : Login} exact />
           <Route path="/execomp" component={user ? ExeComp  : Login} exact />
           {/*Esta outa de compartilhamento é inacessível também */}
           <Route path="/habitacao/aluguel/:id" component={ user ? SingleAluguel : Login} exact />
@@ -44,7 +44,7 @@ function App() {
           <Route path="/compartilhar-cadastrar" component={ user ? CadastrarCompartilhar : Login} exact />
           <Route path="/post/:id" component={user ? SingleVenda  : Login} exact />
           <Route path="/desapego/:id" component={user ? SingleDesapego  : Login} exact />
-          <Route path="/exe" component={user ? Exe  : Login} exact />
+          <Route path="/habitacao-aluguel" component={user ? Exe  : Login} exact />
           <Route path="/user" component={user ? UserPage  : Login} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/sendemail" component={SendEmail} exact />

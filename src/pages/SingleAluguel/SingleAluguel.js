@@ -93,7 +93,7 @@ const handleDelete = async () =>{
         data: { username: user.username, userId: post.userId },
         headers: {authorization:"Bearer " + user.accessToken}
       });
-      window.location.replace("/exe");
+      window.location.replace("/habitacao-aluguel");
   }catch(err){
       alert(err)
   }
@@ -163,7 +163,7 @@ const FotoChengFive = ()=>{
                     Habitação
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><Link className="dropdown-item" to="/exe">Aluguel</Link></li>
+                    <li><Link className="dropdown-item" to="/habitacao-aluguel">Aluguel</Link></li>
                     <li><Link className="dropdown-item" to="/habitacao-compartilhar">Compartilhamento</Link></li>
                     <li><Link className="dropdown-item" to="/aluguel-cadastrando">Divulgar Aluguel</Link></li>
                 </ul>
@@ -208,7 +208,7 @@ const FotoChengFive = ()=>{
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <Link to="/exe"><i className='outrosProdutos'>Outros produtos</i></Link>
+              <Link to="/habitacao-aluguel"><i className='outrosProdutos'>Outros produtos</i></Link>
             </div>
             <p><i>Divulgador: </i> <b>{post.username}</b></p>
             <p><i>Preço: </i>R$ <b>{post.preco}</b></p>

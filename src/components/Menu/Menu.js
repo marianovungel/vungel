@@ -41,7 +41,7 @@ export default function Menu() {
                     <Link to='/' className="nav-link" href="#">Venda</Link>
                     </li>
                     <li className="nav-item">
-                    <Link to='/exe' className="nav-link" href="#">Habitação</Link>
+                    <Link to='/habitacao-aluguel' className="nav-link" href="#">Habitação</Link>
                     </li>
                     <li className="nav-item">
                     <Link to='/sobre' className="nav-link" href="#">Sobre</Link>
@@ -55,7 +55,7 @@ export default function Menu() {
         <ul className='menuList'>
             <Link to='/doacao'><li>Doação</li></Link>
             <Link to='/'><li>Venda</li></Link>
-            <Link to='/exe'><li>Habitação</li></Link>
+            <Link to='/habitacao-aluguel'><li>Habitação</li></Link>
             <li onClick={Producao}>Oportunidades</li>
             <li onClick={Producao}>Vida na Unilab</li>
             <Link to='/sobre'><li>Sobre</li></Link>
