@@ -73,3 +73,73 @@
     width: 100%;
     text-align: center;
 }
+@media(max-width: 880px){
+    .services{
+        width: 80%;
+        position: relative;
+        margin: 35px auto 10px auto;
+    }
+    .headerTitleVida{
+        text-align: center;
+        margin-top: -45px;
+        font-size: 35pt;
+        width: 100%;
+        z-index: 90;
+        color: #142d88;
+    }
+    .imgItemVida{
+        object-fit: cover;
+        width: 70%;
+        height: 300px;
+        margin-top: -10px;
+    }
+    .imgContentVida{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        background-color: #fff;
+        box-sizing: border-box;
+        margin-top: 90px;
+        position: relative;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(203, 201, 201, 0.2);
+        box-shadow: 1px 1px 1px 1px rgba(203, 201, 201, 0.2);
+    }
+}
+@media(max-width: 775px){
+    .services{
+        width: 95%;
+        position: relative;
+        margin: 35px auto 10px auto;
+    }
+}
+@media(max-width: 660px){
+    .services{
+        width: 95%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 35px auto 10px auto;
+    }
+    .sectionService{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media(max-width: 660px){
+    .imgItemVida{
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        margin-top: -10px;
+    }
+}
