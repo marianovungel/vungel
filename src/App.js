@@ -21,6 +21,7 @@ import Exe from './pages/exe/Exe';
 import ExeComp from './pages/ExeComp/ExeComp';
 import SendEmail from './pages/SendEmail/SendEmail';
 import UserPage from './pages/UserPage/UserPage';
+import Vida from './pages/Vida/Vida';
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
   return (
       <Router>
         <Switch> 
-          <Route path="/" component={ user ? Venda : Login} exact />
+          <Route path="/" component={ user ? Vida : Login} exact />
           <Route path="/venda" component={ user ? Venda : Login} exact />
           <Route path="/doacao" component={ user ? Desapego : Login} exact />
           {/* esta rota de aluguel é inacessível */}

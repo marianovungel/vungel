@@ -79,7 +79,7 @@ export default function Produto() {
             </div>
             <div className='nomePreco'>
                 <h3 className='valorNome'>{post?.title}</h3>
-                <h3 className='valorNome'>R$ {post?.preco},00</h3>
+                <h3 className='valorNome'>R$ {post?.preco},00</h3> 
             </div>
           </div>
           </Link>

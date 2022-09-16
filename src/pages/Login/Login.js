@@ -28,7 +28,6 @@ export default function Login() {
                 password: passwordRef.current.value,
             })
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data})
-            window.location.replace("/venda");
         }catch(err){
             dispatch({ type: "LOGIN_FAILURE"})
             setFalsesenha(true)
