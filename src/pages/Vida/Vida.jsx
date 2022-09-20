@@ -69,7 +69,7 @@ export default function Vida() {
                 <h3 className="headerTitleVida">
                     UnilabTem App
                 </h3>
-                <img src="http://saofranciscodoconde.ba.gov.br/wp-content/uploads/2015/06/UNILAB-%E2%80%93-Universidade-da-Integra%C3%A7%C3%A3o-Internacional-da-Lusofonia-Afro-Brasileira.jpg" alt="" 
+                <img src="./image/fundo3.jpeg" alt="" 
                 className='imgItemVida' />
             </div>
             <div className="services">
