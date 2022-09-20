@@ -247,6 +247,9 @@ export default function Desapego() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/">Vida na Unilab</Link>
+                </li>
+                <li className="nav-item">
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">

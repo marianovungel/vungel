@@ -38,6 +38,9 @@ export default function Menu() {
                 <Link to='/doacao' className="nav-link active" aria-current="page" href="#">Doação</Link>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
+                    <Link to='/' className="nav-link" href="#">Vida na Unilab</Link>
+                    </li>
+                    <li className="nav-item">
                     <Link to='/venda' className="nav-link" href="#">Venda</Link>
                     </li>
                     <li className="nav-item">
@@ -57,7 +60,7 @@ export default function Menu() {
             <Link to='/venda'><li>Venda</li></Link>
             <Link to='/habitacao-aluguel'><li>Habitação</li></Link>
             <li onClick={Producao}>Oportunidades</li>
-            <li onClick={Producao}>Vida na Unilab</li>
+            <Link to='/'><li>Vida na Unilab</li></Link>
             <Link to='/sobre'><li>Sobre</li></Link>
         </ul>
         <div className='fotoPerfil'>
