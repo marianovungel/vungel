@@ -157,6 +157,9 @@ const TodosPro = ()=>{
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
+                <Link className="nav-link active text-light" aria-current="page" to="/">Vida na Unilab</Link>
+                </li>
+                <li className="nav-item">
                 <Link className="nav-link active text-light" aria-current="page" to="/doacao">Doação</Link>
                 </li>
                 <li className="nav-item">
@@ -211,7 +214,7 @@ const TodosPro = ()=>{
             <h2>{post.title}</h2>
             <div className='codigoItem'>
               <p>(Cód. Item {post._id})</p>
-              <Link to="/desapego">
+              <Link to="/doacao">
                 <i className='outrosProdutos'>Outros produtos</i>
               </Link>
             </div>
