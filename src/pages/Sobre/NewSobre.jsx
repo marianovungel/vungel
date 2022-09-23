@@ -10,6 +10,16 @@ export default function NewSobre() {
 
     const { user } = useContext(Context)
 
+    const SabiFunction  = ()=>{
+        window.open('http://lattes.cnpq.br/2818665148998081')
+    }
+    const TalesFunction  = ()=>{
+        window.open('http://lattes.cnpq.br/3410512550905802')
+    }
+    const MarianoFunction  = ()=>{
+        window.open('http://lattes.cnpq.br/0916995612340632')
+    }
+
   return (
     <div className='desapego'>
         <div className='OI' >
@@ -93,45 +103,43 @@ export default function NewSobre() {
                     <div className="userNewSobre">
                         <img src="https://sig.unilab.edu.br/shared/verFoto?idFoto=494816&key=c7bc69afa99a94c1404d79d7bded526d" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
-                            <b className="nameNewSobre">Doutor Sabi Yari Moïse Bandiri</b>
-                            <i className="formacaoNewSobre">Professor</i>
                             <i className="cargoNewSobre">Cordenador</i>
-                            <i className="liteNewSobre">http://lattes.cnpq.br/2818665148998081</i>
+                            <b className="nameNewSobre">Prof.Dr. Sabi Yari Moïse Bandiri</b>
+                            <i className="liteNewSobre" onClick={SabiFunction}>http://lattes.cnpq.br/2818665148998081</i>
                         </div>
                     </div>
                     <div className="userNewSobre">
                         <img src="https://sig.unilab.edu.br/shared/verFoto?idFoto=643363&key=846b8cc5a7457f43ef9bbc9380a869e6" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
-                            <b className="nameNewSobre">Doutor Tales Paiva Nogueira</b>
-                            <i className="formacaoNewSobre">Professor</i>
-                            <i className="cargoNewSobre">Vice-coordenado</i>
-                            <i className="liteNewSobre">http://lattes.cnpq.br/3410512550905802</i>
+                        <i className="cargoNewSobre">Vice-Coordenador</i>
+                            <b className="nameNewSobre">Prof.Dr. Tales Paiva Nogueira</b>
+                            <i className="liteNewSobre" onClick={TalesFunction}>http://lattes.cnpq.br/3410512550905802</i>
                         </div>
                     </div>
                     <div className="userNewSobre">
                         <img src="./image/mariano.jpg" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
+                            <i className="cargoNewSobre">Colaborador</i>
                             <b className="nameNewSobre">Mariano António Vunge</b>
                             <i className="formacaoNewSobre">Graduando</i>
-                            <i className="cargoNewSobre">Colaborador</i>
-                            <i className="liteNewSobre">http://lattes.cnpq.br/0916995612340632</i>
+                            <i className="liteNewSobre" onClick={MarianoFunction}>http://lattes.cnpq.br/0916995612340632</i>
                         </div>
                     </div>
                     <div className="userNewSobre">
                         <img src="./image/marcos.png" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
+                            <i className="cargoNewSobre">Colaborador</i>
                             <b className="nameNewSobre">Marcos Domingos Simão Kiacola</b>
                             <i className="formacaoNewSobre">Graduando</i>
-                            <i className="cargoNewSobre">Colaborador</i>
                             <i className="liteNewSobre"></i>
                         </div>
                     </div>
                     <div className="userNewSobre">
                         <img src="./image/sumae.jpeg" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
+                            <i className="cargoNewSobre">Colaborador</i>
                             <b className="nameNewSobre">Sumaé Embaló</b>
                             <i className="formacaoNewSobre">Graduando</i>
-                            <i className="cargoNewSobre">Colaborador</i>
                             <i className="liteNewSobre"></i>
                         </div>
                     </div>

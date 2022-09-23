@@ -4,6 +4,13 @@
     margin: 35px auto 10px auto;
     background-color: #fff;
 }
+.liteNewSobre{
+    cursor: pointer;
+}
+.liteNewSobre:hover{
+    cursor: pointer;
+    color: #193498;
+}
 .titleNewSobre{
     width: 100%;
     background: -webkit-linear-gradient(#193498, #0b1e65);

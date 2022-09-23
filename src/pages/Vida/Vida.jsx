@@ -28,6 +28,7 @@ export default function Vida() {
     const Cplp =()=>{
         window.open("https://unilab.edu.br/paises-parceiros/#:~:text=Tem%20mais%20de%2030%20milh%C3%B5es,s%C3%A9timo%20da%20popula%C3%A7%C3%A3o%20do%20mundo.")
     }
+
   return (
     <div className='desapego'>
         <div className='OI' >
