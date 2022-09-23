@@ -56,12 +56,12 @@ export default function Menu() {
       </nav>
 
         <ul className='menuList'>
-            <Link to='/'><li>Vida na Unilab</li></Link>
-            <Link to='/doacao'><li>Doação</li></Link>
-            <Link to='/venda'><li>Venda</li></Link>
-            <Link to='/habitacao-aluguel'><li>Habitação</li></Link>
+            <Link to='/' id='idManu'><li>Vida na Unilab</li></Link>
+            <Link to='/doacao' id='idManu'><li>Doação</li></Link>
+            <Link to='/venda' id='idManu'><li>Venda</li></Link>
+            <Link to='/habitacao-aluguel' id='idManu'><li>Habitação</li></Link>
             <li onClick={Producao}>Oportunidades</li>
-            <Link to='/sobre'><li>Sobre</li></Link>
+            <Link to='/sobre' id='idManu'><li>Sobre</li></Link>
         </ul>
         <div className='fotoPerfil'>
           {/* <i className="fa-solid fa-user"></i> */}

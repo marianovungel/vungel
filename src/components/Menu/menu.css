@@ -10,6 +10,18 @@
     z-index: 95;
     font-family: 'Roboto', sans-serif;
 }
+#idManu{
+    text-decoration: none;
+}
+#idManu:hover{
+    color: yellow;
+}
+#idmenu1{
+    text-decoration: none;
+}
+#idmenu1:hover{
+    color: #666;
+}
 .blueHeader{
     width: 100%;
     min-width: 100%;
