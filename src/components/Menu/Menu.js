@@ -67,7 +67,7 @@ export default function Menu() {
           {/* <i className="fa-solid fa-user"></i> */}
               <Link to='/user' >
                   <Chip
-                  className='CursorUserPoiter'
+                  id='colorandPoiter'
                     avatar={<Avatar alt="Natacha" src={URLImg +user.profilePic} />}
                     label={user.username}
                     variant="outlined"

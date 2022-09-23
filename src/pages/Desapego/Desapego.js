@@ -336,7 +336,7 @@ export default function Desapego() {
           {scroll && (<div className='sidebarCardDesapego scroll'>
           <>
           {/* /////////////////////////////////--pesquisa--//////////////////////////////// */}
-      <form onSubmit={submitSearch} className='searchform'>
+      <form onSubmit={submitSearch} className='searchform' id='searchFormDesapego'>
           <input className='searchformInportDesapego' type="search" placeholder='Pesquise...' onChange={e => setTitleSearh(e.target.value)} />
           <button type="submit" className='searchformButton'><i className="fa-solid fa-magnifying-glass colorSearch"></i></button>
       </form>

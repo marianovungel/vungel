@@ -1,25 +1,24 @@
 import React from 'react'
-import './Sobre.css'
-import Menu from '../../components/Menu/Menu'
+import './NewSobre.css'
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { Context } from '../../Context/Context'
+import {useContext} from 'react'
+import {Context} from '../../Context/Context'
+import Menu from '../../components/Menu/Menu';
 const URLImg = "https://festupload.s3.amazonaws.com/";
 
-
-export default function Sobre() {
+export default function NewSobre() {
 
     const { user } = useContext(Context)
- 
+
   return (
     <div className='desapego'>
-         <div className='OI' >
+        <div className='OI' >
             <Menu />
         </div>
         <div className='menuBootstrap' >
         <nav className="navbar navbar-expand-lg navbar-light  menuBootstrap">
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/venda">
+            <Link className="navbar-brand" to="/">
                 <div className='logoBootstrap'>
                     <img className='imagemLogo' src="./image/preta.png" alt="logoUnilabtem" />
                 </div>
@@ -62,11 +61,17 @@ export default function Sobre() {
         </div>
         </nav>
         </div>
-        <div className='sidebarDesapego'>
-            <div className='centerSidebar'>
-                <div className='sobreheader'>Sobre...</div>
-                <div className='sobreText'>
-                    <p className='sobreTextParagrafo'>
+        <div className='vidaContent'>
+            <div className="servicess">
+
+                <section className='sectionService'>
+                    <div className="titleNewSobre">
+                        <h3 className="titleSobreText">
+                            Sobre...
+                        </h3>
+                    </div>
+                    <div className="paragrafoDesc">
+                        <p className="descP">
                         Unilabtem é uma plataforma digital web de fácil manejo que simplifica a vida dos
                         seus usuários, que buscam por seus serviços que são oferecidos por ela. O objetivo
                         desta plataforma é estreitar a distância entre o usuário que divulga e o que deseja
@@ -82,74 +87,58 @@ export default function Sobre() {
                         cadastro, venda, Aluguel, compartilhamento e de doação (desapego) funcionando na íntegra, podendo
                          criar uma conta, fazer login,  
                         postar, ver, editar, deletar, pesquisar e filtrar produtos a venda e/ou em doação. 
-                    </p>
-                    
-                </div>
-                <div className='sobreParticipantes'>
-                    <h4 className='headerSobrePartic'>Participantes</h4>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='https://sig.unilab.edu.br/shared/verFoto?idFoto=494816&key=c7bc69afa99a94c1404d79d7bded526d' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Doutor Sabi Yari Moïse Bandiri</b>
-                            <p className='marginBott'>Professor</p>
-                            <p className='marginBott'>Cordenador</p>
-                            <p className='marginBott'>@gmail</p>
+                        </p>
+                    </div>
+                    <h3 className='participantesTitleNew'>Participantes</h3>
+                    <div className="userNewSobre">
+                        <img src="https://sig.unilab.edu.br/shared/verFoto?idFoto=494816&key=c7bc69afa99a94c1404d79d7bded526d" alt="" className="imagemNewSobre" />
+                        <div className="descNewSobre">
+                            <b className="nameNewSobre">Doutor Sabi Yari Moïse Bandiri</b>
+                            <i className="formacaoNewSobre">Professor</i>
+                            <i className="cargoNewSobre">Cordenador</i>
+                            <i className="liteNewSobre">http://lattes.cnpq.br/2818665148998081</i>
                         </div>
                     </div>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='https://sig.unilab.edu.br/shared/verFoto?idFoto=643363&key=846b8cc5a7457f43ef9bbc9380a869e6' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Doutor Tales Paiva Nogueira</b>
-                            <p className='marginBott'>Professor</p>
-                            <p className='marginBott'>Vice-coordenado</p>
-                            <p className='marginBott'>@gmail</p>
+                    <div className="userNewSobre">
+                        <img src="https://sig.unilab.edu.br/shared/verFoto?idFoto=643363&key=846b8cc5a7457f43ef9bbc9380a869e6" alt="" className="imagemNewSobre" />
+                        <div className="descNewSobre">
+                            <b className="nameNewSobre">Doutor Tales Paiva Nogueira</b>
+                            <i className="formacaoNewSobre">Professor</i>
+                            <i className="cargoNewSobre">Vice-coordenado</i>
+                            <i className="liteNewSobre">http://lattes.cnpq.br/3410512550905802</i>
                         </div>
                     </div>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='./image/mariano.jpg' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Mariano António Vunge</b>
-                            <p className='marginBott'>Graduando</p>
-                            <p className='marginBott'>Colaborador</p>
-                            <p className='marginBott'>@gmail</p>
+                    <div className="userNewSobre">
+                        <img src="./image/mariano.jpg" alt="" className="imagemNewSobre" />
+                        <div className="descNewSobre">
+                            <b className="nameNewSobre">Mariano António Vunge</b>
+                            <i className="formacaoNewSobre">Graduando</i>
+                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="liteNewSobre">http://lattes.cnpq.br/0916995612340632</i>
                         </div>
                     </div>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Marcos Domingos Simão Kiacola</b>
-                            <p className='marginBott'>Graduando</p>
-                            <p className='marginBott'>Colaborador</p>
-                            <p className='marginBott'>@gmail</p>
+                    <div className="userNewSobre">
+                        <img src="./image/marcos.png" alt="" className="imagemNewSobre" />
+                        <div className="descNewSobre">
+                            <b className="nameNewSobre">Marcos Domingos Simão Kiacola</b>
+                            <i className="formacaoNewSobre">Graduando</i>
+                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="liteNewSobre"></i>
                         </div>
                     </div>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Sumaé Embaló</b>
-                            <p className='marginBott'>Graduando</p>
-                            <p className='marginBott'>Colaborador</p>
-                            <p className='marginBott'>@gmail</p>
+                    <div className="userNewSobre">
+                        <img src="./image/sumae.jpeg" alt="" className="imagemNewSobre" />
+                        <div className="descNewSobre">
+                            <b className="nameNewSobre">Sumaé Embaló</b>
+                            <i className="formacaoNewSobre">Graduando</i>
+                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="liteNewSobre"></i>
                         </div>
                     </div>
-                    <div className='sobreparticipanteDiv'>
-                        <img src='https://cdn-icons-png.flaticon.com/512/74/74472.png' alt='#' className='imagemParti'/>
-                        <div className='divDescParti'>
-                            <b className='marginBott'>Nena António Impanta</b>
-                            <p className='marginBott'>Graduando</p>
-                            <p className='marginBott'>Colaborador</p>
-                            <p className='marginBott'>@gmail</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div className='sobreParticipantes'>
-                    <h4 className='headerSobrePartic'>Redes sociais...</h4>
-                    <div className='sobreparticipanteDiv'>
-
-                    </div>
-                </div>
+                </section>
             </div>
+          
+          
         </div>
     </div>
   )

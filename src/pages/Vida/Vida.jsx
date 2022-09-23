@@ -11,22 +11,22 @@ export default function Vida() {
 
     const { user } = useContext(Context)
     const Ru =()=>{
-        window.location.replace("https://unilab.edu.br/restauranteuniversitario/")
+        window.open("https://unilab.edu.br/restauranteuniversitario/")
     }
     const Inter =()=>{
-        window.location.replace("https://unilab.edu.br/onibus-intercampi/")
+        window.open("https://unilab.edu.br/onibus-intercampi/")
     }
     const Biblioteca =()=>{
-        window.location.replace("https://unilab.edu.br/biblioteca-universitaria-unilab/")
+        window.open("https://unilab.edu.br/biblioteca-universitaria-unilab/")
     }
     const Curso =()=>{
-        window.location.replace("https://unilab.edu.br/cursos-de-graduacao/")
+        window.open("https://unilab.edu.br/cursos-de-graduacao/")
     }
     const RNE =()=>{
-        window.location.replace("https://www.tirarrne.com.br/artigos/como-renovar-rne-permanente-vencido/")
+        window.open("https://www.tirarrne.com.br/artigos/como-renovar-rne-permanente-vencido/")
     }
     const Cplp =()=>{
-        window.location.replace("https://unilab.edu.br/paises-parceiros/#:~:text=Tem%20mais%20de%2030%20milh%C3%B5es,s%C3%A9timo%20da%20popula%C3%A7%C3%A3o%20do%20mundo.")
+        window.open("https://unilab.edu.br/paises-parceiros/#:~:text=Tem%20mais%20de%2030%20milh%C3%B5es,s%C3%A9timo%20da%20popula%C3%A7%C3%A3o%20do%20mundo.")
     }
   return (
     <div className='desapego'>
@@ -88,10 +88,10 @@ export default function Vida() {
                 className='imgItemVida' />
             </div>
             <div className="services">
-                <h4 className="serviceTitleVida">Servições</h4>
+                <h4 className="serviceTitleVida">Serviços</h4>
                 <section className='sectionService'>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-book"></i> Biblioteca</h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-book"></i> Biblioteca</h6>
                         <p className="serviceParagrafo">
                         O Sistema de Bibliotecas da Unilab (Sibiuni) 
                         é um órgão suplementar da Unilab criado conforme
@@ -104,7 +104,7 @@ export default function Vida() {
                         <i className="serviceLink" onClick={Biblioteca}>Saiba mais...</i>
                     </div>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-bus"></i> Intercampis </h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-bus"></i> Intercampis </h6>
                         <p className="serviceParagrafo">
                         A Coordenação de Serviços Operacionais (CSO), por meio da 
                         Divisão de Transportes, informa à comunidade 
@@ -113,7 +113,7 @@ export default function Vida() {
                         <i className="serviceLink" onClick={Inter}>Saiba mais...</i>
                     </div>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-utensils"></i> Restaurante Universitário (RU)</h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-utensils"></i> Restaurante Universitário (RU)</h6>
                         <p className="serviceParagrafo">
                         Os Restaurantes Universitários (RUs) da 
                         Unilab têm como objetivos fornecer refeições
@@ -131,7 +131,7 @@ export default function Vida() {
                         <i className="serviceLink" onClick={Ru}>Saiba mais...</i>
                     </div>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-passport"></i> Documentação Para O Visto</h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-passport"></i> Documentação Para O Visto</h6>
                         <p className="serviceParagrafo">
                             O processo de Renovação do RNE-CRNM permanente é o mesmo da primeira via do documento. No entanto, esses documentos serão destinados para cada caso. Sendo assim, os documentos básicos, são:
                             É necessário ter em mãos duas fotos recentes 3×4, coloridas com o fundo branco;
@@ -142,7 +142,7 @@ export default function Vida() {
                         <i className="serviceLink" onClick={RNE}>Saiba mais...</i>
                     </div>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-graduation-cap"></i> Cursos de Graduação Unilab</h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-graduation-cap"></i> Cursos de Graduação Unilab</h6>
                         <p className="serviceParagrafo">
                             Na unilab, tem diversos cursos no formato Presencial
                             e de diversas áreas do saber, que são administrados nos 
@@ -151,7 +151,7 @@ export default function Vida() {
                         <i className="serviceLink" onClick={Curso}>Saiba mais...</i>
                     </div>
                     <div className="serviceItem">
-                        <h6 className="serviceTitle"><i class="fa-solid fa-flag"></i> CPLP</h6>
+                        <h6 className="serviceTitle"><i className="fa-solid fa-flag"></i> CPLP</h6>
                         <p className="serviceParagrafo">
                         Um dos propósitos da Unilab é formar 
                         pessoas aptas para contribuir com a 

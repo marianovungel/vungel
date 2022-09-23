@@ -64,7 +64,7 @@ export default function Produto() {
   return (
     <>
         <form onSubmit={submitSearch} className='searchform'>
-          <input className='searchformInport' type="search" placeholder='Pesquise...' onChange={e => setTitle(e.target.value)} />
+          <input className='searchformInportt' type="search" placeholder='Pesquise...' onChange={e => setTitle(e.target.value)} />
           <button type="submit" className='searchformButton'><i className="fa-solid fa-magnifying-glass colorSearch"></i></button>
         </form>
       {vazio && (<div className='Encontrar'><h5>Nenhum Produto encontrado ...</h5></div>)}

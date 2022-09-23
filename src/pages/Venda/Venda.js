@@ -155,12 +155,12 @@ function Venda() {
       <div className='conteiner'>
             {cadastrarFunc ? (
         <div className='cadastrarProdutonew'>
-            <form className='formProdutonew' onSubmit={handleSubmit} >
+            <form className='formProdutonewww' onSubmit={handleSubmit} >
               <h4 className='produtoFormModalnew'>Cadastrar Produto</h4>
-              <input type="file" className='imgInputContentnew' accept="image/*" onChange={(e)=> setFile(e.target.files[0])}/>
-              <input className='inputProdutonew' type='text' placeholder='Titulo' onChange={(e)=> setTitle(e.target.value)} />
-              <input className='inputProdutonew' type='Number' placeholder='R$ 00,00' onChange={(e)=> setPreco(e.target.value)} />
-              <textarea placeholder='descrição...' className="storynew" rows="10" cols="33" onChange={(e)=> setDesc(e.target.value)} ></textarea>
+              <input type="file" className='imgInputContentnew' accept="image/*" required onChange={(e)=> setFile(e.target.files[0])}/>
+              <input className='inputProdutonew' type='text' placeholder='Titulo' required onChange={(e)=> setTitle(e.target.value)} />
+              <input className='inputProdutonew' type='Number' placeholder='R$ 00,00' required onChange={(e)=> setPreco(e.target.value)} />
+              <textarea placeholder='descrição...' className="storynew" rows="10" cols="33" required onChange={(e)=> setDesc(e.target.value)} ></textarea>
               <button className='inputProdutonew colorbutton' type='submit'> Cadastrar </button>
               <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
             </form>

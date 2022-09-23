@@ -8,7 +8,6 @@
     justify-content: center;
     margin-top: -60px;
 }
-ativeCadastrar
 #ativ{
     cursor: pointer;
 }
@@ -36,16 +35,19 @@ ativeCadastrar
     height: 100vh;
     display: flex;
     justify-content: center;
+    position: relative;
     
 }
-.formProdutonew{
+.formProdutonewww{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
+    width: 30%;
+    min-width: 300px;
+    max-height: 550px;
     background-color: #193498;
-    margin: 120px auto 0px auto;
+    margin: 95px auto 0px auto;
     border-radius: 10px;
 }
 #shoop{
@@ -158,11 +160,12 @@ ativeCadastrar
     align-items: center;
     width: 150px;
     height: 40px;
-    font-size: 10pt;
+    font-size: 12pt;
     background-color: #193498;
     border-radius: 5px;
     color: #fff;
     box-shadow: 1px 1px 3px 1px #666;
+    font-weight: 400;
 }
 
 
@@ -210,20 +213,7 @@ ativeCadastrar
     .banner{
         display: none;
     }
-    .ativeCadastrar{
-        position: absolute;
-        top: 120px;
-        left: 40px;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 150px;
-        height: 40px;
-        font-size: 10pt;
-        background-color: #193498;
-        border-radius: 10px;
-        color: #fff;
-    }
+    
     .formProdutonew{
         display: flex;
         flex-direction: column;
@@ -239,6 +229,20 @@ ativeCadastrar
 }
 
 @media (max-width: 947px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 133px;
+        left: 40px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        background-color: #193498;
+        border-radius: 10px;
+        color: #fff;
+    }
     .sidebar{
         position: relative;
         height: 100%;
@@ -318,6 +322,20 @@ ativeCadastrar
     }
 }
 @media (max-width: 885px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 133px;
+        left: 40px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        background-color: #193498;
+        border-radius: 10px;
+        color: #fff;
+    }
     .sidebar{
         position: relative;
         height: 100%;
@@ -344,6 +362,20 @@ ativeCadastrar
     }
 }
 @media (max-width: 831px){
+    .ativeCadastrar{
+        position: absolute;
+        top: 150px;
+        left: 40px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        font-size: 10pt;
+        background-color: #193498;
+        border-radius: 10px;
+        color: #fff;
+    }
     .sidebar{
         position: relative;
         height: 100%;

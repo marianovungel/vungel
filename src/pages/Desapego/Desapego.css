@@ -21,16 +21,16 @@
     object-fit: cover;
     margin-left: 5px;
 }
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
 .sidebarCardDesapego{
-    flex: 5;
-    width: 90%;
+    flex: 4.6;
     min-width: 40%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 3px  0px 0px;
     margin-top: 65px;
 }
 
@@ -39,8 +39,10 @@
     width: 320px;
     height: 100vh;
 }
+
+/* +++++++++++++++++++++++++++++++++++ */
 .bannerDesapego{
-    flex: 3.5;
+    flex: 3.7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,8 +123,8 @@
     height: 100px;
 }
 .bannerDesapegoFast{
-    margin-top: 86px;
-    width: 70%;
+    margin-top: 100px;
+    width: 300px;
     position: relative;
 }
 .h3Desapego{
@@ -162,9 +164,12 @@
     margin-top: -5px;
     text-align: justify;
 }
-
+/* +++++++++++++++++++++++++++++++ */
 .cadastrarProdutoCallForm{
-    flex: 3.5;
+    flex: 3.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .buttonCad{
     color: #fff;
@@ -174,18 +179,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px 10px 0px 50px;
+    margin-top: 100px;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 1px #666;
-    z-index: 99;
-}
-.buttonCad:hover{
+    z-index: 90;
     cursor: pointer;
 }
+
+/* +++++++++++++++++++++++++++++++++++ */
 .scroll{
-    /* background-color: red; */
-    width: 80%;
     height: 100%;
+    padding: 0px 3px  0px 0px;
     overflow-x: hidden;
     overflow-y:scroll;
     scrollbar-color: #666;
@@ -197,7 +201,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 20px 10px 0px 50px;
+    margin-top: 20px;
 }
 .itemList{
     width: 300px;
@@ -238,7 +242,7 @@
     border-radius: 10px;
     margin: 0px 0px 20px 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 100%;
     min-width: 300px;
     height: 100%;
     padding-top: 15px;
@@ -311,7 +315,7 @@
     margin-left: 20px;
 }
 .searchformInportDesapego{
-    width: 85%;
+    width: 96%;
     height: 65px;
     border-radius: 25px;
     border-color: #666;
@@ -381,6 +385,9 @@
     color: #fff;
     font-size: 13pt;
 }
+#searchFormDesapego{
+    margin-right: 0px;
+}
 
 
 @media (max-width: 650px){
@@ -414,6 +421,8 @@
     .filtrar{
         display: none;
     }
+
+    /* +++++++++++++++++++++++++++++++++ */
     .sidebarCardDesapego{
         margin-top: -70px;
         flex: 12;
@@ -443,7 +452,7 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px 1px #666;
     }
-    .searchform{
+    .searchformx{
         width: 100%;
         height: 70px;
         display: flex;

@@ -55,8 +55,11 @@ li:hover{
     height: 70px;
 
 }
-.CursorUserPoiter{
+
+#colorandPoiter{
     cursor: pointer;
+    color: #fff;
+    border: 2px solid #fff;
 }
 .imagemLogo{
     width: 200px;

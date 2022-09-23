@@ -93,7 +93,7 @@ export default function UserDivulg() {
     <h4 className="userInfo">Minhas divulgações...</h4>
     <div className="vendaDivulgacoes">
         <i className="vendaI">Venda...</i>
-        <div className="produtosDiv" ref={carrocelVenda}>
+        <div className="compartilharDiv" ref={carrocelVenda}>
         {venda?.map((post)=>(
             <Link className="titleColor" to={`/post/${post?._id}`} key={post._id}>
                 {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
@@ -122,7 +122,7 @@ export default function UserDivulg() {
     </div>
     <div className="doacaoDivulgacoes">
         <i className="doacoaI">Doação...</i>
-        <div className="doacaoDiv" ref={carrocelDoacao}>
+        <div className="compartilharDiv" ref={carrocelDoacao}>
         {doacao?.map((post)=>(
             <Link className="titleColor" to={`/doacao/${post?._id}`} key={post._id}>
                 {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}

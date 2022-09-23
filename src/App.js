@@ -14,7 +14,6 @@ import CadastrarAluguel from './pages/CadastrarAluguel/CadastrarAluguel';
 import CadastrarCompartilhar from './pages/CadastrarCompartilhar/CadastrarCompartilhar';
 import SingleAluguel from './pages/SingleAluguel/SingleAluguel';
 import SingleCompartilhar from './pages/SingleCompartilhar/SingleCompartilhar';
-import Sobre from './pages/Sobre/Sobre';
 import EditAluguel from './pages/EditAluguel/EditAluguel';
 import EditCompartilhar from './pages/EditCompartilhar/EditCompartilhar';
 import Exe from './pages/exe/Exe';
@@ -22,6 +21,7 @@ import ExeComp from './pages/ExeComp/ExeComp';
 import SendEmail from './pages/SendEmail/SendEmail';
 import UserPage from './pages/UserPage/UserPage';
 import Vida from './pages/Vida/Vida';
+import NewSobre from './pages/Sobre/NewSobre';
 
 function App() {
 
@@ -50,7 +50,7 @@ function App() {
           <Route path="/user" component={user ? UserPage  : Login} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/sendemail" component={SendEmail} exact />
-          <Route path="/sobre" component={Sobre} exact />
+          <Route path="/sobre" component={NewSobre} exact />
           <Route path="/registrar" component={Registrar} exact />
         </Switch>
       </Router>
