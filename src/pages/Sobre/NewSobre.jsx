@@ -119,7 +119,7 @@ export default function NewSobre() {
                     <div className="userNewSobre">
                         <img src="./image/mariano.jpg" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
-                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="cargoNewSobre">Bolsista</i>
                             <b className="nameNewSobre">Mariano António Vunge</b>
                             <i className="formacaoNewSobre">Graduando</i>
                             <i className="liteNewSobre" onClick={MarianoFunction}>http://lattes.cnpq.br/0916995612340632</i>
@@ -128,7 +128,7 @@ export default function NewSobre() {
                     <div className="userNewSobre">
                         <img src="./image/marcos.png" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
-                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="cargoNewSobre">Bolsista Voluntário</i>
                             <b className="nameNewSobre">Marcos Domingos Simão Kiacola</b>
                             <i className="formacaoNewSobre">Graduando</i>
                             <i className="liteNewSobre"></i>
@@ -137,7 +137,7 @@ export default function NewSobre() {
                     <div className="userNewSobre">
                         <img src="./image/sumae.jpeg" alt="" className="imagemNewSobre" />
                         <div className="descNewSobre">
-                            <i className="cargoNewSobre">Colaborador</i>
+                            <i className="cargoNewSobre">Bolsista Voluntário</i>
                             <b className="nameNewSobre">Sumaé Embaló</b>
                             <i className="formacaoNewSobre">Graduando</i>
                             <i className="liteNewSobre"></i>
