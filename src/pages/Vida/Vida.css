@@ -1,6 +1,12 @@
 .vidaContent{
     width: 100%;
 }
+.descBottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .imgContentVida{
     width: 100%;
     height: 400px;

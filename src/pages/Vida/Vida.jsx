@@ -111,7 +111,10 @@ export default function Vida() {
                         Divisão de Transportes, informa à comunidade 
                         acadêmica os horários das rotas dos ônibus intercampi.
                         </p>
-                        <i className="serviceLink" onClick={Inter}>Saiba mais...</i>
+                        <div className="descBottom">
+                            <i className="serviceLink" onClick={Inter}>Saiba mais...</i>
+                            <Link to='/intercampi'><i className="serviceLink">Horários</i></Link>
+                        </div>
                     </div>
                     <div className="serviceItem">
                         <h6 className="serviceTitle"><i className="fa-solid fa-utensils"></i> Restaurante Universitário (RU)</h6>
@@ -140,7 +143,10 @@ export default function Vida() {
                             Pagamento da taxa requerida para esse documento (levar o comprovante impresso);
                             Em caso de permanência obtida no Brasil deve levar uma cópia do Diário Oficial da União (DOU);
                         </p>
-                        <i className="serviceLink" onClick={RNE}>Saiba mais...</i>
+                        <div className="descBottom">
+                            <i className="serviceLink" onClick={RNE}>Saiba mais...</i>
+                            <Link to='/visto'><i className="serviceLink">Documentos</i></Link>
+                        </div>
                     </div>
                     <div className="serviceItem">
                         <h6 className="serviceTitle"><i className="fa-solid fa-graduation-cap"></i> Cursos de Graduação Unilab</h6>

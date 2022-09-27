@@ -22,6 +22,8 @@ import SendEmail from './pages/SendEmail/SendEmail';
 import UserPage from './pages/UserPage/UserPage';
 import Vida from './pages/Vida/Vida';
 import NewSobre from './pages/Sobre/NewSobre';
+import Visto from './pages/Visto/Visto';
+import Intercampi from './pages/Intercampi/Intercampi';
 
 function App() {
 
@@ -51,6 +53,8 @@ function App() {
           <Route path="/login" component={Login} exact />
           <Route path="/sendemail" component={SendEmail} exact />
           <Route path="/sobre" component={NewSobre} exact />
+          <Route path="/visto" component={Visto} exact />
+          <Route path="/intercampi" component={Intercampi} exact />
           <Route path="/registrar" component={Registrar} exact />
         </Switch>
       </Router>
