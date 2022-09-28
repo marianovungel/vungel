@@ -101,6 +101,23 @@
         
     }
 }
+@media(max-width: 1330px){
+    .sectionService{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .serviceItem{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 35px;
+        
+    }
+}
 @media(max-width: 880px){
     .services{
         width: 80%;
