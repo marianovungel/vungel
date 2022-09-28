@@ -15,6 +15,18 @@ export default function Visto() {
 
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
+    const [zoom, setZoom] = useState(0);
+
+    const add = ()=>{
+        if(zoom !== 200){
+            setZoom(zoom+50)
+        }
+    }
+    const menos = ()=>{
+        if(500+zoom !== 350){
+            setZoom(zoom-50)
+        }
+    }
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
@@ -77,16 +89,23 @@ export default function Visto() {
         </nav>
         </div>
         <div className='vidaContent'>
-            <div className="services">
-                <h4 className="serviceTitleVida">Renovação de Visto</h4>
+            <div className="services" id='marginTopVisto'>
+                <h4 className="serviceTitleVida addMarginVisto">Renovação de Visto</h4>
                 <section className='sectionService'>
                     <div className='center'>
                         <Document file="/pdfFile.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-                            <Page  pageNumber={pageNumber} />
+                            <Page height={500+zoom} pageNumber={pageNumber} />
                             {/* {URL.createObjectURL(pageNumber) numPages={numPages}} */}
                         </Document>
                         <p>
-                            Page {pageNumber} of {numPages}
+                            <div className="buttomzoom">
+                                <i className="marginToo plasZoom" onClick={menos}>-</i>
+                                <i className='valorAtual'>{50+(zoom/4)}%</i>
+                                <i className="marginToo menosZoom" onClick={add}>+</i>
+                            </div>
+                            <div className="buttomzoom">
+                                Page {pageNumber} of {numPages}
+                            </div>
                         </p>
                     </div>
                 </section>

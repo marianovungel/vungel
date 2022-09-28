@@ -14,6 +14,28 @@ export default function Ru() {
 
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
+    const [zoom, setZoom] = useState(0);
+
+    const add = ()=>{
+        if(zoom !== 200){
+            setZoom(zoom+50)
+        }
+    }
+    const menos = ()=>{
+        if(500+zoom !== 350){
+            setZoom(zoom-50)
+        }
+    }
+    const next = ()=>{
+        if(pageNumber !== 4){
+            setPageNumber(pageNumber+1)
+        }
+    }
+    const anterior = ()=>{
+        if(pageNumber !== 1){
+            setPageNumber(pageNumber-1)
+        }
+    }
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
@@ -79,13 +101,27 @@ export default function Ru() {
             <div className="services">
                 <h4 className="serviceTitleVida">Rotas e Horários dos Intercampi</h4>
                 <section className='sectionService'>
-                    <div className='center'>
-                        <Document file="/Intercampi.pdf" id='idIntercampi' onLoadSuccess={onDocumentLoadSuccess}>
-                            <Page  pageNumber={pageNumber} />
+                <div className='center'>
+                        <Document file="/intercmpii.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+                            <Page height={500+zoom} pageNumber={pageNumber} />
                             {/* {URL.createObjectURL(pageNumber) numPages={numPages}} */}
                         </Document>
                         <p>
-                            Page {pageNumber} of {numPages}
+                            <div className="buttomBottonsInter">
+                                <div className="buttomzoomInter">
+                                    <i className="marginTooo plasZoom" onClick={menos}><i class="fa-solid fa-circle-minus"></i></i>
+                                    <i className='valorAtual'>{50+(zoom/4)}%</i>
+                                    <i className="marginTooo menosZoom" onClick={add}><i class="fa-solid fa-circle-plus"></i></i>
+                                </div>
+                                <div className="buttomzoomInter">
+                                    <i className="marginTooo plasZoom" onClick={anterior}><i class="fa-solid fa-circle-chevron-up"></i></i>
+                                    <i className='valorAtual'>Página {pageNumber}</i>
+                                    <i className="marginTooo menosZoom" onClick={next}><i class="fa-solid fa-circle-chevron-down"></i></i>
+                                </div>
+                            </div>
+                            <div className="buttomzoom">
+                                Page {pageNumber} of {numPages}
+                            </div>
                         </p>
                     </div>
                 </section>

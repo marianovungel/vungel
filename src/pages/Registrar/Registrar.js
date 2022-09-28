@@ -3,6 +3,7 @@ import './Registrar.css'
 import {Link, useHistory} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import api from '../../services/api.js'
+import Swal from 'sweetalert2'
 
 export default function Registrar() {
 
@@ -100,6 +101,22 @@ export default function Registrar() {
                             password: password,
                             profilePic: "74d5d28e4db58837d16d30eb57d8e8e6"
                         })
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.addEventListener('mouseenter', Swal.stopTimer)
+                              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                          })
+                          
+                          Toast.fire({
+                            icon: 'success',
+                            title: 'Usuário criado com sucesso!'
+                          })
                         history.goBack()
                     }catch(err){
                         setCreden(true)
