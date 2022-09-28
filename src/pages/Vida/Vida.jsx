@@ -14,7 +14,7 @@ export default function Vida() {
         window.open("https://unilab.edu.br/restauranteuniversitario/")
     }
     const Inter =()=>{
-        window.open("https://unilab.edu.br/onibus-intercampi/")
+        window.open("https://play.google.com/store/apps/details?id=com.edesonabizerril.newintercampi&hl=pt_BR&gl=US")
     }
     const Biblioteca =()=>{
         window.open("https://unilab.edu.br/biblioteca-universitaria-unilab/")
@@ -107,9 +107,18 @@ export default function Vida() {
                     <div className="serviceItem">
                         <h6 className="serviceTitle"><i className="fa-solid fa-bus"></i> Intercampis </h6>
                         <p className="serviceParagrafo">
-                        A Coordenação de Serviços Operacionais (CSO), por meio da 
-                        Divisão de Transportes, informa à comunidade 
-                        acadêmica os horários das rotas dos ônibus intercampi.
+                        Intercampi é o aplicativo desenvolvido pelo estudante
+                        Edeson Bizerril do curso de Engenharia de Energias de forma
+                        voluntária e independente, tendo como objetivo facilitar o
+                        acesso a todos os horários de ônibus que 
+                        circulam entre os campi da Unilab no Ceará.
+                        No app Intercampi você encontrará todos os horários
+                        dos trajetos entre os campus Auroras, Palmares e Liberdade.
+                        Esta ferramenta combina todas as listas de horários de 
+                        maneira simplificada e direta, permitindo o acesso prévio
+                        das viagens entre os campi. Além, você pode encontrará 
+                        todos os horários da linha Fortaleza - 
+                        Redenção (Fretcar) na opção "Transporte Público".
                         </p>
                         <div className="descBottom">
                             <i className="serviceLink" onClick={Inter}>Saiba mais...</i>
