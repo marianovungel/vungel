@@ -8,6 +8,15 @@
     justify-content: center;
     margin-top: -60px;
 }
+.girar{
+    color: #fff;
+    cursor: not-allowed;
+    font-size: 18pt;
+    animation: girarr 1s linear infinite;
+}
+@keyframes girarr{
+    from{ transform: rotate(360deg) }
+}
 #ativ{
     cursor: pointer;
 }

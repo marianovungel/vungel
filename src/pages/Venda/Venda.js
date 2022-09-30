@@ -27,6 +27,7 @@ function Venda() {
   const [cadastrarFunc, setCadastrarFunc] = useState(false)
   const [banner, setBanner] = useState(true)
   const [file, setFile] = useState(null)
+  const [girar, setGirar] = useState(false)
   const history = useHistory()
   
 
@@ -35,6 +36,7 @@ function Venda() {
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
+    setGirar(true)
     const newPost = {
       username: user.username,
       userwhatsapp: user.whatsapp,
@@ -60,6 +62,7 @@ function Venda() {
         timer: 1300
       })
       setCadastrarFunc(false)
+      setGirar(false)
       setBanner(true)
       history.back();
     }catch(err){}
@@ -68,6 +71,7 @@ function Venda() {
   const Ative = ()=>{
     if(banner && !cadastrarFunc){
       setCadastrarFunc(true)
+      setGirar(false)
       setBanner(false)
     }else{
       setCadastrarFunc(false)
@@ -161,7 +165,13 @@ function Venda() {
               <input className='inputProdutonew' type='text' placeholder='Titulo' required onChange={(e)=> setTitle(e.target.value)} />
               <input className='inputProdutonew' type='Number' placeholder='R$ 00,00' required onChange={(e)=> setPreco(e.target.value)} />
               <textarea placeholder='descrição...' className="storynew" rows="10" cols="33" required onChange={(e)=> setDesc(e.target.value)} ></textarea>
+              {girar ? (
+
+              <button className='inputProdutonew colorbutton' type='submit'> <i class="fa-solid fa-circle-notch girar"></i></button>
+              ):(
+
               <button className='inputProdutonew colorbutton' type='submit'> Cadastrar </button>
+              )}
               <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
             </form>
         </div>

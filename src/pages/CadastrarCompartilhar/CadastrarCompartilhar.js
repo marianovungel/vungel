@@ -6,7 +6,6 @@ import {Context} from '../../Context/Context'
 import upload from '../../services/upload'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
-import { CircularProgress } from '@mui/material'
 const URLImg = "https://festupload.s3.amazonaws.com/";
 
 //upload img
@@ -43,11 +42,11 @@ export default function CadastrarCompartilhar() {
     const [addPhoto, SetAddPhoto] = useState(false)
     const [alertImg, setAlertImg] = useState(false)
     const [pfile1, setPfile1] = useState(false)
-    const [progress, setProgress] = useState(true)
+    const [girar, setGirar] = useState(false)
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
-        setProgress(false)
+        setGirar(true)
     
         const newPost = {
           username: user.username,
@@ -267,11 +266,10 @@ export default function CadastrarCompartilhar() {
                         <textarea className='forNewDesc' placeholder='Descreve a casa em poucas palavras....' maxLength='200' onChange={(e)=> setDesc(e.target.value)}></textarea>
                     </div>
                     <div className='precoType'>
-                        {progress ? (<button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar Compartilhamento</button>
+                        {girar ? (
+                        <button type='submit' className='CadastrarcasaEmAluguel'><i class="fa-solid fa-spinner girar"></i></button>
                         ):(
-                        <button type='submit' className='CadastrarcasaEmAluguel'>
-                          <CircularProgress variant="determinate" value={75} />
-                        </button>
+                          <button type='submit' onClick={setImg} className='CadastrarcasaEmAluguel'>Cadastrar Compartilhamento</button>
                         )}
                     </div>
                 </div>

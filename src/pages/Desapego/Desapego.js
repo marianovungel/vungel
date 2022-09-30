@@ -38,7 +38,7 @@ export default function Desapego() {
   const [scroll, setScroll] = useState(true)
   const [side, setSide] = useState(true)
   const [titleSearh, setTitleSearh] = useState("")
-
+  const [girar, setGirar] = useState(false)
 
   const { user } = useContext(Context)
   useEffect(()=>{
@@ -75,7 +75,7 @@ export default function Desapego() {
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
-
+    setGirar(true)
     const newPost = {
       username: user.username,
       userwhatsapp: user.whatsapp,
@@ -107,6 +107,7 @@ export default function Desapego() {
         showConfirmButton: false,
         timer: 1300
       })
+      setGirar(false)
       window.location.reload('/desapego');
       setScroll(true)
         setSide(true)
@@ -115,6 +116,7 @@ export default function Desapego() {
   }
 ///////////////--cadastrar--////////////
   const CadastrarTrue = () =>{
+    setGirar(false)
     setCadastrar(false)
     setScroll(false)
     setSide(false)
@@ -327,7 +329,11 @@ export default function Desapego() {
               </select>
 
               <textarea className="story" rows="10" cols="33" required onChange={(e)=> setDesc(e.target.value)} ></textarea>
-              <button className='inputProduto colorbutton' type='submit'> Criar </button>
+              {girar ? (
+                <button className='inputProduto colorbutton' type='submit'> <i class="fa-solid fa-spinner girar"></i> </button>
+              ):(
+                <button className='inputProduto colorbutton' type='submit'> Criar </button>
+              )}
               <div className='todosProdutosnew' id='cancelform' onClick={TodosPro}><i>Cancelar</i></div>
             </form>
           )}
