@@ -83,7 +83,7 @@ export default function Vida() {
         <div className='vidaContent'>
             <div className="imgContentVida">
                 <h3 className="headerTitleVida">
-                    UnilabTem App
+                    UnilabTem
                 </h3>
                 <img src="./image/fundo3.jpeg" alt="" 
                 className='imgItemVida' />
@@ -107,22 +107,13 @@ export default function Vida() {
                     <div className="serviceItem">
                         <h6 className="serviceTitle"><i className="fa-solid fa-bus"></i> Intercampis </h6>
                         <p className="serviceParagrafo">
-                        Intercampi é o aplicativo desenvolvido pelo estudante
-                        Edeson Bizerril do curso de Engenharia de Energias de forma
-                        voluntária e independente, tendo como objetivo facilitar o
-                        acesso a todos os horários de ônibus que 
-                        circulam entre os campi da Unilab no Ceará.
-                        No app Intercampi você encontrará todos os horários
-                        dos trajetos entre os campus Auroras, Palmares e Liberdade.
-                        Esta ferramenta combina todas as listas de horários de 
-                        maneira simplificada e direta, permitindo o acesso prévio
-                        das viagens entre os campi. Além, você pode encontrará 
-                        todos os horários da linha Fortaleza - 
-                        Redenção (Fretcar) na opção "Transporte Público".
+                            Intercampi é o serviço de transporte de ônibus entre os campi do Ceará 
+                            para os estudantes e servidores da Unilab. 
+                            Informações sobre os horários e rotas podem ser consultados abaixo.
                         </p>
                         <div className="descBottom">
-                            <i className="serviceLink" onClick={Inter}>Saiba mais...</i>
-                            <Link to='/intercampi'><i className="serviceLink">Horários</i></Link>
+                            <Link to='/intercampi'><i className="serviceLink">Horários e Rotas</i></Link>
+                            <i className="serviceLink" onClick={Inter}></i>
                         </div>
                     </div>
                     <div className="serviceItem">
