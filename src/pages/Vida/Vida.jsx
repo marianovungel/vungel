@@ -11,8 +11,11 @@ export default function Vida() {
 
     const { user } = useContext(Context)
     const Ru =()=>{
-        window.open("https://unilab.edu.br/restauranteuniversitario/")
+        window.open("https://unilab.edu.br/wp-content/uploads/2022/09/RU-Ceara-Setembro-Semana-4.pdf")
     }
+    // const Ru =()=>{
+    //     window.open("https://unilab.edu.br/restauranteuniversitario/")
+    // }
     const Inter =()=>{
         window.open("https://play.google.com/store/apps/details?id=com.edesonabizerril.newintercampi&hl=pt_BR&gl=US")
     }
@@ -132,7 +135,7 @@ export default function Vida() {
                         empresas terceirizadas à serviço da universidade e 
                         visitantes em caráter acadêmico-cultural.
                         </p>
-                        <i className="serviceLink" onClick={Ru}>Saiba mais...</i>
+                        <i className="serviceLink" onClick={Ru}>Cardápio...</i>
                     </div>
                     <div className="serviceItem">
                         <h6 className="serviceTitle"><i className="fa-solid fa-passport"></i> Documentação Para O Visto</h6>

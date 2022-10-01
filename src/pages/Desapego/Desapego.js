@@ -294,8 +294,8 @@ export default function Desapego() {
                     <h5 className='filtraritem' onClick={submitSearchMeu}>Meus Desapegos<i className='filtraritemSpace'></i>  <i className="fa-solid fa-person"></i></h5>
                     <h5 className='filtraritemCat'>
                     <select className='inputProdutoselet' type='text' placeholder='Categoria'  onChange={(e)=> setcategories(e.target.value)} onClick={submitSearchCat}>
-                      <option className='inputSeletItem' value="Eletrodomesticos" >Eletrodomesticos</option>
-                      <option className='inputSeletItem' value="Material eletrónico" >Material eletrónico</option>
+                      <option className='inputSeletItem' value="Eletrodomesticos" >Eletrodomésticos</option>
+                      <option className='inputSeletItem' value="Material eletrónico" >Material Eletrônico</option>
                       <option className='inputSeletItem' value="Vestuários" >Vestuários</option>
                       <option className='inputSeletItem' value="Calçados" >Calçados</option>
                       <option className='inputSeletItem' value="Diversos" >Diversos</option>
@@ -321,8 +321,8 @@ export default function Desapego() {
               <input className='inputProduto' type='text' placeholder='CEP' maxLength='9'
               minLength='9' required onChange={(e)=> setCepp(e.target.value)} onBlur={Cepfuncion} />
               <select className='inputProduto' type='text' placeholder='Categoria' required onChange={(e)=> setCat(e.target.value)}>
-                <option value="Eletrodomesticos">Eletrodomesticos</option>
-                <option value="Material eletrónico">Material eletrónico</option>
+                <option value="Eletrodomesticos">Eletrodomésticos</option>
+                <option value="Material eletrónico">Material Eletrônico</option>
                 <option value="Vestuários">Vestuários</option>
                 <option value="Calçados">Calçados</option>
                 <option value="Diversos">Diversos</option>
