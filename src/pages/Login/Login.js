@@ -75,8 +75,7 @@ export default function Login() {
                             </div>
                     </form>
                     <div className='criar'>
-                    
-                        <h6 className='Termos'><Link to='#'>Termos e Políticas de uso da aplicação</Link></h6>
+                        <div className='Termoss'><Link to='termos-politicas'>Termos e Políticas de Uso</Link></div>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,7 @@ import Vida from './pages/Vida/Vida';
 import NewSobre from './pages/Sobre/NewSobre';
 import Visto from './pages/Visto/Visto';
 import Intercampi from './pages/Intercampi/Intercampi';
+import Termos from './pages/Termos/Termos';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/visto" component={Visto} exact />
           <Route path="/intercampi" component={Intercampi} exact />
           <Route path="/registrar" component={Registrar} exact />
+          <Route path="/termos-politicas" component={Termos} exact />
         </Switch>
       </Router>
   );

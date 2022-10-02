@@ -28,6 +28,28 @@ export default function Registrar() {
         setAleEmail(false)
     }, [])
 
+    const fastConfirmTermo = async (e)=>{
+        e.preventDefault();
+        const { value: accept } = await Swal.fire({
+          title: 'Termos e Políticas de Uso',
+          input: 'checkbox',
+          inputValue: 1,
+          inputPlaceholder:
+            'Selecione a caixa para criar usuário!',
+          confirmButtonText:
+            'Continue <i class="fa fa-arrow-right"></i>',
+          inputValidator: (result) => {
+            return !result && 'É necessário selecionar para proceguir!'
+            
+          }
+        })
+        
+        if (accept) {
+          // Swal.fire('You agreed with T&C :)')
+          handleSubmit()
+        }
+      }
+
     const chackUser = async (e)=>{
         setCreden(false)
         checkValid = false;
@@ -141,7 +163,7 @@ export default function Registrar() {
                 
                 <div className='formregistrar'>
 
-                    <form className='loginFormregister animation' onSubmit={handleSubmit}>
+                    <form className='loginFormregister animation' onSubmit={fastConfirmTermo}>
                     
                         <div className='valillaTilt'>
                             
@@ -167,8 +189,7 @@ export default function Registrar() {
                     {aleEmail && <h3 className='errRegister'>Já existe usuário registrado com este email!</h3>}
                     {creden && <h3 className='errRegister'>Credências inválidas!</h3>}
                     <div className='criar'>
-                        <div className='Termos'><Link to='#'></Link></div>
-                         
+                        <div className='Termoss'><Link to='termos-politicas'>Termos e Políticas de Uso</Link></div>
                     </div>
                 </div>
                 

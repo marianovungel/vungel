@@ -144,8 +144,12 @@
     justify-content: center;
     align-items: center;
 }
-.Termos{
-    color: aliceblue;
+.Termoss{
+    color: #666;
+    text-decoration: none;
+}
+.Termoss:hover{
+    color: #666;
     text-decoration: underline;
 }
 
