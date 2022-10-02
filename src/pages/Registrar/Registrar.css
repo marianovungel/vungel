@@ -47,14 +47,15 @@
     box-shadow: rgba(53, 49, 99, 0.5) solid 1px;
     margin-top: 30px;
     background-color: #193498;
-    animation-name: movimentarx;
-    animation-duration: 3s;
+    /* animation-name: movimentarx; */
+    animation-name: scalimentarconfirmm;
+    animation-duration: 2s;
     animation-fill-mode: both;
 }
-@keyframes movimentarx{
+/* @keyframes movimentarx{
     from{ transform: translateX(-1100px)}
     to{ transform: translateX(0px)}
-}
+} */
 #Valilaclass{
     width: 30px;
     height: 300px;
@@ -107,9 +108,15 @@
     align-items: center;
 }
 .Termoss{
-    animation-name: movimentarx;
     color: #666;
     text-decoration: none;
+    animation-name: scalimentarconfirmm;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes scalimentarconfirmm{
+    from{ transform: scale(0.0)}
+    to{ transform: scale(1)}
 }
 .Termoss:hover{
     color: #666;

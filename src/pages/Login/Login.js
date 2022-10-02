@@ -74,9 +74,6 @@ export default function Login() {
                                 {falsesenha && <i className='checkuser'>Senha inválida...</i>}
                             </div>
                     </form>
-                    <div className='criar'>
-                        <div className='Termoss'><Link to='termos-politicas'>Termos e Políticas de Uso</Link></div>
-                    </div>
                 </div>
             </div>
         </div>

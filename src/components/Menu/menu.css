@@ -12,6 +12,7 @@
 }
 #idManu{
     text-decoration: none;
+    color: #fff;
 }
 #idManu:hover{
     color: yellow;

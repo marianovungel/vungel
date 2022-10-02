@@ -109,8 +109,7 @@ export default function Registrar() {
         }
     }
 
-    const handleSubmit = async (e)=>{
-        e.preventDefault();
+    const handleSubmit = async ()=>{
         setCreden(false)
         if(classificacao==="Forte" || classificacao==="Excelente"){
             if(confirmPassword===password){
