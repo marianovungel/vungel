@@ -131,7 +131,7 @@ export default function Registrar() {
                             icon: 'success',
                             title: 'Usuário criado com sucesso!',
                             showConfirmButton: false,
-                            timer: 3000,
+                            timer: 5000,
                             timerProgressBar: true,
                           })
                           setGirar(false)
