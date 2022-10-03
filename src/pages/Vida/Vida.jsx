@@ -1,4 +1,4 @@
-import React from 'react'
+// import React, { useEffect, useState } from 'react'
 import './Vida.css'
 import { Link } from 'react-router-dom'
 import Menu from '../../components/Menu/Menu';
@@ -10,6 +10,21 @@ const URLImg = "https://festupload.s3.amazonaws.com/";
 export default function Vida() {
 
     const { user } = useContext(Context)
+    
+    // const [countere, setCountere] = useState(1)
+
+    // useEffect(()=>{
+    //     setCountere(1)
+    // }, [])
+
+    // setInterval(function(){
+    //     document.getElementById('radio' + countere).checked = true;
+    //     setCountere(countere+1)
+    //     if(countere > 4){
+    //         setCountere(1)
+    //     }
+    // }, 8000)
+
     const Ru =()=>{
         window.open("https://unilab.edu.br/wp-content/uploads/2022/09/RU-Ceara-Setembro-Semana-4.pdf")
     }
@@ -88,8 +103,43 @@ export default function Vida() {
                 <h3 className="headerTitleVida">
                     UnilabTem
                 </h3>
-                <img src="./image/fundo3.jpeg" alt="" 
-                className='imgItemVida' />
+                {/* <img src="./image/fundo3.jpeg" alt="" 
+                className='imgItemVida' /> */}
+                <div className="slider">
+                    <div className="slides">
+                        <input type="radio" name="radio-btn" id="radio1" />
+                        <input type="radio" name="radio-btn" id="radio2" />
+                        <input type="radio" name="radio-btn" id="radio3" />
+                        <input type="radio" name="radio-btn" id="radio4" />
+
+                        <div className="slide first">
+                            <img src="./image/1.png" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="./image/2.png" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="./image/3.jpg" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="./image/4.jpg" alt="" />
+                        </div>
+
+                        <div className="navigation-auto">
+                            <div className="auto-btn1"></div>
+                            <div className="auto-btn2"></div>
+                            <div className="auto-btn3"></div>
+                            <div className="auto-btn4"></div>
+                        </div>
+                    </div>
+
+                    <div className="navigation-manual">
+                        <label for="radio1" className="manual-btn"></label>
+                        <label for="radio2" className="manual-btn"></label>
+                        <label for="radio3" className="manual-btn"></label>
+                        <label for="radio4" className="manual-btn"></label>
+                    </div>
+                </div>
             </div>
             <div className="services">
                 <h4 className="serviceTitleVida">Serviços</h4>
