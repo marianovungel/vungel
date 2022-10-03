@@ -130,7 +130,6 @@ export default function Registrar() {
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
-                            timer: 1300
                           })
                         history.goBack()
                     }catch(err){
