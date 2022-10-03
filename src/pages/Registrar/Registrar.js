@@ -19,6 +19,7 @@ export default function Registrar() {
     const [confirmPassword, setConfirmPassword] = useState("")
     const [ale, setAle] = useState(false)
     const [aleEmail, setAleEmail] = useState(false)
+    const [girar, setGirar] = useState(false)
     const history = useHistory()
     var checkValid = false;
     var checkValidEmail = false;
@@ -26,6 +27,7 @@ export default function Registrar() {
     useEffect(()=>{
         setAle(false)
         setAleEmail(false)
+        setGirar(false)
     }, [])
 
     const fastConfirmTermo = async (e)=>{
@@ -111,6 +113,7 @@ export default function Registrar() {
 
     const handleSubmit = async ()=>{
         setCreden(false)
+        setGirar(true)
         if(classificacao==="Forte" || classificacao==="Excelente"){
             if(confirmPassword===password){
                 if(ale === false || aleEmail === false){
@@ -131,6 +134,7 @@ export default function Registrar() {
                             timer: 3000,
                             timerProgressBar: true,
                           })
+                          setGirar(false)
                         history.goBack()
                     }catch(err){
                         setCreden(true)
@@ -165,7 +169,11 @@ export default function Registrar() {
                             <input className='inputLogin' type='Number' placeholder='  Celular' minLength='9' onChange={e=>setWhatsapp(e.target.value)} />
                             <input className='inputLogin' onKeyUp={validarSenhaForca} type='password' placeholder='  Password' minLength='4' onChange={e=>setPassword(e.target.value)} />
                             <input className='inputLogin' type='password' placeholder='  Confirme a Senha...' onChange={e=>setConfirmPassword(e.target.value)} />
-                            <button className='inputLogin entrarbutton' type='submit'>Registrar</button>
+                            {girar ? (
+                                <button className='inputLogin entrarbutton'><i class="fa-solid fa-spinner girar"></i></button>
+                            ):(
+                                <button className='inputLogin entrarbutton' type='submit'>Registrar</button>
+                            )}
                             <h5 className='h6loginregistrar'><Link to='/' className='h6loginregistrar'>Login</Link></h5>
                             
                         </div>
