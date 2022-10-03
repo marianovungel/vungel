@@ -122,21 +122,15 @@ export default function Registrar() {
                             password: password,
                             profilePic: "74d5d28e4db58837d16d30eb57d8e8e6"
                         })
-                        const Toast = Swal.mixin({
-                            toast: true,
-                            position: 'top-end',
+                        
+                          Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Usuário criado com sucesso!',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
-                            didOpen: (toast) => {
-                              toast.addEventListener('mouseenter', Swal.stopTimer)
-                              toast.addEventListener('mouseleave', Swal.resumeTimer)
-                            }
-                          })
-                          
-                          Toast.fire({
-                            icon: 'success',
-                            title: 'Usuário criado com sucesso!'
+                            timer: 1300
                           })
                         history.goBack()
                     }catch(err){
