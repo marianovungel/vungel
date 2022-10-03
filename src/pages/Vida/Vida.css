@@ -106,6 +106,7 @@
 .slide img{
     width: 800px;
     height: 400px;
+    object-fit: cover;
 }
 .navigation-manual{
     position: absolute;
@@ -202,20 +203,18 @@
         
     }
 }
+@media(max-width: 992px){
+    .headerTitleVida{
+        display: none;
+    }
+}
 @media(max-width: 880px){
     .services{
         width: 80%;
         position: relative;
         margin: 35px auto 10px auto;
     }
-    .headerTitleVida{
-        text-align: center;
-        margin-top: -45px;
-        font-size: 35pt;
-        width: 100%;
-        z-index: 90;
-        color: #142d88;
-    }
+    
     .imgItemVida{
         object-fit: cover;
         width: 70%;
@@ -224,7 +223,7 @@
     }
     .imgContentVida{
         width: 100%;
-        height: 350px;
+        height: 400px;
         object-fit: cover;
         background-color: #fff;
         box-sizing: border-box;
@@ -237,6 +236,41 @@
         align-items: center;
         border: 2px solid rgba(203, 201, 201, 0.2);
         box-shadow: 1px 1px 1px 1px rgba(203, 201, 201, 0.2);
+    }
+}
+@media(max-width: 800px){
+    .slider{
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 500%;
+        height: 400px;
+        display: flex;
+    }
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 600px;
+        justify-content: center;
+        margin-top: 360px;
+    }
+    .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    .slide img{
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .navigation-manual{
+        position: absolute;
+        width: 600px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
     }
 }
 @media(max-width: 775px){
@@ -278,7 +312,7 @@
     }
     .imgContentVida{
         width: 100%;
-        height: 350px;
+        height: 400px;
         object-fit: cover;
         background-color: #fff;
         box-sizing: border-box;
@@ -292,11 +326,45 @@
         border: 2px solid rgba(203, 201, 201, 0.2);
         box-shadow: 1px 1px 1px 1px rgba(203, 201, 201, 0.2);
     }
+    .slider{
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 500%;
+        height: 400px;
+        display: flex;
+    }
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 400px;
+        justify-content: center;
+        margin-top: 360px;
+    }
+    .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    .slide img{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .navigation-manual{
+        position: absolute;
+        width: 400px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
 }
+
 @media(max-width: 500px){
     .imgContentVida{
         width: 100%;
-        height: 300px;
+        height: 400px;
         background-color: #fff;
         box-sizing: border-box;
         margin-top: 30px;
