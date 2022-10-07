@@ -82,21 +82,14 @@ export default function NewSobre() {
                     </div>
                     <div className="paragrafoDesc">
                         <p className="descP">
-                        Unilabtem é uma plataforma digital web de fácil manejo que simplifica a vida dos
-                        seus usuários, que buscam por seus serviços que são oferecidos por ela. O objetivo
-                        desta plataforma é estreitar a distância entre o usuário que divulga e o que deseja
-                        aderir ou comprar o produto que esteja a ser divulgado nas cidades dos campus da UNILAB
-                        (Ceará e Bahia) e das comunidades em torno da universidade,
-                        assim ajuda tornando mais fácil encontrar as coisas perto de onde estiveres.
-                        A metodologia usada no desenvolvimento é em MERN (Mongodb Express React Js Node js), com
-                        react js no lado do usuário, node js e express no lado do servidor e mongodb como banco de
-                        dados não relacional, tendo criptografia moderna de dados sensíveis no servidor para garantir
-                        segurança de informações dos usuário da plataforma, e animações no frontend com Vanilla tilt
-                        js e  CSS para deixar mais convidativo e interessante a usabilidade. Os resultados alcançados
-                        pelo projeto atualmente está aproximadamente 67% concluído e já  conta com a página de login,
-                        cadastro, venda, Aluguel, compartilhamento e de doação (desapego) funcionando na íntegra, podendo
-                         criar uma conta, fazer login,  
-                        postar, ver, editar, deletar, pesquisar e filtrar produtos a venda e/ou em doação. 
+                            UnilabTem é uma iniciativa voluntária, solidária e
+                            colaborativa que visa oferecer à comunidade interna e
+                            externa uma plataforma digital de
+                            integração de vários serviços tais como: pedido de ajuda, doação, feira de escambo
+                            online, vendas e compras entre os pequenos empreendedores e consumidores de produtos
+                            e serviços entregues e realizados em domicílio, 
+                            oportunidades na Unilab (bolsa, estágio, emprego etc.), 
+                            além disso é possível divulgar casa em aluguel e em Compartilhamento.
                         </p>
                     </div>
                     <h3 className='participantesTitleNew'>Participantes</h3>
