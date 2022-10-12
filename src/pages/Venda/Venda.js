@@ -129,7 +129,7 @@ function Venda() {
                 <Link className="nav-link text-light" to="/venda">Venda</Link>
                 </li>
                 <li className="nav-item" onClick={Ative}>
-                <Link className="nav-link text-light" to="">Cadastrar venda</Link>
+                <Link className="nav-link text-light" to="/venda">Cadastrar venda</Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link text-light" to="/sobre">Sobre</Link>
