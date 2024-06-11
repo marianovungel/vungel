@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {useContext} from 'react'
-import {Context} from './Context/Context'
+// import {useContext} from 'react'
+// import {Context} from './Context/Context'
 
 
 import Home from './pages/Home/Home';
@@ -11,7 +11,7 @@ import Portefolio from './pages/Portefolio/Portefolio';
 
 function App() {
 
-  const {user} = useContext(Context);
+  // const {user} = useContext(Context);
 
   return (
       <Router>
