@@ -26,10 +26,10 @@ export default function Home() {
                 <h3 className="headerAbout">About Me</h3>
                 <i className="row"></i>
                 <p className="ParagrafAbout">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas vel! Tempore esse minima maxime tenetur sunt, praesentium consequatur.
+                    Desenvolvedor Frontend Web e Mobile à 5 anos com fremeworks Javascript, banco de dados, backend, UI & UX Designer. Habilidade em resolução de problemas e aprendizagem rápida.
                 </p>
                 <p className="ParagrafAbout">
-                    Reprehenderit, voluptas vel! Tempore esse minima maxime tenetur sunt, praesentium, consectetur odit.
+                    Busco oportunidades para aplicar meu conhecimento em uma empresa de tecnologia em crescimento.
                 </p>
                 <div className="buutonsAbout">
                     <button className="BuutonAbout">See lattes</button>
