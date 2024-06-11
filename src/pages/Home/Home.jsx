@@ -9,7 +9,7 @@ export default function Home() {
                 <small className="Holo">Hello</small>
                 <h1 className="im">I'm Mariano</h1>
                 <p className="fleelancer">Freelancer web and Mobile</p>
-                <p className="developer">develepe</p>
+                <p className="developer">develeper</p>
 
                 <button className="BuutonHere">Here I'm</button>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="service">
             <div className="marginCenterServece">
                 <div className="textService">
-                    <h3 className="headerAbout">About Me</h3>
+                    <h3 className="headerAbout">Services</h3>
                     <i className="row"></i>
                     <p className="ParagrafAbout">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas vel! Tempore esse minima maxime tenetur sunt, praesentium consequatur.
