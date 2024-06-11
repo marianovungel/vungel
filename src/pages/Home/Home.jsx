@@ -55,7 +55,7 @@ export default function Home() {
 
                 <div className="CardService">
                     <div className="backColor">
-                        <i class="fa-solid fa-mobile-screen iconServerSetting"></i>
+                        <i className="fa-solid fa-mobile-screen iconServerSetting"></i>
                         <h4 className="titleService">App Desig</h4>
                         <p className="paragrafoServiceCard">Services such as creating modern mobile and web</p>
                         <p className="paragrafoServiceCard">interface designs.</p>
@@ -63,7 +63,7 @@ export default function Home() {
                 </div>
                 <div className="CardService">
                     <div className="backColor">
-                        <i class="fa-solid fa-laptop-code iconServerSetting"></i>
+                        <i className="fa-solid fa-laptop-code iconServerSetting"></i>
                         <h4 className="titleService">Web Developement</h4>
                         <p className="paragrafoServiceCard">Development of web applications aimed at </p>
                         <p className="paragrafoServiceCard">different areas.</p>
@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 <div className="CardService">
                     <div className="backColor">
-                        <i class="fa-solid fa-code iconServerSetting"></i>
+                        <i className="fa-solid fa-code iconServerSetting"></i>
                         <h4 className="titleService">Mobile Developement</h4>
                         <p className="paragrafoServiceCard">Mobile application development Using good</p>
                         <p className="paragrafoServiceCard">coding practices.</p>
@@ -79,7 +79,7 @@ export default function Home() {
                 </div>
                 <div className="CardService">
                     <div className="backColor">
-                        <i class="fa-solid fa-server iconServerSetting"></i>
+                        <i className="fa-solid fa-server iconServerSetting"></i>
                         <h4 className="titleService">Server Developement</h4>
                         <p className="paragrafoServiceCard">Built the simple and complex server with</p>
                         <p className="paragrafoServiceCard">Node.js & Express.js</p>
