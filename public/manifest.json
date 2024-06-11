@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Mariano A. Vunge",
   "name": "Create React App Sample",
   "icons": [
     {
@@ -9,12 +9,12 @@
     },
     
     {
-      "src": "logo192.png",
+      "src": "im.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "im.png",
       "type": "image/png",
       "sizes": "512x512"
     }
