@@ -174,3 +174,108 @@
     color: #fff;
     margin: 5px 0px;
 }
+
+.projetos{
+    background-color: #111;
+}
+.centerProject{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+.BackProject{
+    width: 70%;
+    padding: 10px 0px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.textProject{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px;
+}
+.projectRecent{
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.setentaRecent{
+    width: 70%;
+    background-color: #111;
+    padding-bottom: 50px;
+    
+}
+
+/* ============== */
+.compartilharDiv{
+    width: 90%;
+    margin: 15px auto 10px auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.compartilharDiv::-webkit-scrollbar{
+    display: none;
+    
+}
+
+.buttomGrupe{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -85px;
+    background-color: #111;
+}
+.buttomLeft{
+    cursor: pointer;
+    background-color: #111;
+    color: #999;
+}
+.widthIconButtom{
+    font-size: 25pt;
+}
+.margnLeft{
+    margin-right: 40px;
+}
+.marginRight{
+    margin-left: 40px;
+}
+.titleColor{
+    margin: 0px 15px 0px 15px;
+    cursor: pointer;
+    background-color: #99999921;
+    padding: 15px;
+    border-radius: 8px;
+}
+.vendaDivulgacoes{
+    width: 90%;
+    margin: 30px auto 0px auto;
+}
+
+
+.sizePhoto{
+    width: 70px;height: 70px;
+    border-radius: 100%;
+}
+.nomePreco{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.valorNome{
+    text-align: center;
+    color: #666;
+}
+.borderIcon{
+    border: none;
+    border-radius: 100%;
+}
