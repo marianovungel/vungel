@@ -258,6 +258,51 @@ export default function Home() {
                 )}
             </div>
         </div>
+
+        <div className="centerProject marginTopProject">
+            <div className="BackProject">
+                <h3 className="textProject">Relevant Web Projects</h3>
+            </div>
+        </div>
+
+        <div className="projectRecent">
+            <div className="setentaRecent">
+                {/* <div className="cardRecent">
+                    <img src="" alt="" />
+                    <div className="textCArdRecent">
+                        <p className="titleCard">African Coder</p>
+                        <p className="firsDesc">Este é o meu projeto do youtube</p>
+                        <p className="firsDesc">Neste canal posto conteudos de programação</p>
+                    </div>
+                </div> */}
+
+                <div className="compartilharDiv" ref={carrocelVenda}>
+                {data?.map((post)=>(
+                    <div className="titleColor" key={post?._id}>
+                        {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
+                    <div className="Produto" key={post?._id}>
+                        <div className='imgProduto' id='Produto'>
+                            <img className='imagemCard sizePhoto' src={post?.profilePic} alt=' '/>
+                        </div>
+                        <div className='nomePreco'>
+                            <h5 className='valorNome'>{post?.nome}</h5>
+                        </div>
+                    </div>
+                    </div>
+                ))}
+                </div>
+                {!vendaVazia && (
+                    <div className='buttomGrupe'>
+                        <button onClick={LeftVenda} className='buttomLeft margnLeft borderIcon'>
+                            <i className="fa-solid fa-circle-chevron-left widthIconButtom borderIcon"></i>
+                        </button>
+                        <button onClick={RightVenda} className='buttomLeft marginRight borderIcon'>
+                            <i className="fa-solid fa-circle-chevron-right widthIconButtom borderIcon"></i>  
+                        </button>
+                    </div>
+                )}
+            </div>
+        </div>
         
     </div>
   )
