@@ -206,6 +206,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 30px;
 }
 .setentaRecent{
     width: 70%;
@@ -281,4 +282,43 @@
 }
 .marginTopProject{
     padding-top: 15px;
+}
+.Tecnologias{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    background-color: #222;
+}
+.textTecnologias{
+    text-align: center;
+    color: #999;
+}
+.tecnologiaSecundTec{
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0px 10px 0px;
+}
+.setentCenter{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.capaciti{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 5px;
+    transform: scale(0.98);
+}
+.capaciti:hover{
+    transform: scale(1);
+    cursor: pointer;
+    transition: 0.3s;
 }
