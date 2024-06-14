@@ -80,31 +80,9 @@ const newVar = [
         nome:"African-coder"
 
     },
-    {
-        _id: "1",
-        profilePic:"./im.png",
-        nome:"African-coder"
-
-    },
-    {
-        _id: "1",
-        profilePic:"./im.png",
-        nome:"African-coder"
-
-    },
-    {
-        _id: "1",
-        profilePic:"./im.png",
-        nome:"African-coder"
-
-    },
-    {
-        _id: "1",
-        profilePic:"./im.png",
-        nome:"African-coder"
-
-    },
 ]
+
+
 export default function Home() {
     const [vendaVazia, setVendaVazia] = useState(false)
     const [data, setData] = useState(newVar)

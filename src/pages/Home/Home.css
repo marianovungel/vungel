@@ -4,9 +4,11 @@
     justify-content: space-between;
     align-items: flex-start;
     background-color: #111;
+    border: none; border: 0px solid transparent;
 }
 .centerAbout{
     background-color: #222;
+    border: none; border: 0px solid transparent;
 }
 .first{
     width: 75%;
@@ -17,11 +19,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    border: none; border: 0px solid transparent;
 }
 .Holo{
     color: #999;
     margin-left: 0px;
     padding: 0px;
+    border: none; border: 0px solid transparent;
 }
 .im{
     color: #1597E5;
@@ -29,6 +33,7 @@
     font-weight: bold;
     margin-left: 0px;
     padding: 0px;
+    border: none; border: 0px solid transparent;
 }
 .fleelancer, .developer{
     color: #999;
@@ -37,6 +42,7 @@
     padding: 0px;
     margin-left: 0px;
     padding: 0px;
+    border: none; border: 0px solid transparent;
 }
 .BuutonHere{
     border: 2px solid #1597E5;
@@ -46,23 +52,28 @@
     border-radius: 5px;
     color: #1597E5;
     background-color: #222;
+    border: none; border: 0px solid transparent;
 }
 .secund{
     width: 25%;
     background-color: #111;
     border-radius: 40%;
+    border: none; border: 0px solid transparent;
 }
 .ImgHome{
     height: 450px;
     margin-left: -60%;
+    border: none; border: 0px solid transparent;
 }
 .imgSection{
     width: 48%;
     padding: 60px 0px 60px 15%;
     background-color: #222;
+    border: none; border: 0px solid transparent;
 }
 .imgAbout{
     height: 320px;
+    border: none; border: 0px solid transparent;
 }
 .textAbout{
     width: 48%;
@@ -71,12 +82,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    border: none; border: 0px solid transparent;
 }
 .ParagrafAbout{
     color: #999;
+    border: none; border: 0px solid transparent;
 }
 .headerAbout{
     color: #999;
+    border: none; border: 0px solid transparent;
 }
 .row{
     width: 40px;
@@ -92,6 +106,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
+    border: none; border: 0px solid transparent;
 }
 .BuutonAbout{
     border: 2px solid #1597E5;
@@ -109,10 +124,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border: none; border: 0px solid transparent;
 }
 .marginCenterServece{
     width: 100%;
     padding-left: 15%;
+    border: none; border: 0px solid transparent;
 }
 .textService{
     width: 50%;
@@ -121,11 +138,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    border: none; border: 0px solid transparent;
 }
 .secundServece{
     width: 100%;
     padding: 0px 15% 50px 15%;
     background-color: #111;
+    border: none; border: 0px solid transparent;
 }
 .centerSecundService{
     width: 100%;
@@ -135,6 +154,7 @@
     flex-wrap: wrap;
     padding-top: 0px;
     gap:30px;
+    border: none; border: 0px solid transparent;
 }
 .CardService{
     width: 50%;
@@ -163,20 +183,24 @@
 .titleService{
     color: #fff;
     font-size: 1.8rem;
+    border: none; border: 0px solid transparent;
 }
 .paragrafoServiceCard{
     color: #fff;
     font-size: 1.1rem;
     margin: 0px;
+    border: none; border: 0px solid transparent;
 }
 .iconServerSetting{
     font-size: 2.5rem;
     color: #fff;
     margin: 5px 0px;
+    border: none; border: 0px solid transparent;
 }
 
 .projetos{
     background-color: #111;
+    border: none; border: 0px solid transparent;
 }
 .centerProject{
     width: 100%;
@@ -184,6 +208,7 @@
     justify-content: center;
     align-items: center;
     background-color: #111;
+    border: none; border: 0px solid transparent;
 }
 .BackProject{
     width: 70%;
@@ -193,12 +218,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    border: none; border: 0px solid transparent;
 }
 .textProject{
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0px;
+    border: none; border: 0px solid transparent;
 }
 .projectRecent{
     width: 100%;
@@ -207,12 +234,13 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
+    border: none; border: 0px solid transparent;
 }
 .setentaRecent{
     width: 70%;
     background-color: #111;
     padding-bottom: 50px;
-    
+    border: none; border: 0px solid transparent;
 }
 
 /* ============== */
@@ -277,7 +305,7 @@
     color: #666;
 }
 .borderIcon{
-    border: none;
+    border: none; border: 0px solid transparent;
     border-radius: 100%;
 }
 .marginTopProject{
@@ -302,6 +330,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 10px 0px 10px 0px;
+    border: none; border: 0px solid transparent;
 }
 .setentCenter{
     width: 70%;
@@ -309,6 +338,8 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    border: none; border: 0px solid transparent;
+    border: 0px solid transparent;
 }
 .capaciti{
     width: 250px;
