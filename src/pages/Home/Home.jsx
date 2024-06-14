@@ -142,10 +142,10 @@ export default function Home() {
                 <h3 className="headerAbout">About Me</h3>
                 <i className="row"></i>
                 <p className="ParagrafAbout">
-                    Desenvolvedor Frontend Web e Mobile à 5 anos com fremeworks Javascript, banco de dados, backend, UI & UX Designer. Habilidade em resolução de problemas e aprendizagem rápida.
+                    Frontend Web and Mobile Developer for 5 years with Javascript fremeworks, database, backend, UI & UX Designer. Ability to solve problems and learn quickly.
                 </p>
                 <p className="ParagrafAbout">
-                    Busco oportunidades para aplicar meu conhecimento em uma empresa de tecnologia em crescimento.
+                    I'm looking for opportunities to apply my knowledge in a growing technology company.
                 </p>
                 <div className="buutonsAbout">
                     <button className="BuutonAbout">See lattes</button>
@@ -260,7 +260,7 @@ export default function Home() {
         </div> 
 
         <div className="Tecnologias">
-            <h3 className="textTecnologias">Tecnologias de Domínio</h3>
+            <h3 className="textTecnologias">Domain Technologies</h3>
         </div>
 
         <div className="tecnologiaSecundTec">
@@ -271,6 +271,7 @@ export default function Home() {
                 <img src="./ts.jpg" alt="" className="capaciti" />
                 <img src="./reactjs.jpg" alt="" className="capaciti" />
                 <img src="./next.jpg" alt="" className="capaciti" />
+                <img src="./sass.png" alt="" className="capaciti" />
                 <img src="./boot.jpg" alt="" className="capaciti" />
                 <img src="./nodejs.jpg" alt="" className="capaciti" />
                 <img src="./express.jpg" alt="" className="capaciti" />
