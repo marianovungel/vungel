@@ -167,7 +167,7 @@ export default function Home() {
                 <p className="fleelancer">Freelancer web and Mobile</p>
                 <p className="developer">develeper</p>
 
-                <button className="BuutonHere">Here I'm</button>
+                <button className="BuutonHere bauttonWidthNew" onClick={()=>Facebook("https://github.com/marianovungel?tab=repositories")}>Github</button>
             </div>
             <div className="secund">
                 <img className="ImgHome" src="./home.png" alt="Mariano António Vunge" />
@@ -188,7 +188,7 @@ export default function Home() {
                     I'm looking for opportunities to apply my knowledge in a growing technology company.
                 </p>
                 <div className="buutonsAbout">
-                    <button className="BuutonAbout newWidth">See lattes</button>
+                    <button className="BuutonAbout newWidth" onClick={()=>Facebook("http://lattes.cnpq.br/0916995612340632")}>See lattes</button>
                     <button className="BuutonHere newWidth">Download CV</button>
                 </div>
             </div>
