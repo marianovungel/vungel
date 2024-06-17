@@ -189,7 +189,7 @@ export default function Home() {
                 </p>
                 <div className="buutonsAbout">
                     <button className="BuutonAbout newWidth" onClick={()=>Facebook("http://lattes.cnpq.br/0916995612340632")}>See lattes</button>
-                    <button className="BuutonHere newWidth">Download CV</button>
+                    <button className="BuutonHere newWidth" onClick={()=>Facebook("https://drive.google.com/file/d/1wMxaD8yu6ZhdFJbK_aMo4pmTI35r02Fb/view")}>Download CV</button>
                 </div>
             </div>
         </div>
