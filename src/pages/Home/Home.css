@@ -12,6 +12,12 @@
     background-color: #111;
 }
 
+.imgProduto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ===============Menu Humburguer ================= */
 .Humburguer{
     width: 100%;
