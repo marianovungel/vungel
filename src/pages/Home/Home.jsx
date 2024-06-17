@@ -130,23 +130,21 @@ export default function Home() {
                     <i className="fa-solid fa-bars iall"></i>
                 </div>
                 <div id="myLinks">
-                    <div onClick={()=>OpenParte("/#About")}>About</div> 
-                    <div onClick={()=>OpenParte("/#Services")}>Services</div>
-                    <div onClick={()=>OpenParte("/#Projects")}>Projects</div>
-                    <div onClick={()=>OpenParte("/#Technologies")}>Technologies</div>
-                    <div onClick={()=>OpenParte("/#CONTACTS")}>Contacts</div>
+                    <div className="itemMenuHumburg" onClick={()=>OpenParte("/#About")}>About</div> 
+                    <div className="itemMenuHumburg" onClick={()=>OpenParte("/#Services")}>Services</div>
+                    <div className="itemMenuHumburg" onClick={()=>OpenParte("/#Projects")}>Projects</div>
+                    <div className="itemMenuHumburg" onClick={()=>OpenParte("/#Technologies")}>Technologies</div>
+                    <div className="itemMenuHumburg" onClick={()=>OpenParte("/#CONTACTS")}>Contacts</div>
                 </div>
             </div>
         </div>
 
-
         <div className='Header' id="here">
             <div className="allcontent">
                 <div className="flag">
-                    <i className="fa-brands fa-square-facebook iconsoc" onClick={()=> Facebook("facebook")}></i>
-                    <i className="fa-brands fa-twitter iconsoc flagItem" onClick={()=> Facebook("facebook")}></i>
-                    <i className="fa-brands fa-square-instagram iconsoc flagItem" onClick={()=> Facebook("facebook")}></i>
-                    <i className="fa-brands fa-youtube iconsoc flagItem" onClick={()=> Facebook("facebook")}></i>
+                    <i className="fa-brands fa-linkedin iconsoc" onClick={()=>Facebook("https://www.linkedin.com/in/mariano-vunge-10283a1b4/")}></i>
+                    <i className="fa-brands fa-square-youtube iconsoc flagItem" onClick={()=>Facebook("https://www.youtube.com/@african-coder9576")}></i>
+                    <i className="fa-brands fa-square-github iconsoc flagItem" onClick={()=>Facebook("https://github.com/marianovungel?tab=repositories")}></i>
                 </div>
                 <div className="menu">
                     <div className="itensMenu">
@@ -190,8 +188,8 @@ export default function Home() {
                     I'm looking for opportunities to apply my knowledge in a growing technology company.
                 </p>
                 <div className="buutonsAbout">
-                    <button className="BuutonAbout">See lattes</button>
-                    <button className="BuutonHere">Download CV</button>
+                    <button className="BuutonAbout newWidth">See lattes</button>
+                    <button className="BuutonHere newWidth">Download CV</button>
                 </div>
             </div>
         </div>
@@ -361,13 +359,11 @@ export default function Home() {
             <div className="RedContent">
                 <div className="TitleFacebookRed">WE ARE ON THE NETWORK:</div>
                 <div className="midiasSociasRed">
-                    <i className="fa-brands fa-square-facebook iconsocRed" onClick={()=>Facebook("https://www.linkedin.com/in/mariano-vunge-10283a1b4/")}></i>
+                    <i className="fa-brands fa-linkedin iconsocRed" onClick={()=>Facebook("https://www.linkedin.com/in/mariano-vunge-10283a1b4/")}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-twitter iconsocRed" onClick={()=>Facebook("x")}></i>
+                    <i className="fa-brands fa-square-youtube iconsocRed" onClick={()=>Facebook("https://www.youtube.com/@african-coder9576")}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-square-instagram iconsocRed" onClick={()=>Facebook("instagram")}></i>
-                    <div className="tracoRed"></div>
-                    <i className="fa-brands fa-youtube iconsocRed" onClick={()=>Facebook("youtube")}></i>
+                    <i className="fa-brands fa-square-github iconsocRed" onClick={()=>Facebook("https://github.com/marianovungel?tab=repositories")}></i>
                 </div>
                 <div className="divTextRed">
                     For more information, take a look at my profile on social media...
