@@ -1,85 +1,86 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Home.css'
 
 const newVar = [
     {
         _id: "1",
-        profilePic:"./afri.png",
-        nome:"African-coder"
+        profilePic:"./uni.png",
+        nome:"UNILABTEM",
+        url:"https://unilabtem.com.br/venda"
 
     },
     {
-        _id: "1",
-        profilePic:"./afri.png",
-        nome:"African-coder"
-
+        _id: "2",
+        profilePic:"./cgad.png",
+        nome:"CGAD",
+        url:"https://cgad.site/"
     },
     {
-        _id: "1",
-        profilePic:"./afri.png",
-        nome:"African-coder"
-
+        _id: "3",
+        profilePic:"./ampli.png",
+        nome:"AMPLIFICADOR IA",
+        url:"https://app.netlify.com/sites/thunderous-froyo-cf32a8/overview"
     },
     {
-        _id: "1",
-        profilePic:"./afri.png",
-        nome:"African-coder"
-
+        _id: "4",
+        profilePic:"./miti.png",
+        nome:"MITI  CODE",
+        url:"https://heartfelt-semolina-b72f84.netlify.app/"
     },
     {
-        _id: "1",
-        profilePic:"./afri.png",
-        nome:"African-coder"
-
+        _id: "5",
+        profilePic:"./soc.png",
+        nome:"ENG. NA SOCIEDADE",
+        url:"https://eng-sociedade.vercel.app/"
     },
     {
-        _id: "1",
+        _id: "6",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "7",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "8",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "9",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "10",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "11",
         profilePic:"./afri.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "12",
         profilePic:"./im.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
     {
-        _id: "1",
+        _id: "13",
         profilePic:"./im.png",
-        nome:"African-coder"
-
+        nome:"African-coder",
+        url:"https://unilabtem.com.br/venda"
     },
 ]
 
@@ -88,6 +89,11 @@ export default function Home() {
     const [vendaVazia, setVendaVazia] = useState(false)
     const [data, setData] = useState(newVar)
     const carrocelVenda = useRef(null)
+
+    useEffect(()=>{
+        setVendaVazia(false)
+        setData(newVar)
+    }, [])
 
     function myFunction() {
         var x = document.getElementById("myLinks");
@@ -275,7 +281,7 @@ export default function Home() {
 
                 <div className="compartilharDiv" ref={carrocelVenda}>
                 {data?.map((post)=>(
-                    <div className="titleColor" key={post?._id}>
+                    <div onClick={()=>Facebook(`${post.url}`)} className="titleColor" key={post?._id}>
                         {/* onClick={() => history.push(`/post/${post?.id}`, post)}  key={post?.photo} */}
                     <div className="Produto" key={post?._id}>
                         <div className='imgProduto' id='Produto'>
