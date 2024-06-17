@@ -196,11 +196,11 @@ export default function Home() {
 
         <div className="service" id='Services'>
             <div className="marginCenterServece">
-                <div className="textService">
+                <div className="textService serviceTextsFull">
                     <h3 className="headerAbout">Services</h3>
                     <i className="row"></i>
-                    <p className="ParagrafAbout">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas vel! Tempore esse minima maxime tenetur sunt, praesentium consequatur.
+                    <p className="ParagrafAbout serviceTextsFullParagrado">
+                    Works in the area of ​​software development with JavaCript framerworks such as React.js, Next.js, React-native, Node.js, and relational and non-relational databases.
                     </p>
                 </div>
             </div>

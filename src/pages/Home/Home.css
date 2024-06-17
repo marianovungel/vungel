@@ -69,6 +69,7 @@
 /* ===============Menu Humburguer ================= */
 
 /* ============Header=========== */
+margnLeft
 .itensMenu{
     width: 100%;
     display: flex;
@@ -562,7 +563,6 @@
 
 
 /* 88888888888888888888888888888 */
-imgAbout
 .EnderecoItemTellRed{
     color: #666;
 }
@@ -710,6 +710,26 @@ imgAbout
 
 /* ***************************** */
 
+@media (max-width: 1500px){
+    .CardService{
+        width: 50%;
+        max-width: 470px;
+        min-width: 200px;
+        height: 50%;
+        max-height: 470px;
+        min-height: 200px;
+    }
+}
+@media (max-width: 1386px){
+    .CardService{
+        width: 40%;
+        max-width: 450px;
+        min-width: 200px;
+        height: 40%;
+        max-height: 470px;
+        min-height: 200px;
+    }
+}
 @media (max-width: 1350px){
     .iconsocRed{
         font-size: 2rem;
@@ -734,6 +754,27 @@ imgAbout
     }
     .im{
         font-size: 4rem;
+    }
+    .serviceTextsFull{
+        width: 80%;
+        padding: 0px;
+    }
+    .serviceTextsFullParagrado{
+        width: 100%;
+    }
+    .centerSecundService{
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .CardService{
+        width: 100%;
+        max-width: 100%;
+        min-width: 200px;
+        height: 40%;
+        max-height: 470px;
+        min-height: 200px;
     }
 }
 @media (max-width: 940px){
