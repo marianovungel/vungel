@@ -159,6 +159,8 @@ export default function Home() {
             </div>
         </div>
 
+        <div className="transparentDiv"></div>
+
 
         <div className="homeIm">
             <div className="first">
