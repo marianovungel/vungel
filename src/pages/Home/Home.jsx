@@ -36,51 +36,51 @@ const newVar = [
     },
     {
         _id: "6",
-        profilePic:"./afri.png",
-        nome:"African-coder",
+        profilePic:"./cv.png",
+        nome:"CV FÀCEL",
         url:"https://unilabtem.com.br/venda"
     },
     {
         _id: "7",
-        profilePic:"./afri.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        profilePic:"./menor.png",
+        nome:"MENOR PREÇO",
+        url:"https://github.com/marianovungel/Menor-Preco-Front"
     },
     {
         _id: "8",
         profilePic:"./afri.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        nome:"IDE C",
+        url:"https://github.com/marianovungel/IDE-Para-Linguagem-C-Nodejs"
     },
     {
         _id: "9",
         profilePic:"./afri.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        nome:"Jogo RT",
+        url:"https://github.com/marianovungel/Jogo-em-tempo-real-Front"
     },
     {
         _id: "10",
         profilePic:"./afri.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        nome:"Gravador de Tela",
+        url:"https://github.com/marianovungel/Gravador-de-Tela"
     },
     {
         _id: "11",
-        profilePic:"./afri.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        profilePic:"./ea.png",
+        nome:"Delive Eathome",
+        url:"https://github.com/marianovungel/Delive-Eathome"
     },
     {
         _id: "12",
-        profilePic:"./im.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        profilePic:"./blog.png",
+        nome:"Blog M.Borge",
+        url:"https://github.com/marianovungel/blog-front"
     },
     {
         _id: "13",
-        profilePic:"./im.png",
-        nome:"African-coder",
-        url:"https://unilabtem.com.br/venda"
+        profilePic:"./dlove.png",
+        nome:"DLove",
+        url:"https://github.com/marianovungel/Dlove--PHP-"
     },
 ]
 
