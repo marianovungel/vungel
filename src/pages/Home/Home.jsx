@@ -207,7 +207,7 @@ export default function Home() {
                     <h3 className="headerAbout">Services</h3>
                     <i className="row"></i>
                     <p className="ParagrafAbout serviceTextsFullParagrado">
-                    Works in the area of ​​software development with JavaCript framerworks such as React.js, Next.js, React-native, Node.js, and relational and non-relational databases.
+                    Works in the area of ​​software development with JavaScript Frameworks such as React.js, Next.js, React-native, Node.js, and relational and non-relational databases.
                     </p>
                 </div>
             </div>
@@ -219,7 +219,7 @@ export default function Home() {
                 <div className="CardService">
                     <div className="backColor">
                         <i className="fa-solid fa-mobile-screen iconServerSetting"></i>
-                        <h4 className="titleService">App Desig</h4>
+                        <h4 className="titleService">App Design</h4>
                         <p className="paragrafoServiceCard">Services such as creating modern mobile and web</p>
                         <p className="paragrafoServiceCard">interface designs.</p>
                     </div>
