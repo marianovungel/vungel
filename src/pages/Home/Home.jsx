@@ -172,7 +172,7 @@ export default function Home() {
                 <small className="Holo">Hello</small>
                 <h1 className="im">I'm Mariano</h1>
                 <p className="fleelancer">Freelancer web and Mobile</p>
-                <p className="developer">develeper</p>
+                <p className="developer">developer</p>
 
                 <button className="BuutonHere bauttonWidthNew" onClick={()=>Facebook("https://github.com/marianovungel?tab=repositories")}>Github</button>
             </div>
@@ -189,7 +189,7 @@ export default function Home() {
                 <h3 className="headerAbout" id="About">About Me</h3>
                 <i className="row"></i>
                 <p className="ParagrafAbout">
-                    Frontend Web and Mobile Developer for 5 years with Javascript fremeworks, database, backend, UI & UX Designer. Ability to solve problems and learn quickly.
+                    Front-end Web and Mobile Developer for 5 years with JavaScript frameworks, database, backend, UI & UX Designer. Ability to solve problems and learn fast.
                 </p>
                 <p className="ParagrafAbout">
                     I'm looking for opportunities to apply my knowledge in a growing technology company.
